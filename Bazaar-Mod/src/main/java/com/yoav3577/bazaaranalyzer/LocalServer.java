@@ -10,12 +10,15 @@ import com.yoav3577.bazaaranalyzer.core.PlayerTrade;
 import com.yoav3577.bazaaranalyzer.core.RequestGuard;
 import com.yoav3577.bazaaranalyzer.core.Trade;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.BindException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.Executors;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.User;
@@ -23,6 +26,12 @@ import net.minecraft.client.User;
 public final class LocalServer {
    public static final int FIRST_PORT = 47860;
    public static final int LAST_PORT = 47869;
+   /** The website files inside the jar (build.gradle copies Bazaar-Analyzer-v12/app there). */
+   private static final String SITE = "/assets/bazaaranalyzer/site";
+   private static final Map<String, String> TYPES = Map.of(
+      "html", "text/html; charset=utf-8", "js", "text/javascript; charset=utf-8", "css", "text/css; charset=utf-8",
+      "json", "application/json; charset=utf-8", "png", "image/png", "svg", "image/svg+xml", "ico", "image/x-icon"
+   );
    private static HttpServer server;
    private static int port = -1;
    private static volatile Cached lowballCache;
@@ -60,9 +69,66 @@ public final class LocalServer {
                return BazaarClient.BOOK.toJson(limit(ex.getRequestURI().getRawQuery()), ledger);
             }));
             server.createContext("/lowballs", ex -> handle(ex, LocalServer::lowballs));
+            server.createContext("/", LocalServer::site);
             server.start();
             BazaarClient.LOG.info("Local server listening on 127.0.0.1:{}", port);
          }
+      }
+   }
+
+   /** The built-in website's address, or null when the server is not running or the jar has no site. */
+   public static synchronized String siteBase() {
+      return server != null && LocalServer.class.getResource(SITE + "/index.html") != null ? "http://127.0.0.1:" + port : null;
+   }
+
+   /** Built-in website files: GET only, same Host check as the data endpoints, no ".." paths. */
+   private static void site(HttpExchange ex) throws IOException {
+      try {
+         String path = ex.getRequestURI().getPath();
+         if (!RequestGuard.hostAllowed(ex.getRequestHeaders().getFirst("Host"), port)) {
+            ex.sendResponseHeaders(403, -1L);
+            return;
+         }
+
+         if (!"GET".equals(ex.getRequestMethod()) && !"HEAD".equals(ex.getRequestMethod())) {
+            ex.sendResponseHeaders(405, -1L);
+            return;
+         }
+
+         if (path == null || path.isEmpty() || path.equals("/")) {
+            path = "/index.html";
+         }
+
+         int dot = path.lastIndexOf('.');
+         String type = dot < 0 ? null : TYPES.get(path.substring(dot + 1).toLowerCase(Locale.ROOT));
+         if (path.contains("..") || path.contains("\\") || type == null) {
+            ex.sendResponseHeaders(404, -1L);
+            return;
+         }
+
+         byte[] bytes;
+         try (InputStream in = LocalServer.class.getResourceAsStream(SITE + path)) {
+            if (in == null) {
+               ex.sendResponseHeaders(404, -1L);
+               return;
+            }
+
+            bytes = in.readAllBytes();
+         }
+
+         ex.getResponseHeaders().set("Content-Type", type);
+         ex.getResponseHeaders().set("Cache-Control", path.endsWith(".html") || path.endsWith(".json") ? "no-cache" : "public, max-age=86400");
+         if ("HEAD".equals(ex.getRequestMethod())) {
+            ex.sendResponseHeaders(200, -1L);
+            return;
+         }
+
+         ex.sendResponseHeaders(200, bytes.length);
+         try (OutputStream os = ex.getResponseBody()) {
+            os.write(bytes);
+         }
+      } finally {
+         ex.close();
       }
    }
 

@@ -17,7 +17,10 @@ final class SiteFinder {
    private SiteFinder() {
    }
 
-   /** Finds the website: only the port set in the settings, or (Auto) the newest site on 47831-47850. Null when none answers. */
+   /**
+    * Finds the website: only the port set in the settings, or (Auto) the newest site on 47831-47850, else (Auto) the copy
+    * built into the mod (LocalServer). Null when none answers.
+    */
    static SiteFinder.Site find() {
       SiteFinder.Site best = null;
       int fixed = ModSettings.get().sitePort();
@@ -38,7 +41,23 @@ final class SiteFinder {
          }
       }
 
+      if (best == null && fixed == 0) {
+         String base = LocalServer.siteBase();
+         if (base != null) {
+            best = new SiteFinder.Site(base, builtInVersion());
+         }
+      }
+
       return best;
+   }
+
+   private static int builtInVersion() {
+      try (java.io.InputStream in = SiteFinder.class.getResourceAsStream("/assets/bazaaranalyzer/site/index.html")) {
+         Matcher m = BUNDLE.matcher(in == null ? "" : new String(in.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8));
+         return m.find() ? Integer.parseInt(m.group(1)) : 0;
+      } catch (IOException | RuntimeException e) {
+         return 0;
+      }
    }
 
    /** Starts the website in its own window; serve.ps1 saves its folder on every run. False when it never ran here (or not Windows). */

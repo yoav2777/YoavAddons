@@ -57,6 +57,20 @@ final class AhTabs {
       });
    }
 
+   /** /ya site: the running website, else the copy built into the mod, in the browser. */
+   static void openSite() {
+      PriceData.async(() -> {
+         SiteFinder.Site site = SiteFinder.find();
+         if (site == null) {
+            say("The website is not available (the mod's local server did not start).", ChatFormatting.RED);
+            return;
+         }
+
+         say("Opening " + site.base() + " in your browser.", ChatFormatting.GRAY);
+         Util.getPlatform().openUri(URI.create(site.base() + "/"));
+      });
+   }
+
    static void say(String text, ChatFormatting color) {
       say(prefix().append(Component.literal(text).withStyle(color)));
    }

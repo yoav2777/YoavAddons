@@ -207,7 +207,7 @@ final class SettingsScreen extends Screen {
       this.options.add(new Info(Page.ABOUT, "Yoav Addons", "Version " + BazaarClient.VERSION + " by yoav3577. Prices come from Coflnet and the Hypixel API."));
       this.options.add(new Info(
          Page.ABOUT, "Commands",
-         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
+         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/ya site: the website in your browser (built into the mod).\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
       ));
       this.options.add(new Action(
          Page.ABOUT, "Reset everything", "Every setting on every page back to the defaults. Click twice to confirm.",
@@ -337,7 +337,7 @@ final class SettingsScreen extends Screen {
       int ports = ModPrefs.LAST_SITE_PORT - ModPrefs.FIRST_SITE_PORT + 1;
       this.options.add(new Slider(
          Page.LINKS, "Website port",
-         "Auto finds the newest Bazaar Analyzer site on ports " + ModPrefs.FIRST_SITE_PORT + "-" + ModPrefs.LAST_SITE_PORT + "; pick a port to use only that one.",
+         "Auto finds the newest Bazaar Analyzer site on ports " + ModPrefs.FIRST_SITE_PORT + "-" + ModPrefs.LAST_SITE_PORT + " (else the copy built into the mod); pick a port to use only that one.",
          0, ports, 1, () -> ModSettings.get().sitePort() == 0 ? 0 : ModSettings.get().sitePort() - ModPrefs.FIRST_SITE_PORT + 1, i -> {
             ModSettings.live(ModSettings.get().withSitePort(i == 0 ? 0 : ModPrefs.FIRST_SITE_PORT + i - 1));
             siteResult = null;

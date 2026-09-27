@@ -40,6 +40,10 @@ processResources {
 		include "recipes.json"
 		into "assets/bazaaranalyzer"
 	}
+	// The whole website, served by LocalServer on 127.0.0.1:47860-47869 when the separate site is not running.
+	from("../Bazaar-Analyzer-v12/app") {
+		into "assets/bazaaranalyzer/site"
+	}
 }
 
 tasks.withType(JavaCompile).configureEach {

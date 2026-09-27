@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 
 /**
  * Client commands. Settings: /ba, /ya, /yoavaddons, /bazaaranalyzer, /bazaaranalyzer settings, /bazaaranalyzer open.
+ * /ya site (any of the names) opens the website in the browser.
  * /bazaaranalyzer open &lt;n&gt; re-opens a cancelled trade's AH items on the website.
  */
 final class AhCommands {
@@ -29,15 +30,26 @@ final class AhCommands {
             ClientCommands.literal("bazaaranalyzer")
                .executes(c -> settings())
                .then(ClientCommands.literal("settings").executes(c -> settings()))
+               .then(ClientCommands.literal("site").executes(c -> site()))
                .then(ClientCommands.literal("open").executes(c -> settings()).then(ClientCommands.argument("id", IntegerArgumentType.integer(1)).executes(c -> {
                   AhTabs.openOffer(IntegerArgumentType.getInteger(c, "id"));
                   return 1;
                })))
          );
          for (String alias : SETTINGS_ALIASES) {
-            dispatcher.register(ClientCommands.literal(alias).executes(c -> settings()).then(ClientCommands.literal("settings").executes(c -> settings())));
+            dispatcher.register(
+               ClientCommands.literal(alias)
+                  .executes(c -> settings())
+                  .then(ClientCommands.literal("settings").executes(c -> settings()))
+                  .then(ClientCommands.literal("site").executes(c -> site()))
+            );
          }
       });
+   }
+
+   private static int site() {
+      AhTabs.openSite();
+      return 1;
    }
 
    private static int settings() {
