@@ -38,25 +38,77 @@ final class SettingsScreen extends Screen {
    private static final int CARD_GAP = 5;
    private static final String[] RANGE_LABELS = {"1 day", "1 week", "1 month", "1 year"};
 
-   enum Page {
-      ABOUT("About", "Yoav Addons by yoav3577."),
-      GRAPH("Price graph", "The price graph (key I): its default range, look and size."),
-      TRADE("Trade window", "The website button in trade windows, and recording trades."),
-      WORTH("Item worth", "How items are valued: the trade window worth and the debug hover."),
-      LINKS("Website links", "Which modifiers become filters on the website's AH item pages."),
-      FILL("Auto fill time", "Fills the Custom Duration sign in the AH Auction Duration menu.");
+   /** A category on the left. The built-in ones below, plus the pages add-on mods register (api.Settings#page). */
+   static final class Page {
+      private static final List<Page> ALL = new ArrayList<>();
+      static final Page ABOUT = new Page("ABOUT", "About", "Yoav Addons by yoav3577.");
+      static final Page GRAPH = new Page("GRAPH", "Price graph", "The price graph (key I): its default range, look and size.");
+      static final Page TRADE = new Page("TRADE", "Trade window", "The website button in trade windows, and recording trades.");
+      static final Page WORTH = new Page("WORTH", "Item worth", "How items are valued: the trade window worth and the debug hover.");
+      static final Page LINKS = new Page("LINKS", "Website links", "Which modifiers become filters on the website's AH item pages.");
+      static final Page FILL = new Page("FILL", "Auto fill time", "Fills the Custom Duration sign in the AH Auction Duration menu.");
 
+      final String id;
       final String label;
       final String desc;
 
-      Page(String label, String desc) {
+      private Page(String id, String label, String desc) {
+         this.id = id;
          this.label = label;
          this.desc = desc;
+         ALL.add(this);
+      }
+
+      static synchronized Page[] values() {
+         return ALL.toArray(new Page[0]);
+      }
+
+      String name() {
+         return this.id;
+      }
+
+      @Override
+      public String toString() {
+         return this.id;
+      }
+
+      int ordinal() {
+         synchronized (Page.class) {
+            return ALL.indexOf(this);
+         }
+      }
+
+      /** The page with this id (any case), or null. */
+      static synchronized Page byId(String id) {
+         for (Page p : ALL) {
+            if (p.id.equalsIgnoreCase(id)) {
+               return p;
+            }
+         }
+
+         return null;
+      }
+
+      static Page valueOf(String id) {
+         Page p = byId(id);
+         if (p == null) {
+            throw new IllegalArgumentException("No settings page " + id);
+         }
+
+         return p;
+      }
+
+      /** An add-on's page: the existing one with this id, or a new one at the end of the list. */
+      static synchronized Page addon(String id, String label, String desc) {
+         Page p = byId(id);
+         return p != null ? p : new Page(id, label, desc);
       }
    }
 
    private static Page lastPage = Page.ABOUT;
    private static volatile String siteResult;
+   /** A page to show when the screen next opens (api.YoavAddons#settingsScreen); an add-on page exists only after its options are built. */
+   private static volatile String wantedPage;
    private final Screen parent;
    private Page page = lastPage;
    private final List<Opt> options = new ArrayList<>();
@@ -65,6 +117,9 @@ final class SettingsScreen extends Screen {
    private int scroll;
    private int contentH;
    private boolean resetArmed;
+   // add-on pages (api.YoavAddonsPlugin): what "Reset everything" and closing the screen also run
+   private final List<Runnable> addonResets = new ArrayList<>();
+   private final List<Runnable> addonCloses = new ArrayList<>();
    // layout (from the last frame)
    private int x0;
    private int y0;
@@ -84,11 +139,13 @@ final class SettingsScreen extends Screen {
       this.parent = parent;
       String dev = System.getProperty("bazaaranalyzer.dev.settingsPage");
       if (dev != null) {
-         try {
-            this.page = Page.valueOf(dev.toUpperCase(Locale.ROOT));
-         } catch (IllegalArgumentException ignored) {
-         }
+         wantedPage = dev;
       }
+   }
+
+   /** Opens on this page next time (any case; an add-on page id works too). */
+   static void wantPage(String id) {
+      wantedPage = id;
    }
 
    Page page() {
@@ -114,6 +171,17 @@ final class SettingsScreen extends Screen {
       this.open = null;
       this.dragging = null;
       this.buildOptions();
+      this.buildAddonOptions();
+      String want = wantedPage;
+      if (want != null) {
+         wantedPage = null;
+         Page p = Page.byId(want);
+         if (p != null) {
+            this.page = p;
+            lastPage = p;
+         }
+      }
+
       for (Opt o : this.options) {
          if (o instanceof Text t) {
             this.addRenderableWidget(t.box);
@@ -148,6 +216,7 @@ final class SettingsScreen extends Screen {
                GraphSettings.live(GraphPrefs.DEFAULT);
                ModSettings.live(ModPrefs.DEFAULT);
                AhSettings.live(LinkSettings.DEFAULT);
+               this.runAll(this.addonResets, "reset");
                this.resetArmed = false;
                this.rebuildWidgets();
             } else {
@@ -610,6 +679,89 @@ final class SettingsScreen extends Screen {
       GraphSettings.set(GraphSettings.get());
       ModSettings.set(ModSettings.get());
       AhSettings.save(AhSettings.get());
+      this.runAll(this.addonCloses, "save");
+   }
+
+   private void runAll(List<Runnable> rs, String what) {
+      for (Runnable r : rs) {
+         try {
+            r.run();
+         } catch (RuntimeException e) {
+            BazaarClient.LOG.warn("An add-on's settings could not {}", what, e);
+         }
+      }
+   }
+
+   // ---------------------------------------------------------------- add-on pages
+
+   /** Pages and options from other mods (the "yoavaddons" entrypoint, api.YoavAddonsPlugin). A broken add-on is skipped. */
+   private void buildAddonOptions() {
+      this.addonResets.clear();
+      this.addonCloses.clear();
+      for (com.yoav3577.bazaaranalyzer.api.YoavAddonsPlugin plugin : Addons.plugins()) {
+         List<Opt> before = new ArrayList<>(this.options);
+         try {
+            plugin.settings(new AddonSettings());
+         } catch (RuntimeException | LinkageError e) {
+            BazaarClient.LOG.warn("An add-on's settings page failed to load: {}", plugin.getClass().getName(), e);
+            this.options.clear();
+            this.options.addAll(before);
+         }
+      }
+   }
+
+   /** What an add-on sees: adds options to this screen. */
+   private final class AddonSettings implements com.yoav3577.bazaaranalyzer.api.Settings {
+      private Page page(String id) {
+         Page p = Page.byId(id);
+         if (p == null) {
+            throw new IllegalArgumentException("Unknown settings page " + id + " (register it with page() first)");
+         }
+
+         return p;
+      }
+
+      public void page(String id, String label, String description) {
+         Page.addon(id, label, description);
+      }
+
+      public void info(String page, String name, String text) {
+         SettingsScreen.this.options.add(new Info(this.page(page), name, text));
+      }
+
+      public void toggle(String page, String name, String description, Supplier<Boolean> get, Consumer<Boolean> set) {
+         SettingsScreen.this.options.add(new Toggle(this.page(page), name, description, get, set));
+      }
+
+      public <T> void choice(String page, String name, String description, List<T> values, Function<T, String> label, Supplier<T> get, Consumer<T> set) {
+         SettingsScreen.this.options.add(new Dropdown<>(this.page(page), name, description, values, label, get, set));
+      }
+
+      public void slider(
+         String page, String name, String description, int min, int max, int step, IntSupplier get, IntConsumer set, IntFunction<String> format
+      ) {
+         SettingsScreen.this.options.add(new Slider(this.page(page), name, description, min, max, step, get, set, format));
+      }
+
+      public void text(String page, String name, String description, String hint, String value, Consumer<String> onChange) {
+         SettingsScreen.this.options.add(new Text(this.page(page), name, description, hint, value, onChange));
+      }
+
+      public void button(String page, String name, String description, Supplier<String> label, Runnable run) {
+         SettingsScreen.this.options.add(new Action(this.page(page), name, description, label, run));
+      }
+
+      public void onResetAll(Runnable r) {
+         SettingsScreen.this.addonResets.add(r);
+      }
+
+      public void onClose(Runnable r) {
+         SettingsScreen.this.addonCloses.add(r);
+      }
+
+      public void refresh() {
+         SettingsScreen.this.rebuildWidgets();
+      }
    }
 
    public void onClose() {
