@@ -31,6 +31,7 @@ import java.util.regex.Pattern;
  * the filters, moved to this item's modifier cost.</li>
  * </ol>
  * A live BIN listing of the same item (modifier cost within CLOSE_LISTING) caps the result: it can't sell above that.
+ * So does the easy craft cost (capByCraft): nobody pays more than it costs to buy the parts and craft it.
  */
 public final class Appraiser {
    /** Share of a modifier's cost that a sale price moves by (tested 0.5-0.9: 0.6-0.8 best). */
@@ -98,12 +99,18 @@ public final class Appraiser {
 
    /**
     * value NaN = no estimate. recent/monthEst/quarterEst/anchor/listingCap/lowestBin are NaN when not known; month and
-    * quarter are the sale counts (-1 = not looked at).
+    * quarter are the sale counts (-1 = not looked at); craftCapped = value is the easy craft cost (capByCraft).
     */
    public record Result(
       double value, Source source, int comps, double recent, int month, double monthEst, int quarter, double quarterEst, double anchor,
-      double lowestBin, double listingCap, boolean capped
+      double lowestBin, double listingCap, boolean capped, boolean craftCapped
    ) {
+      public Result(
+         double value, Source source, int comps, double recent, int month, double monthEst, int quarter, double quarterEst, double anchor,
+         double lowestBin, double listingCap, boolean capped
+      ) {
+         this(value, source, comps, recent, month, monthEst, quarter, quarterEst, anchor, lowestBin, listingCap, capped, false);
+      }
    }
 
    // ---------------------------------------------------------------- items
@@ -281,6 +288,20 @@ public final class Appraiser {
       }
 
       return new Result(value, source, comps.size(), recent, nMonth, monthEst, nQuarter, quarterEst, anchor, lowest, cap, capped);
+   }
+
+   /**
+    * The estimate, never above the easy craft cost (buy the parts, craft it). complete = every craft part has a price:
+    * with parts missing the craft costs more than the quote, so it caps nothing.
+    */
+   public static Result capByCraft(Result r, double easy, boolean complete) {
+      if (r == null || !complete || !ok(easy) || !ok(r.value()) || r.value() <= easy) {
+         return r;
+      }
+
+      return new Result(
+         easy, r.source(), r.comps(), r.recent(), r.month(), r.monthEst(), r.quarter(), r.quarterEst(), r.anchor(), r.lowestBin(), r.listingCap(), r.capped(), true
+      );
    }
 
    /**

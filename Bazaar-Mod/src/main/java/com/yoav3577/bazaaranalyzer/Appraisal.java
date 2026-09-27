@@ -195,6 +195,10 @@ final class Appraisal {
          BazaarClient.LOG.warn("Craft quote failed for {}", tag, e);
       }
 
+      if (craft != null) {
+         res = Appraiser.capByCraft(res, craft.easy(), craft.missing().isEmpty());
+      }
+
       return new Report(tag, res, List.copyOf(filters), List.copyOf(labels), mods, clean, craft, error);
    }
 

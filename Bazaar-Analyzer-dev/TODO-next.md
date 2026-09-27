@@ -13,6 +13,10 @@ Hand this file to a new chat. Projects: site source of truth = C:/Users/Lenovo/B
 - Install: copy the new jar into `%APPDATA%\ModrinthApp\profiles\Skyblocker Modpack\mods\` (replacing the older
   yoav-addons jar) with the game CLOSED; copy the rebuilt site into the Downloads copy and re-zip.
 
+## Changed 2026-09-27 (craft cap)
+- Mod item worth (trade window + price debug) is never above the easy craft cost (only when every craft part has a
+  price). 123 JUnit tests pass (JDK 25). Not checked in game.
+
 ## Changed 2026-09-27 (cloud session: bug sweep)
 - Site: a page that throws shows "This page failed: ..." instead of blanking the whole site (BA_CraftBoundary around
   <main>, reset on navigation). Activity stops polling while the browser tab is hidden. "Net per day" uses the mod's

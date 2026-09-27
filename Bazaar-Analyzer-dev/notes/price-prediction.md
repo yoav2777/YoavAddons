@@ -34,6 +34,9 @@ Findings:
   with fewer than 3 matching recent sales, and never go above the anchor then.
 - Capping by the cheapest matching *sold* BIN hurt a lot (-17% bias: snipes + minimal items). Only a *live* listing
   of the same item (modifier cost within 5%, moved to this item) caps now.
+- The easy craft cost caps the worth too (2026-09-27, Appraiser.capByCraft; owner's rule, not backtested): easy
+  craft 460M -> worth at most 460M. Skipped when a craft part has no price (the quote is then too low). The price
+  debug tooltip says "capped by the easy craft".
 - Stat-tracked items (2026-09-26): Final Destination 34% -> 12%, Midas Sword 40% -> 19%. The 1.5 x anchor cap was
   the main error (clean BIN 1.4M vs 30M+ for 40k-kill FD chestplates); now skipped when the item has a tracker. Each
   sale is also moved by coins-per-unit (Theil-Sen median of pairwise slopes, e.g. ~500 coins per FD kill): 18% -> 12%

@@ -37,6 +37,21 @@ class AppraiserTest {
    }
 
    @Test
+   void theEasyCraftCostCapsTheWorth() {
+      List<Appraiser.Item> sold = List.of(sale(500e6, H, 0), sale(500e6, 2 * H, 0), sale(500e6, 3 * H, 0));
+      Appraiser.Result r = Appraiser.estimate(target(0), sold, List.of(), null, List.of(), 480e6, NOW);
+      Appraiser.Result c = Appraiser.capByCraft(r, 460e6, true);
+      assertEquals(460e6, c.value(), 1);
+      assertTrue(c.craftCapped());
+      assertEquals(Appraiser.Source.RECENT, c.source());
+      // cheaper than the craft, a craft with unpriced parts, or no craft: unchanged
+      assertEquals(500e6, Appraiser.capByCraft(r, 600e6, true).value(), 1);
+      assertFalse(Appraiser.capByCraft(r, 600e6, true).craftCapped());
+      assertEquals(500e6, Appraiser.capByCraft(r, 460e6, false).value(), 1);
+      assertEquals(500e6, Appraiser.capByCraft(r, Double.NaN, true).value(), 1);
+   }
+
+   @Test
    void newestAndClosestSalesWeighMost() {
       // an old sale at 900M and three fresh ones near 600M: the fresh ones win
       List<Appraiser.Item> sold = List.of(sale(900e6, 5 * DAY, 0), sale(600e6, H, 0), sale(610e6, 2 * H, 0), sale(590e6, 3 * H, 0));

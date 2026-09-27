@@ -130,7 +130,7 @@ final class PriceDebug {
 
    private static void lines(Appraisal.Report r, List<Component> out) {
       Appraiser.Result res = r.result();
-      out.add(kv("Worth", Worth.coins(res.value()) + " (" + res.source().label + (res.capped() ? ", capped by a listing" : "") + ")", ChatFormatting.GOLD));
+      out.add(kv("Worth", Worth.coins(res.value()) + " (" + res.source().label + (res.craftCapped() ? ", capped by the easy craft" : res.capped() ? ", capped by a listing" : "") + ")", ChatFormatting.GOLD));
       out.add(kv("Recent sales", res.comps() > 0 && Double.isFinite(res.recent())
          ? Worth.coins(res.recent()) + " from " + res.comps() + " comparable" : "none comparable", ChatFormatting.GRAY));
       if (res.month() >= 0) {
