@@ -1,0 +1,36 @@
+# Actions tab > Release > Run workflow: builds the mod + zips the site, publishes them as release v<version>
+# (version = Bazaar-Mod/gradle.properties). Running it again for the same version replaces the files.
+name: Release
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Build mod
+        working-directory: Bazaar-Mod
+        run: bash gradlew build --no-daemon
+      - name: Package
+        run: |
+          v=$(grep '^version=' Bazaar-Mod/gradle.properties | cut -d= -f2)
+          echo "V=$v" >> "$GITHUB_ENV"
+          mkdir out
+          cp "Bazaar-Mod/build/libs/yoav-addons-$v.jar" out/
+          cp -r Bazaar-Analyzer-v12 Bazaar-Analyzer
+          zip -qr out/Bazaar-Analyzer.zip Bazaar-Analyzer
+          cp README.md out/1-README.txt   # "1-": GitHub lists assets by name, so it shows first
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$V" out/* --title "Bazaar Analyzer v$V" --target "$GITHUB_SHA" \
+            --notes "Download **yoav-addons-$V.jar** (mod) and **Bazaar-Analyzer.zip** (website). Setup: see the README." \
+          || gh release upload "v$V" out/* --clobber

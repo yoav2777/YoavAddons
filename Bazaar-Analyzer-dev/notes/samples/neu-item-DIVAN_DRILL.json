@@ -1,0 +1,31 @@
+{
+ "itemid": "minecraft:diamond_pickaxe",
+ "displayname": "§dDivan's Drill",
+ "damage": 0,
+ "lore": [
+  "§8Breaking Power 10",
+  "",
+  "..."
+ ],
+ "internalname": "DIVAN_DRILL",
+ "clickcommand": "viewrecipe",
+ "crafttext": "Requires: HotM 7",
+ "modver": "Firmament 44.2.0-dev+mc26.1.2+g00fd3323",
+ "infoType": "WIKI_URL",
+ "info": [
+  "https://hypixelskyblock.minecraft.wiki/w/Divan%27s_Drill"
+ ],
+ "recipes": [
+  {
+   "type": "forge",
+   "inputs": [
+    "TITANIUM_DRILL_4:1",
+    "SKYBLOCK_COIN:50000000",
+    "DIVAN_ALLOY:1"
+   ],
+   "count": 1,
+   "overrideOutputId": "DIVAN_DRILL",
+   "duration": 30
+  }
+ ]
+}

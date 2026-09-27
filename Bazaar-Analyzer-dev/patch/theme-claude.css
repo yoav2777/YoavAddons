@@ -1,0 +1,71 @@
+/* Claude-like palette. Loaded after technical-v3.css; only chrome changes (surfaces, text, accent).
+   Chart colors live as constants in the JS bundle and are untouched; price/rarity/profit colors
+   (--color-buy/sell/up/down, inline rarity styles) are not redefined here. */
+:root{
+  --color-bg:#1a1918;        /* page */
+  --color-panel:#232220;     /* cards, tables */
+  --color-panel2:#2c2b28;    /* inputs, raised chips */
+  --color-line:#3a3935;      /* borders */
+  --color-ink:#ece9e1;       /* body text (ivory) */
+  --color-mute:#a09d93;      /* secondary text (warm gray, ~6.5:1 on panel) */
+  --color-accent:#d97757;    /* Claude orange */
+  --ba-accent-deep:#c15f3c;
+  --ba-accent-soft:rgba(217,119,87,.14);
+  --ba-accent-line:rgba(217,119,87,.45);
+  --ba-hover:rgba(236,233,225,.05);
+}
+body{background:var(--color-bg);color:var(--color-ink)}
+::selection{background:rgba(217,119,87,.32);color:#faf9f5}
+
+/* Tailwind compiled some accent opacities as fixed hex fallbacks; re-point them to the orange. */
+.bg-accent\/15{background-color:rgba(217,119,87,.15)}
+.bg-accent\/20{background-color:rgba(217,119,87,.18)}
+.hover\:bg-accent\/30:hover{background-color:rgba(217,119,87,.28)}
+.border-accent\/60{border-color:rgba(217,119,87,.6)}
+.hover\:border-accent\/50:hover{border-color:rgba(217,119,87,.5)}
+/* primary buttons: orange fill, near-black text, deeper orange on hover */
+.bg-accent{background-color:var(--color-accent)}
+button.bg-accent:not(:disabled):hover{background-color:var(--ba-accent-deep);opacity:1}
+.bg-accent.text-bg{color:#1a1918}
+
+/* neutral hover / active surfaces become warm instead of pure white */
+.bg-white\/5,.hover\:bg-white\/5:hover,.hover\:bg-white\/\[0\.04\]:hover{background-color:var(--ba-hover)}
+.bg-white\/10,.hover\:bg-white\/10:hover{background-color:rgba(236,233,225,.09)}
+
+/* header: logo mark and active nav tab in orange */
+header.sticky{background:var(--color-bg);border-bottom-color:var(--color-line)}
+header > div > a:first-child > span:first-child{background:var(--ba-accent-soft);color:var(--color-accent);box-shadow:inset 0 0 0 1px var(--ba-accent-line)}
+header nav a.bg-white\/10{background:var(--ba-accent-soft);border-color:var(--ba-accent-line);color:#f0b9a4}
+header nav a:not(.bg-white\/10):hover{border-color:var(--color-line)}
+
+/* segmented controls / toggles that use bg-white/10 as "selected" get a thin orange edge */
+main button.bg-white\/10,#root > div button.bg-white\/10{box-shadow:inset 0 -1px 0 var(--color-accent)}
+
+/* links */
+a.text-accent:hover{color:#e89a7e}
+
+/* inputs, selects, focus */
+input::placeholder,textarea::placeholder{color:#7d7a72}
+select option{background:var(--color-panel2);color:var(--color-ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--color-accent)!important;box-shadow:0 0 0 2px rgba(217,119,87,.22)}
+:focus-visible{outline:1px solid var(--color-accent);outline-offset:1px}
+input[type=checkbox],input[type=radio],input[type=range]{accent-color:var(--color-accent)}
+
+/* popovers, tooltips, overlays */
+.bg-panel2\/95{background-color:rgba(44,43,40,.97)}
+.bg-panel\/90{background-color:rgba(35,34,32,.94)}
+.bg-bg\/80{background-color:rgba(26,25,24,.85)}
+.bg-bg\/95{background-color:rgba(26,25,24,.96)}
+.ba-tip{background:rgba(26,25,24,.95);border-color:var(--color-line)}
+.ba-lowbin:hover{border-color:var(--color-accent)}
+
+/* panel titles */
+h2{color:var(--color-mute)}
+
+/* scrollbars */
+*{scrollbar-color:#46443f transparent}
+::-webkit-scrollbar-thumb{background:#46443f}
+::-webkit-scrollbar-thumb:hover{background:var(--ba-accent-deep)}
+
+/* fullscreen chart wrapper keeps the page background */
+.ba-fs:fullscreen{background:var(--color-bg)}

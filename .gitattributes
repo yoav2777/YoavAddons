@@ -1,0 +1,9 @@
+# Same bytes on every PC: the patch script matches exact text in the v11 bundle.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+Bazaar-Analyzer-v11-base/** -text
+*.png binary
+*.jar binary
+*.zip binary

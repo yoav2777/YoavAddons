@@ -1,0 +1,7 @@
+PET_ENDER_DRAGON [Lvl 80] Ender Dragon listed 144,614,998  tier EPIC reforge None
+
+== scratch: clean craft n/a + modifiers 590,000 = 590,000
+  [pet] held item: 1 x CROCHET_TIGER_PLUSHIE lbin @ 590,000 = 590,000
+
+== easy: clean craft n/a + modifiers 590,000 = 590,000
+  [pet] held item: 1 x CROCHET_TIGER_PLUSHIE lbin @ 590,000 = 590,000

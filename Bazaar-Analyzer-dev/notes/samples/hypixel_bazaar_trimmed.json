@@ -1,0 +1,102 @@
+{
+  "success": true,
+  "lastUpdated": 1790016741050,
+  "products": {
+    "ENCHANTED_DIAMOND": {
+      "product_id": "ENCHANTED_DIAMOND",
+      "sell_summary": [
+        {
+          "amount": 778477,
+          "pricePerUnit": 1275,
+          "orders": 11
+        },
+        {
+          "amount": 127,
+          "pricePerUnit": 1163.7,
+          "orders": 1
+        },
+        {
+          "amount": 3087,
+          "pricePerUnit": 1163.6,
+          "orders": 1
+        }
+      ],
+      "buy_summary": [
+        {
+          "amount": 61,
+          "pricePerUnit": 1277.7,
+          "orders": 1
+        },
+        {
+          "amount": 9,
+          "pricePerUnit": 1277.9,
+          "orders": 1
+        },
+        {
+          "amount": 705,
+          "pricePerUnit": 1278.3,
+          "orders": 1
+        }
+      ],
+      "quick_status": {
+        "productId": "ENCHANTED_DIAMOND",
+        "sellPrice": 1275,
+        "sellVolume": 6957197,
+        "sellMovingWeek": 21859925,
+        "sellOrders": 261,
+        "buyPrice": 1289.972031866347,
+        "buyVolume": 4815264,
+        "buyMovingWeek": 4964519,
+        "buyOrders": 573
+      }
+    },
+    "GIANT_FRAGMENT_LASER": {
+      "product_id": "GIANT_FRAGMENT_LASER",
+      "sell_summary": [
+        {
+          "amount": 21,
+          "pricePerUnit": 1461042.2,
+          "orders": 1
+        },
+        {
+          "amount": 8,
+          "pricePerUnit": 1461042.1,
+          "orders": 1
+        },
+        {
+          "amount": 160,
+          "pricePerUnit": 1461042,
+          "orders": 1
+        }
+      ],
+      "buy_summary": [
+        {
+          "amount": 8,
+          "pricePerUnit": 1598149.8,
+          "orders": 1
+        },
+        {
+          "amount": 2,
+          "pricePerUnit": 1598149.9,
+          "orders": 1
+        },
+        {
+          "amount": 122,
+          "pricePerUnit": 1598150,
+          "orders": 1
+        }
+      ],
+      "quick_status": {
+        "productId": "GIANT_FRAGMENT_LASER",
+        "sellPrice": 1461042.0264550264,
+        "sellVolume": 1512,
+        "sellMovingWeek": 17028,
+        "sellOrders": 18,
+        "buyPrice": 1598149.8199999998,
+        "buyVolume": 435,
+        "buyMovingWeek": 18572,
+        "buyOrders": 56
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# Classes to print with javap (one per line), and "list <regex>" = class files in the jars whose path matches.
+net.minecraft.client.gui.components.AbstractWidget
+net.minecraft.client.gui.components.AbstractButton
+net.minecraft.client.gui.components.Button
+net.minecraft.client.gui.components.Button$Builder
+net.minecraft.client.gui.components.EditBox
+net.minecraft.client.gui.components.Renderable
+net.minecraft.client.gui.components.events.AbstractContainerEventHandler
+net.minecraft.client.input.MouseButtonEvent
+net.minecraft.client.input.KeyEvent
+net.minecraft.client.input.CharacterEvent
+net.minecraft.client.gui.Font
+net.minecraft.util.Util
+net.fabricmc.fabric.api.client.command.v2.ClientCommands

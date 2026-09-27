@@ -1,0 +1,49 @@
+{
+ "uuid": "5289a1202074467bb1a2f804eb81c7a9",
+ "count": 1,
+ "startingBid": 17000000,
+ "tag": "CRIMSON_CHESTPLATE",
+ "itemName": "Ancient Crimson Chestplate ✪✪✪✪✪",
+ "start": "2026-09-19T23:36:23",
+ "end": "2026-09-21T23:36:23",
+ "auctioneerId": "dee112a5e05f43d09eefd3738468026e",
+ "profileId": "93797586d4d04d69856b8839811a1543",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [
+  {
+   "type": "growth",
+   "level": 5
+  },
+  {
+   "type": "protection",
+   "level": 5
+  }
+ ],
+ "nbtData": {
+  "data": {
+   "upgrade_level": 10,
+   "uid": "a2cbe5186528",
+   "boss_tier": 0,
+   "uuid": "4c36af4c-6b37-42ea-9dcc-a2cbe5186528",
+   "color": "255:111:12",
+   "cc": 1
+  }
+ },
+ "itemCreatedAt": "2023-09-03T16:39:00",
+ "reforge": "ancient",
+ "category": "ARMOR",
+ "tier": "LEGENDARY",
+ "bin": true,
+ "flatNbt": {
+  "upgrade_level": "10",
+  "uid": "a2cbe5186528",
+  "boss_tier": "0",
+  "uuid": "4c36af4c-6b37-42ea-9dcc-a2cbe5186528",
+  "color": "255:111:12",
+  "cc": "1"
+ }
+}

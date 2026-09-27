@@ -1,0 +1,198 @@
+{
+  "enchantments": [
+    {
+      "color": "§5",
+      "value": 2385966,
+      "type": "vampirism",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 999998,
+      "type": "sharpness",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 819061,
+      "type": "giant_killer",
+      "level": 6
+    },
+    {
+      "color": "§9",
+      "value": 740992,
+      "type": "life_steal",
+      "level": 4
+    },
+    {
+      "color": "§5",
+      "value": 698786,
+      "type": "scavenger",
+      "level": 5
+    },
+    {
+      "color": "§d",
+      "value": 656553,
+      "type": "ultimate_wise",
+      "level": 5
+    },
+    {
+      "color": "§5",
+      "value": 599995,
+      "type": "venomous",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 486703,
+      "type": "luck",
+      "level": 6
+    },
+    {
+      "color": "§9",
+      "value": 470815,
+      "type": "experience",
+      "level": 4
+    },
+    {
+      "color": "§5",
+      "value": 427700,
+      "type": "lethality",
+      "level": 6
+    },
+    {
+      "color": "§9",
+      "value": 151796,
+      "type": "looting",
+      "level": 4
+    },
+    {
+      "color": "§5",
+      "value": 150479,
+      "type": "thunderlord",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 11999,
+      "type": "fire_aspect",
+      "level": 3
+    },
+    {
+      "color": "§5",
+      "value": 3999,
+      "type": "critical",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 2622,
+      "type": "smite",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 0,
+      "type": "bane_of_arthropods",
+      "level": 6
+    },
+    {
+      "color": "§5",
+      "value": 0,
+      "type": "ender_slayer",
+      "level": 6
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "impaling",
+      "level": 5
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "cleave",
+      "level": 5
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "execute",
+      "level": 5
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "first_strike",
+      "level": 4
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "dragon_hunter",
+      "level": 5
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "magmarizer",
+      "level": 5
+    },
+    {
+      "color": "§9",
+      "value": -1,
+      "type": "cubism",
+      "level": 5
+    }
+  ],
+  "uuid": "ed97700191ee41c48ea4d4d4ef9fcefb",
+  "count": 1,
+  "startingBid": 1148000000,
+  "tag": "HYPERION",
+  "itemName": "Heroic Hyperion ✪✪✪✪✪",
+  "start": "2026-09-21T18:04:45",
+  "end": "2026-09-21T18:17:15",
+  "auctioneerId": "05f2040cd7d7451ca1aa9e8afae723f4",
+  "profileId": "61fb37e59d66406eb2944059069d2ba9",
+  "coop": null,
+  "coopMembers": null,
+  "highestBidAmount": 1148000000,
+  "bids": [
+    {
+      "bidder": "4605e8d4d7894ae8b78c10abf1ee2e86",
+      "profileId": "7d81de4beaca4ba8aef52c1d56bf28c0",
+      "amount": 1148000000,
+      "timestamp": "2026-09-21T18:17:15"
+    }
+  ],
+  "anvilUses": 0,
+  "nbtData": {
+    "data": {
+      "rarity_upgrades": 1,
+      "hpc": 10,
+      "power_ability_scroll": "SAPPHIRE_POWER_SCROLL",
+      "upgrade_level": 5,
+      "uid": "add2f62333ff",
+      "uuid": "c8a5b58a-8737-45ae-9065-add2f62333ff",
+      "ability_scroll": [
+        "IMPLOSION_SCROLL",
+        "SHADOW_WARP_SCROLL",
+        "WITHER_SHIELD_SCROLL"
+      ]
+    }
+  },
+  "itemCreatedAt": "2026-09-21T17:07:59",
+  "reforge": "Heroic",
+  "category": "UNKNOWN",
+  "tier": "MYTHIC",
+  "bin": true,
+  "flatNbt": {
+    "rarity_upgrades": "1",
+    "hpc": "10",
+    "power_ability_scroll": "SAPPHIRE_POWER_SCROLL",
+    "upgrade_level": "5",
+    "uid": "add2f62333ff",
+    "uuid": "c8a5b58a-8737-45ae-9065-add2f62333ff",
+    "ability_scroll": "IMPLOSION_SCROLL SHADOW_WARP_SCROLL WITHER_SHIELD_SCROLL"
+  }
+}

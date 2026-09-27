@@ -1,0 +1,31 @@
+{
+  "id": 885214722,
+  "uuid": "3cfe6eaf3ae6491381afb3db499dcb8f",
+  "tag": "PET_ENDER_DRAGON",
+  "itemName": "[Lvl 100] Ender Dragon",
+  "auctioneerId": "72c3c1a01e1549f6ae019f861b8aea3d",
+  "startingBid": 533333333,
+  "highestBidAmount": 533333333,
+  "start": "2026-09-21T17:16:49",
+  "end": "2026-09-21T18:32:41",
+  "bin": true,
+  "count": 1,
+  "enchantments": [],
+  "shortItemBytes": null,
+  "flattenedNbt": {
+    "type": "ENDER_DRAGON",
+    "active": "False",
+    "exp": "64420353.55000385",
+    "tier": "LEGENDARY",
+    "hideInfo": "False",
+    "heldItem": "DWARF_TURTLE_SHELMET",
+    "candyUsed": "10",
+    "uniqueId": "8883c2ae-8f36-451a-ad24-ca1cd66e3df9",
+    "hideRightClick": "False",
+    "noMove": "False",
+    "petSoulbound": "False",
+    "uid": "c8ee2854cf63",
+    "uuid": "82fcc62c-cf62-4ac2-a286-c8ee2854cf63"
+  },
+  "tier": "LEGENDARY"
+}

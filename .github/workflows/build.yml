@@ -1,0 +1,33 @@
+# Every push: builds the mod + runs its tests; the jar is under the run's Artifacts (Actions tab > Build > the run).
+name: Build
+on:
+  push:
+    branches-ignore: [mod-jar, dev-shots, mc-api, data-dump]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Build mod
+        working-directory: Bazaar-Mod
+        run: bash gradlew build --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mod-jar
+          path: Bazaar-Mod/build/libs/yoav-addons-*[0-9].jar
+      # ponytail: one jar branch, overwritten by every push; add per-branch names if two branches build at once.
+      - name: Put the jar on the mod-jar branch
+        run: |
+          mkdir jar && cp Bazaar-Mod/build/libs/yoav-addons-*[0-9].jar jar/
+          cd jar && git init -q -b mod-jar && git add . \
+            && git -c user.name=ci -c user.email=ci@localhost commit -qm "jar from ${GITHUB_SHA::7} (${GITHUB_REF_NAME})" \
+            && git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" mod-jar

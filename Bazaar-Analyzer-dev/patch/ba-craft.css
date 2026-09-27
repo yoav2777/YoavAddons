@@ -1,0 +1,47 @@
+/* Craft price UI (v12). Loaded after theme-claude.css; uses its tokens. Source: Bazaar-Analyzer-dev/patch/ba-craft.css */
+.ba-cr-tabs{display:inline-flex;gap:2px;padding:2px;border:1px solid var(--color-line);border-radius:8px;background:var(--color-panel)}
+.ba-cr-tabs button{padding:4px 12px;border-radius:6px;font-size:13px;color:var(--color-mute);transition:background .12s,color .12s}
+.ba-cr-tabs button:hover{color:var(--color-ink);background:var(--ba-hover,rgba(255,255,255,.05))}
+.ba-cr-tabs button.on{color:var(--color-accent);background:var(--ba-accent-soft,rgba(217,119,87,.14));box-shadow:inset 0 0 0 1px var(--ba-accent-line,rgba(217,119,87,.45))}
+.ba-cr-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:10px}
+.ba-cr-stat{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:12.5px;padding:5px 10px;border:1px solid var(--color-line);border-radius:8px;background:var(--color-panel)}
+.ba-cr-stat .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--color-mute)}
+.ba-cr-help{cursor:help;text-decoration:underline dotted;text-decoration-color:var(--color-mute);text-underline-offset:3px}
+.ba-cr-num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.ba-cr-pop{position:fixed;z-index:60;pointer-events:none;width:min(780px,calc(100vw - 16px));padding:10px 12px;background:var(--color-panel2);border:1px solid var(--color-line);border-radius:8px;box-shadow:0 12px 32px rgba(0,0,0,.55);font-size:12px;line-height:1.45;color:var(--color-ink)}
+.ba-cr-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.ba-cr-col-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding-bottom:4px;margin-bottom:4px;border-bottom:1px solid var(--color-line)}
+.ba-cr-col-h b{font-weight:600}
+.ba-cr-line{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center}
+.ba-cr-line .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ba-cr-badge{display:inline-block;padding:0 5px;border-radius:4px;font-size:10.5px;font-weight:600;line-height:16px;white-space:nowrap}
+.ba-cr-grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:1100px){.ba-cr-grid2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.ba-cr-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.ba-cr-row{display:grid;grid-template-columns:minmax(0,1fr) 76px 84px 80px 92px;gap:8px;align-items:center;padding:3px 10px;border-top:1px solid var(--color-line);font-size:12.5px}
+.ba-cr-row.head{font-size:11px;color:var(--color-mute);text-transform:uppercase;letter-spacing:.04em;border-top:0}
+.ba-cr-row.click{cursor:pointer}
+.ba-cr-row:not(.head):hover{background:var(--ba-hover,rgba(255,255,255,.04))}
+.ba-cr-row .r{text-align:right}
+.ba-cr-name{display:flex;align-items:center;gap:6px;min-width:0}
+.ba-cr-name .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ba-cr-tog{display:inline-block;width:12px;flex:none;color:var(--color-mute);font-size:10px;text-align:center}
+.ba-cr-note{font-size:11px;color:var(--color-mute);white-space:nowrap}
+.ba-cr-skel{display:block;height:12px;border-radius:4px;background:var(--color-panel2);animation:ba-cr-pulse 1.2s ease-in-out infinite}
+@keyframes ba-cr-pulse{50%{opacity:.45}}
+.ba-cr-btn{padding:3px 10px;border-radius:6px;font-size:12px;color:var(--color-accent);background:var(--ba-accent-soft,rgba(217,119,87,.14))}
+.ba-cr-btn:hover{background:rgba(217,119,87,.26)}
+.ba-cr-btn:disabled{opacity:.5;cursor:default}
+.ba-cr-link{font-size:12px;color:var(--color-mute)}
+.ba-cr-link:hover{color:var(--color-ink)}
+.ba-cr-sel{padding:2px 6px;border-radius:6px;border:1px solid var(--color-line);background:var(--color-panel2);color:var(--color-ink);font-size:12px}
+@media (max-width:640px){
+  .ba-cr-two{grid-template-columns:minmax(0,1fr)}
+  .ba-cr-row{grid-template-columns:minmax(0,1fr) auto auto 64px;gap:6px;padding:3px 6px}
+  .ba-cr-row .ba-cr-note{display:none}
+  .ba-cr-row .unit{display:none}
+}
+
+/* Book Flips tab (parts/40-book-flips.js): classes the prebuilt Tailwind CSS doesn't have */
+.ba-bf-search{width:10rem}
+.ba-bf-bad{border-color:var(--color-down)}

@@ -1,0 +1,123 @@
+{
+ "uuid": "71296ff10d7144af9e8994586b090357",
+ "count": 1,
+ "startingBid": 2080000000,
+ "tag": "DIVAN_DRILL",
+ "itemName": "Glacial Divan's Drill",
+ "start": "2026-09-16T08:03:57",
+ "end": "2026-09-30T08:03:57",
+ "auctioneerId": "f9cfeddbbb1d4a61819db50dcf094e27",
+ "profileId": "15d7090dff634310b9dbc4bfa01115ed",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [
+  {
+   "type": "ultimate_flowstate",
+   "level": 3
+  },
+  {
+   "type": "lapidary",
+   "level": 5
+  },
+  {
+   "type": "experience",
+   "level": 4
+  },
+  {
+   "type": "smelting_touch",
+   "level": 1
+  },
+  {
+   "type": "efficiency",
+   "level": 10
+  },
+  {
+   "type": "fortune",
+   "level": 4
+  },
+  {
+   "type": "compact",
+   "level": 10
+  },
+  {
+   "type": "paleontologist",
+   "level": 5
+  },
+  {
+   "type": "prismatic",
+   "level": 5
+  }
+ ],
+ "nbtData": {
+  "data": {
+   "rarity_upgrades": 1,
+   "polarvoid": 5,
+   "drill_fuel": 100000,
+   "compact_blocks": 17533701,
+   "power_ability_scroll": "AMBER_POWER_SCROLL",
+   "uuid": "2a9d9589-3c94-4639-910d-dec1c3ba28eb",
+   "divan_powder_coating": 1,
+   "drill_part_upgrade_module": "goblin_omelette_spicy",
+   "gems": {
+    "JADE_1": {
+     "uuid": "b307256d-0d42-41a9-849a-fcdb394cc3f5",
+     "quality": "PERFECT"
+    },
+    "JADE_0": {
+     "uuid": "b560eafa-ce68-41ce-ab9c-7a2046fc859e",
+     "quality": "PERFECT"
+    },
+    "MINING_0": "PERFECT",
+    "unlocked_slots": [
+     "JADE_0",
+     "JADE_1",
+     "MINING_0"
+    ],
+    "AMBER_0": {
+     "uuid": "f5eb3018-1a05-4c45-90d0-4a0d19acbcc9",
+     "quality": "PERFECT"
+    },
+    "AMBER_1": {
+     "uuid": "45d9710c-a168-47a6-9fbe-6db4e27682b8",
+     "quality": "PERFECT"
+    },
+    "MINING_0_gem": "JADE"
+   },
+   "drill_part_engine": "sapphire_polished_drill_engine",
+   "uid": "dec1c3ba28eb",
+   "drill_part_fuel_tank": "perfectly_cut_fuel_tank"
+  }
+ },
+ "itemCreatedAt": "2025-07-06T23:08:35",
+ "reforge": "glacial",
+ "category": "UNKNOWN",
+ "tier": "UNKNOWN",
+ "bin": true,
+ "flatNbt": {
+  "rarity_upgrades": "1",
+  "polarvoid": "5",
+  "drill_fuel": "100000",
+  "compact_blocks": "17533701",
+  "power_ability_scroll": "AMBER_POWER_SCROLL",
+  "uuid": "2a9d9589-3c94-4639-910d-dec1c3ba28eb",
+  "divan_powder_coating": "1",
+  "drill_part_upgrade_module": "goblin_omelette_spicy",
+  "MINING_0": "PERFECT",
+  "unlocked_slots": "JADE_0,JADE_1,MINING_0",
+  "MINING_0_gem": "JADE",
+  "drill_part_engine": "sapphire_polished_drill_engine",
+  "uid": "dec1c3ba28eb",
+  "drill_part_fuel_tank": "perfectly_cut_fuel_tank",
+  "JADE_1": "PERFECT",
+  "JADE_1.uuid": "b307256d-0d42-41a9-849a-fcdb394cc3f5",
+  "JADE_0": "PERFECT",
+  "JADE_0.uuid": "b560eafa-ce68-41ce-ab9c-7a2046fc859e",
+  "AMBER_0": "PERFECT",
+  "AMBER_0.uuid": "f5eb3018-1a05-4c45-90d0-4a0d19acbcc9",
+  "AMBER_1": "PERFECT",
+  "AMBER_1.uuid": "45d9710c-a168-47a6-9fbe-6db4e27682b8"
+ }
+}

@@ -1,0 +1,17 @@
+CRIMSON_CHESTPLATE Ancient Crimson Chestplate ✪✪✪✪✪ listed 17,000,000  tier LEGENDARY reforge ancient
+
+== scratch: clean craft n/a + modifiers 4,022,692 = 4,022,692
+  [enchant] growth 5: 1 x ENCHANTMENT_GROWTH_5 table @ 0 = 0
+  [enchant] protection 5: 1 x ENCHANTMENT_PROTECTION_5 table @ 0 = 0
+  [stars] essence CRIMSON: 555 x ESSENCE_CRIMSON bz-order @ 1,115 = 619,047
+  [stars] star items: 9 x HEAVY_PEARL bz-order @ 326,215 = 2,935,936
+  [reforge] stone PRECURSOR_GEAR: 1 x PRECURSOR_GEAR bz-order @ 417,709 = 417,709
+  [reforge] apply cost @LEGENDARY: 50000 x COINS coins @ 1 = 50,000
+
+== easy: clean craft n/a + modifiers 4,647,305 = 4,647,305
+  [enchant] growth 5: 1 x ENCHANTMENT_GROWTH_5 table @ 0 = 0
+  [enchant] protection 5: 1 x ENCHANTMENT_PROTECTION_5 table @ 0 = 0
+  [stars] essence CRIMSON: 555 x ESSENCE_CRIMSON bz-instabuy @ 1,167 = 647,852
+  [stars] star items: 9 x HEAVY_PEARL bz-instabuy @ 380,598 = 3,425,382
+  [reforge] stone PRECURSOR_GEAR: 1 x PRECURSOR_GEAR bz-instabuy @ 524,072 = 524,072
+  [reforge] apply cost @LEGENDARY: 50000 x COINS coins @ 1 = 50,000

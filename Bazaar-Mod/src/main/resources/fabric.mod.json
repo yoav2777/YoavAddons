@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "bazaaranalyzer",
+	"version": "${version}",
+	"name": "Yoav Addons",
+	"description": "Hypixel SkyBlock tools and companion for the Bazaar Analyzer site: logs your Bazaar and Auction House trades locally, shows price graphs in game.",
+	"authors": [
+		"yoav3577"
+	],
+	"license": "MIT",
+	"icon": "assets/bazaaranalyzer/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.yoav3577.bazaaranalyzer.BazaarClient"
+		],
+		"modmenu": [
+			"com.yoav3577.bazaaranalyzer.ModMenuEntry"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

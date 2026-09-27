@@ -1,0 +1,80 @@
+{
+ "id": 884576247,
+ "uuid": "dc85e2d0e7324557b2af1c9cf10a7a1d",
+ "tag": "TERMINATOR",
+ "itemName": "Hasty Terminator ✪✪✪✪✪➊",
+ "auctioneerId": "2db5b901f7ad420f9e84fce4242722a8",
+ "startingBid": 655000000,
+ "highestBidAmount": 655000000,
+ "start": "2026-09-18T12:49:03",
+ "end": "2026-09-21T17:57:20",
+ "bin": true,
+ "count": 1,
+ "enchantments": [
+  {
+   "type": "impaling",
+   "level": 3
+  },
+  {
+   "type": "chance",
+   "level": 4
+  },
+  {
+   "type": "aiming",
+   "level": 5
+  },
+  {
+   "type": "ultimate_soul_eater",
+   "level": 5
+  },
+  {
+   "type": "tabasco",
+   "level": 3
+  },
+  {
+   "type": "infinite_quiver",
+   "level": 10
+  },
+  {
+   "type": "piercing",
+   "level": 1
+  },
+  {
+   "type": "snipe",
+   "level": 3
+  },
+  {
+   "type": "flame",
+   "level": 2
+  },
+  {
+   "type": "toxophilite",
+   "level": 10
+  },
+  {
+   "type": "power",
+   "level": 6
+  },
+  {
+   "type": "cubism",
+   "level": 5
+  },
+  {
+   "type": "overload",
+   "level": 5
+  }
+ ],
+ "shortItemBytes": null,
+ "flattenedNbt": {
+  "rarity_upgrades": "1",
+  "stats_book": "16841",
+  "hpc": "15",
+  "dungeon_item": "1",
+  "art_of_war_count": "1",
+  "upgrade_level": "6",
+  "uid": "4bba53bba560",
+  "toxophilite_combat_xp": "5687889.254169828",
+  "uuid": "cd8c0a60-a9b2-43e0-bd54-4bba53bba560"
+ },
+ "tier": "MYTHIC"
+}

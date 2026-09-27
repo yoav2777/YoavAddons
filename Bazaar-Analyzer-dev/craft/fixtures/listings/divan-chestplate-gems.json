@@ -1,0 +1,73 @@
+{
+ "uuid": "1a9ee5001eb1448baf384acd403793d5",
+ "count": 1,
+ "startingBid": 169000000,
+ "tag": "DIVAN_CHESTPLATE",
+ "itemName": "✿ Jaded Chestplate of Divan",
+ "start": "2026-09-16T00:49:01",
+ "end": "2026-09-30T00:49:01",
+ "auctioneerId": "5fd20ec6d2dd40229ccb8a3a7cfb8e44",
+ "profileId": "1429a320379643269335af745629c30f",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [
+  {
+   "type": "growth",
+   "level": 5
+  },
+  {
+   "type": "protection",
+   "level": 5
+  }
+ ],
+ "nbtData": {
+  "data": {
+   "rarity_upgrades": 1,
+   "gems": {
+    "JADE_1": "PERFECT",
+    "JADE_0": {
+     "uuid": "1cb873af-c61c-49a7-b085-958452fbc4a8",
+     "quality": "PERFECT"
+    },
+    "unlocked_slots": [
+     "AMBER_0",
+     "AMBER_1",
+     "JADE_0",
+     "JADE_1",
+     "TOPAZ_0"
+    ],
+    "AMBER_0": "PERFECT",
+    "AMBER_1": "PERFECT",
+    "TOPAZ_0": "PERFECT"
+   },
+   "uid": "94f6e1d19f02",
+   "uuid": "19a9a9d8-ff92-40ea-9832-94f6e1d19f02",
+   "dye_item": "DYE_LAVA",
+   "color": "250:187:6",
+   "cc": 1
+  }
+ },
+ "itemCreatedAt": "2025-03-16T06:19:32",
+ "reforge": "jaded",
+ "category": "ARMOR",
+ "tier": "MYTHIC",
+ "bin": true,
+ "flatNbt": {
+  "rarity_upgrades": "1",
+  "JADE_1": "PERFECT",
+  "unlocked_slots": "AMBER_0,AMBER_1,JADE_0,JADE_1,TOPAZ_0",
+  "AMBER_0": "PERFECT",
+  "AMBER_1": "PERFECT",
+  "TOPAZ_0": "PERFECT",
+  "uid": "94f6e1d19f02",
+  "uuid": "19a9a9d8-ff92-40ea-9832-94f6e1d19f02",
+  "dye_item": "DYE_LAVA",
+  "color": "250:187:6",
+  "cc": "1",
+  "JADE_0": "PERFECT",
+  "JADE_0.uuid": "1cb873af-c61c-49a7-b085-958452fbc4a8"
+ }
+}

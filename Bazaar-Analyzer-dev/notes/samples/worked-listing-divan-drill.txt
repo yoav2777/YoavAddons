@@ -1,0 +1,67 @@
+DIVAN_DRILL Glacial Divan's Drill listed 2,080,000,000  tier UNKNOWN reforge glacial
+
+== scratch: clean craft 1,568,427,721 + modifiers 333,931,774 = 1,902,359,494
+  [enchant] ultimate_flowstate 3: 2 x ENCHANTMENT_ULTIMATE_FLOWSTATE_2 bz-order+anvil @ 2,450 = 4,900
+  [enchant] lapidary 5: 2 x ENCHANTMENT_LAPIDARY_4 bz-order+anvil @ 320,503 = 641,005
+  [enchant] experience 4: 1 x ENCHANTMENT_EXPERIENCE_4 bz-order @ 373,830 = 373,830
+  [enchant] smelting_touch 1: 1 x ENCHANTMENT_SMELTING_TOUCH_1 table @ 0 = 0
+  [enchant] efficiency 10: 5 x SIL_EX craft @ 895,795 = 4,478,976  (Efficiency 6+ = Silex per level (1-5 from table))
+  [enchant] fortune 4: 1 x ENCHANTMENT_FORTUNE_4 bz-order @ 18,884 = 18,884
+  [enchant] compact 10: 1 x ENCHANTMENT_COMPACT_1 bz-order @ 3,938,555 = 3,938,555  (levels by use; priced as level 1)
+  [enchant] paleontologist 5: 2 x ENCHANTMENT_PALEONTOLOGIST_4 bz-order+anvil @ 10,003 = 20,005
+  [enchant] prismatic 5: 1 x ENCHANTMENT_PRISMATIC_5 no market (counted as 0) @ 0 = 0
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-order @ 10,501,551 = 10,501,551
+  [upgrade] polarvoid: 5 x POLARVOID_BOOK bz-order @ 2,209,013 = 11,045,065
+  [upgrade] divan_powder_coating: 1 x DIVAN_POWDER_COATING forge @ 57,753,892 = 57,753,892
+  [scroll] AMBER_POWER_SCROLL: 1 x AMBER_POWER_SCROLL craft @ 244,736 = 244,736
+  [gem-slot] JADE_0 unlock coins: 50000 x COINS coins @ 1 = 50,000
+  [gem-slot] JADE_0 unlock: 20 x FINE_JADE_GEM craft @ 16,640 = 332,800
+  [gem-slot] JADE_1 unlock coins: 100000 x COINS coins @ 1 = 100,000
+  [gem-slot] JADE_1 unlock: 40 x FINE_JADE_GEM craft @ 16,640 = 665,600
+  [gem-slot] MINING_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_JADE_GEM craft @ 1,331,200 = 1,331,200
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_AMBER_GEM craft @ 1,177,600 = 1,177,600
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_TOPAZ_GEM craft @ 1,433,600 = 1,433,600
+  [gem] MINING_0: 1 x PERFECT_JADE_GEM bz-order @ 14,420,070 = 14,420,070
+  [gem] JADE_1: 1 x PERFECT_JADE_GEM bz-order @ 14,420,070 = 14,420,070
+  [gem] JADE_0: 1 x PERFECT_JADE_GEM bz-order @ 14,420,070 = 14,420,070
+  [gem] AMBER_0: 1 x PERFECT_AMBER_GEM bz-order @ 15,054,582 = 15,054,582
+  [gem] AMBER_1: 1 x PERFECT_AMBER_GEM bz-order @ 15,054,582 = 15,054,582
+  [drill] drill_part_engine: 1 x SAPPHIRE_POLISHED_DRILL_ENGINE forge @ 96,258,961 = 96,258,961
+  [drill] drill_part_fuel_tank: 1 x PERFECTLY_CUT_FUEL_TANK forge @ 64,407,954 = 64,407,954
+  [drill] drill_part_upgrade_module: 1 x GOBLIN_OMELETTE_SPICY forge @ 3,733,283 = 3,733,283
+  [reforge] stone FRIGID_HUSK: 1 x FRIGID_HUSK bz-order @ 1,000,001 = 1,000,001
+  [reforge] apply cost @DIVINE: 800000 x COINS coins @ 1 = 800,000
+
+== easy: clean craft 1,777,000,000 + modifiers 463,919,174 = 2,240,919,174
+  [enchant] ultimate_flowstate 3: 2 x ENCHANTMENT_ULTIMATE_FLOWSTATE_2 bz-instabuy+anvil @ 29,999 = 59,997
+  [enchant] lapidary 5: 1 x ENCHANTMENT_LAPIDARY_5 bz-instabuy @ 4,999,997 = 4,999,997
+  [enchant] experience 4: 1 x ENCHANTMENT_EXPERIENCE_4 bz-instabuy @ 470,815 = 470,815
+  [enchant] smelting_touch 1: 1 x ENCHANTMENT_SMELTING_TOUCH_1 table @ 0 = 0
+  [enchant] efficiency 10: 5 x SIL_EX bz-instabuy @ 3,032,991 = 15,164,957  (Efficiency 6+ = Silex per level (1-5 from table))
+  [enchant] fortune 4: 1 x ENCHANTMENT_FORTUNE_4 bz-instabuy @ 116,181 = 116,181
+  [enchant] compact 10: 1 x ENCHANTMENT_COMPACT_1 bz-instabuy @ 4,481,525 = 4,481,525  (levels by use; priced as level 1)
+  [enchant] paleontologist 5: 1 x ENCHANTMENT_PALEONTOLOGIST_5 bz-instabuy @ 964,991 = 964,991
+  [enchant] prismatic 5: 1 x ENCHANTMENT_PRISMATIC_5 no market (counted as 0) @ 0 = 0
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-instabuy @ 10,699,996 = 10,699,996
+  [upgrade] polarvoid: 5 x POLARVOID_BOOK bz-instabuy @ 2,849,711 = 14,248,553
+  [upgrade] divan_powder_coating: 1 x DIVAN_POWDER_COATING bz-instabuy @ 67,199,998 = 67,199,998
+  [scroll] AMBER_POWER_SCROLL: 1 x AMBER_POWER_SCROLL lbin @ 1,200,000 = 1,200,000
+  [gem-slot] JADE_0 unlock coins: 50000 x COINS coins @ 1 = 50,000
+  [gem-slot] JADE_0 unlock: 20 x FINE_JADE_GEM bz-instabuy @ 26,676 = 533,522
+  [gem-slot] JADE_1 unlock coins: 100000 x COINS coins @ 1 = 100,000
+  [gem-slot] JADE_1 unlock: 40 x FINE_JADE_GEM bz-instabuy @ 26,676 = 1,067,044
+  [gem-slot] MINING_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_JADE_GEM bz-instabuy @ 2,462,437 = 2,462,437
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_AMBER_GEM bz-instabuy @ 2,463,500 = 2,463,500
+  [gem-slot] MINING_0 unlock: 1 x FLAWLESS_TOPAZ_GEM bz-instabuy @ 2,749,997 = 2,749,997
+  [gem] MINING_0: 1 x PERFECT_JADE_GEM bz-instabuy @ 14,942,002 = 14,942,002
+  [gem] JADE_1: 1 x PERFECT_JADE_GEM bz-instabuy @ 14,942,002 = 14,942,002
+  [gem] JADE_0: 1 x PERFECT_JADE_GEM bz-instabuy @ 14,942,002 = 14,942,002
+  [gem] AMBER_0: 1 x PERFECT_AMBER_GEM bz-instabuy @ 15,820,348 = 15,820,348
+  [gem] AMBER_1: 1 x PERFECT_AMBER_GEM bz-instabuy @ 15,820,348 = 15,820,348
+  [drill] drill_part_engine: 1 x SAPPHIRE_POLISHED_DRILL_ENGINE lbin @ 128,000,000 = 128,000,000
+  [drill] drill_part_fuel_tank: 1 x PERFECTLY_CUT_FUEL_TANK lbin @ 111,700,000 = 111,700,000
+  [drill] drill_part_upgrade_module: 1 x GOBLIN_OMELETTE_SPICY lbin @ 7,769,000 = 7,769,000
+  [reforge] stone FRIGID_HUSK: 1 x FRIGID_HUSK bz-instabuy @ 9,899,960 = 9,899,960
+  [reforge] apply cost @DIVINE: 800000 x COINS coins @ 1 = 800,000

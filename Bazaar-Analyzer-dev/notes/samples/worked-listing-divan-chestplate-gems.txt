@@ -1,0 +1,37 @@
+DIVAN_CHESTPLATE ✿ Jaded Chestplate of Divan listed 169,000,000  tier MYTHIC reforge jaded
+
+== scratch: clean craft 14,708,947 + modifiers 139,169,053 = 153,878,000
+  [enchant] growth 5: 1 x ENCHANTMENT_GROWTH_5 table @ 0 = 0
+  [enchant] protection 5: 1 x ENCHANTMENT_PROTECTION_5 table @ 0 = 0
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-order @ 10,501,551 = 10,501,551
+  [gem-slot] AMBER_0 unlock: 1 x GEMSTONE_CHAMBER forge @ 6,384,036 = 6,384,036
+  [gem-slot] AMBER_1 unlock: 1 x GEMSTONE_CHAMBER forge @ 6,384,036 = 6,384,036
+  [gem-slot] JADE_0 unlock: 1 x GEMSTONE_CHAMBER forge @ 6,384,036 = 6,384,036
+  [gem-slot] JADE_1 unlock: 1 x GEMSTONE_CHAMBER forge @ 6,384,036 = 6,384,036
+  [gem-slot] TOPAZ_0 unlock: 1 x GEMSTONE_CHAMBER forge @ 6,384,036 = 6,384,036
+  [gem] JADE_1: 1 x PERFECT_JADE_GEM bz-order @ 14,420,070 = 14,420,070
+  [gem] AMBER_0: 1 x PERFECT_AMBER_GEM bz-order @ 15,054,582 = 15,054,582
+  [gem] AMBER_1: 1 x PERFECT_AMBER_GEM bz-order @ 15,054,582 = 15,054,582
+  [gem] TOPAZ_0: 1 x PERFECT_TOPAZ_GEM bz-order @ 16,000,002 = 16,000,002
+  [gem] JADE_0: 1 x PERFECT_JADE_GEM bz-order @ 14,420,070 = 14,420,070
+  [cosmetic] dye: 1 x DYE_LAVA lbin @ 18,600,000 = 18,600,000
+  [reforge] stone JADERALD: 1 x JADERALD bz-order @ 2,598,016 = 2,598,016
+  [reforge] apply cost @MYTHIC: 600000 x COINS coins @ 1 = 600,000
+
+== easy: clean craft 23,282,465 + modifiers 151,989,350 = 175,271,815
+  [enchant] growth 5: 1 x ENCHANTMENT_GROWTH_5 table @ 0 = 0
+  [enchant] protection 5: 1 x ENCHANTMENT_PROTECTION_5 table @ 0 = 0
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-instabuy @ 10,699,996 = 10,699,996
+  [gem-slot] AMBER_0 unlock: 1 x GEMSTONE_CHAMBER lbin @ 8,100,000 = 8,100,000
+  [gem-slot] AMBER_1 unlock: 1 x GEMSTONE_CHAMBER lbin @ 8,100,000 = 8,100,000
+  [gem-slot] JADE_0 unlock: 1 x GEMSTONE_CHAMBER lbin @ 8,100,000 = 8,100,000
+  [gem-slot] JADE_1 unlock: 1 x GEMSTONE_CHAMBER lbin @ 8,100,000 = 8,100,000
+  [gem-slot] TOPAZ_0 unlock: 1 x GEMSTONE_CHAMBER lbin @ 8,100,000 = 8,100,000
+  [gem] JADE_1: 1 x PERFECT_JADE_GEM bz-instabuy @ 14,942,002 = 14,942,002
+  [gem] AMBER_0: 1 x PERFECT_AMBER_GEM bz-instabuy @ 15,820,348 = 15,820,348
+  [gem] AMBER_1: 1 x PERFECT_AMBER_GEM bz-instabuy @ 15,820,348 = 15,820,348
+  [gem] TOPAZ_0: 1 x PERFECT_TOPAZ_GEM bz-instabuy @ 16,900,639 = 16,900,639
+  [gem] JADE_0: 1 x PERFECT_JADE_GEM bz-instabuy @ 14,942,002 = 14,942,002
+  [cosmetic] dye: 1 x DYE_LAVA lbin @ 18,600,000 = 18,600,000
+  [reforge] stone JADERALD: 1 x JADERALD bz-instabuy @ 3,164,014 = 3,164,014
+  [reforge] apply cost @MYTHIC: 600000 x COINS coins @ 1 = 600,000

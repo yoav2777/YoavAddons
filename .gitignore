@@ -1,0 +1,42 @@
+# --- Build output / dependencies (all rebuildable) ---
+node_modules/
+dist/
+release/
+**/build/
+**/.gradle/
+*.class
+.idea/
+.vscode/
+*.log
+
+# --- Mod ---
+# dev client world, options, logs, screenshots and mods (DevHarness writes here)
+Bazaar-Mod/run/
+# decompile of 0.5.0 (reference only; tools/vineflower.jar can redo it)
+Bazaar-Mod/decompiled/
+
+# --- Website dev folder ---
+# ~86 MB / 18k saved API responses (network cache for craftSmoke / record scripts; they refetch)
+Bazaar-Analyzer-dev/notes/cache/
+# screenshots from past checks
+Bazaar-Analyzer-dev/notes/shots/
+Bazaar-Analyzer-dev/notes/screens/
+Bazaar-Analyzer-dev/notes/review-shots/
+# duplicate of Bazaar-Analyzer-dev/patch/base/index-KsTXbicp-v11.js
+Bazaar-Analyzer-dev/patch/prev-bundles/
+# third-party decompiler + Minecraft option backups + run logs
+Bazaar-Analyzer-dev/tools/*.jar
+Bazaar-Analyzer-dev/tools/options*.txt
+
+# --- misc ---
+*.local
+.DS_Store
+Thumbs.db
+
+# --- AH tracker output ---
+tracker/ah-log.jsonl
+
+# --- Local AI assistant notes (kept off GitHub; the dev notes live in Bazaar-Analyzer-dev/notes/dev-guide.md) ---
+CLAUDE.md
+CLAUDE.local.md
+.claude/

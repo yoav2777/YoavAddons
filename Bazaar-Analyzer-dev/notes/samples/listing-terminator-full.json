@@ -1,0 +1,101 @@
+{
+ "uuid": "92543e910cab4e3684ab60078fdb32fb",
+ "count": 1,
+ "startingBid": 809000000,
+ "tag": "TERMINATOR",
+ "itemName": "Precise Terminator ✪✪✪✪✪➎",
+ "start": "2026-09-21T12:23:28",
+ "end": "2026-10-05T12:23:28",
+ "auctioneerId": "d680cff7dc6943b888776073483ac398",
+ "profileId": "b3e28b494abe47c4973fdb557db4b26c",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [
+  {
+   "type": "overload",
+   "level": 5
+  },
+  {
+   "type": "impaling",
+   "level": 3
+  },
+  {
+   "type": "chance",
+   "level": 4
+  },
+  {
+   "type": "aiming",
+   "level": 5
+  },
+  {
+   "type": "ultimate_soul_eater",
+   "level": 5
+  },
+  {
+   "type": "dragon_hunter",
+   "level": 5
+  },
+  {
+   "type": "tabasco",
+   "level": 3
+  },
+  {
+   "type": "infinite_quiver",
+   "level": 10
+  },
+  {
+   "type": "piercing",
+   "level": 1
+  },
+  {
+   "type": "snipe",
+   "level": 3
+  },
+  {
+   "type": "flame",
+   "level": 2
+  },
+  {
+   "type": "toxophilite",
+   "level": 10
+  },
+  {
+   "type": "power",
+   "level": 6
+  },
+  {
+   "type": "cubism",
+   "level": 5
+  }
+ ],
+ "nbtData": {
+  "data": {
+   "rarity_upgrades": 1,
+   "stats_book": 108127,
+   "hpc": 15,
+   "dungeon_item": 1,
+   "upgrade_level": 10,
+   "uid": "67fa18f70a7c",
+   "toxophilite_combat_xp": 15593377.691198355,
+   "uuid": "da0688e6-c0d6-4139-9b8b-67fa18f70a7c"
+  }
+ },
+ "itemCreatedAt": "2024-02-11T13:25:59",
+ "reforge": "Precise",
+ "category": "WEAPON",
+ "tier": "MYTHIC",
+ "bin": true,
+ "flatNbt": {
+  "rarity_upgrades": "1",
+  "stats_book": "108127",
+  "hpc": "15",
+  "dungeon_item": "1",
+  "upgrade_level": "10",
+  "uid": "67fa18f70a7c",
+  "toxophilite_combat_xp": "15593377.691198355",
+  "uuid": "da0688e6-c0d6-4139-9b8b-67fa18f70a7c"
+ }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "uuid": "3544c98d9b41493da4d4accd7a4589ed",
+    "count": 1,
+    "startingBid": 504000000,
+    "tag": "HYPERION",
+    "itemName": "Hyperion",
+    "start": "2026-09-21T18:45:26",
+    "end": "2026-10-05T18:45:26",
+    "auctioneerId": "05f2040cd7d7451ca1aa9e8afae723f4",
+    "profileId": "61fb37e59d66406eb2944059069d2ba9",
+    "coop": null,
+    "coopMembers": null,
+    "highestBidAmount": 0,
+    "bids": null,
+    "anvilUses": 0,
+    "enchantments": [],
+    "nbtData": {
+      "data": {
+        "uid": "54e91953abbb",
+        "uuid": "157668fd-2407-4b1f-bcb4-54e91953abbb"
+      }
+    },
+    "itemCreatedAt": "2026-09-19T23:00:35",
+    "reforge": "None",
+    "category": "WEAPON",
+    "tier": "LEGENDARY",
+    "bin": true,
+    "flatNbt": {
+      "uid": "54e91953abbb",
+      "uuid": "157668fd-2407-4b1f-bcb4-54e91953abbb"
+    }
+  },
+  {
+    "uuid": "6937a2ad1e2a446ebc5a2373e073ab7b",
+    "count": 1,
+    "startingBid": 505000000,
+    "tag": "HYPERION",
+    "itemName": "Hyperion",
+    "start": "2026-09-21T18:40:42",
+    "end": "2026-09-22T00:40:42",
+    "auctioneerId": "76adcf6f36ef44c1835af2949281f1b7",
+    "profileId": "757fc832934e499fa6d03e61ec458046",
+    "coop": null,
+    "coopMembers": null,
+    "highestBidAmount": 0,
+    "bids": null,
+    "anvilUses": 0,
+    "enchantments": [],
+    "nbtData": {
+      "data": {
+        "uid": "e9b67429ace9",
+        "uuid": "f9f0ba02-9d8f-4eec-84c1-e9b67429ace9"
+      }
+    },
+    "itemCreatedAt": "2026-09-21T02:43:41",
+    "reforge": "None",
+    "category": "WEAPON",
+    "tier": "LEGENDARY",
+    "bin": true,
+    "flatNbt": {
+      "uid": "e9b67429ace9",
+      "uuid": "f9f0ba02-9d8f-4eec-84c1-e9b67429ace9"
+    }
+  },
+  {
+    "uuid": "8d488abcd47449b4aecacf1dbe94b3ee",
+    "count": 1,
+    "startingBid": 508000000,
+    "tag": "HYPERION",
+    "itemName": "Hyperion",
+    "start": "2026-09-21T17:39:06",
+    "end": "2026-10-05T17:39:06",
+    "auctioneerId": "05f2040cd7d7451ca1aa9e8afae723f4",
+    "profileId": "61fb37e59d66406eb2944059069d2ba9",
+    "coop": null,
+    "coopMembers": null,
+    "highestBidAmount": 0,
+    "bids": null,
+    "anvilUses": 0,
+    "enchantments": [],
+    "nbtData": {
+      "data": {
+        "uid": "e37356592479",
+        "uuid": "3e554d7f-98c7-48cb-b8b6-e37356592479"
+      }
+    },
+    "itemCreatedAt": "2026-09-21T04:51:56",
+    "reforge": "None",
+    "category": "WEAPON",
+    "tier": "LEGENDARY",
+    "bin": true,
+    "flatNbt": {
+      "uid": "e37356592479",
+      "uuid": "3e554d7f-98c7-48cb-b8b6-e37356592479"
+    }
+  }
+]

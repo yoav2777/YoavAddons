@@ -1,0 +1,45 @@
+{
+ "uuid": "8f99609ff4dc49ac955e8d5b8f50ed03",
+ "count": 1,
+ "startingBid": 144614998,
+ "tag": "PET_ENDER_DRAGON",
+ "itemName": "[Lvl 80] Ender Dragon",
+ "start": "2026-09-21T17:47:45",
+ "end": "2026-09-23T17:47:45",
+ "auctioneerId": "d196b430e06f4245b327f8cbaf81491b",
+ "profileId": "48af38679ad143d7bb22046604cd7fe6",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [],
+ "nbtData": {
+  "data": {
+   "petInfo": "{\"type\":\"ENDER_DRAGON\",\"active\":false,\"exp\":4282683.761409913,\"tier\":\"EPIC\",\"hideInfo\":false,\"heldItem\":\"CROCHET_TIGER_PLUSHIE\",\"heldItemUuid\":\"8b9bee02-64c5-422e-8aaa-3a3b3009beb0\",\"candyUsed\":2,\"uuid\":\"e79f5d56-6cae-428c-8233-2f89b9df38f1\",\"uniqueId\":\"ed5f492d-e406-4603-87fe-4bdd22791628\",\"hideRightClick\":false,\"noMove\":false,\"petSoulbound\":false}",
+   "uid": "2f89b9df38f1",
+   "uuid": "e79f5d56-6cae-428c-8233-2f89b9df38f1"
+  }
+ },
+ "itemCreatedAt": "2026-09-21T10:53:52",
+ "reforge": "None",
+ "category": "UNKNOWN",
+ "tier": "EPIC",
+ "bin": true,
+ "flatNbt": {
+  "type": "ENDER_DRAGON",
+  "active": "False",
+  "exp": "4282683.761409913",
+  "tier": "EPIC",
+  "hideInfo": "False",
+  "heldItem": "CROCHET_TIGER_PLUSHIE",
+  "heldItemUuid": "8b9bee02-64c5-422e-8aaa-3a3b3009beb0",
+  "candyUsed": "2",
+  "uniqueId": "ed5f492d-e406-4603-87fe-4bdd22791628",
+  "hideRightClick": "False",
+  "noMove": "False",
+  "petSoulbound": "False",
+  "uid": "2f89b9df38f1",
+  "uuid": "e79f5d56-6cae-428c-8233-2f89b9df38f1"
+ }
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "id": 885222388,
+    "uuid": "ed97700191ee41c48ea4d4d4ef9fcefb",
+    "tag": "HYPERION",
+    "itemName": "Heroic Hyperion ✪✪✪✪✪",
+    "auctioneerId": "05f2040cd7d7451ca1aa9e8afae723f4",
+    "startingBid": 1148000000,
+    "highestBidAmount": 1148000000,
+    "start": "2026-09-21T18:04:45",
+    "end": "2026-09-21T18:17:15",
+    "bin": true,
+    "count": 1,
+    "enchantments": [
+      {
+        "type": "luck",
+        "level": 6
+      },
+      {
+        "type": "looting",
+        "level": 4
+      },
+      {
+        "type": "ender_slayer",
+        "level": 6
+      },
+      {
+        "type": "scavenger",
+        "level": 5
+      },
+      {
+        "type": "sharpness",
+        "level": 6
+      },
+      {
+        "type": "execute",
+        "level": 5
+      },
+      {
+        "type": "thunderlord",
+        "level": 6
+      },
+      {
+        "type": "smite",
+        "level": 6
+      },
+      {
+        "type": "experience",
+        "level": 4
+      },
+      {
+        "type": "first_strike",
+        "level": 4
+      },
+      {
+        "type": "vampirism",
+        "level": 6
+      },
+      {
+        "type": "ultimate_wise",
+        "level": 5
+      },
+      {
+        "type": "giant_killer",
+        "level": 6
+      },
+      {
+        "type": "venomous",
+        "level": 6
+      },
+      {
+        "type": "magmarizer",
+        "level": 5
+      },
+      {
+        "type": "impaling",
+        "level": 5
+      },
+      {
+        "type": "dragon_hunter",
+        "level": 5
+      },
+      {
+        "type": "cleave",
+        "level": 5
+      },
+      {
+        "type": "lethality",
+        "level": 6
+      },
+      {
+        "type": "bane_of_arthropods",
+        "level": 6
+      },
+      {
+        "type": "critical",
+        "level": 6
+      },
+      {
+        "type": "life_steal",
+        "level": 4
+      },
+      {
+        "type": "fire_aspect",
+        "level": 3
+      },
+      {
+        "type": "cubism",
+        "level": 5
+      }
+    ],
+    "shortItemBytes": null,
+    "flattenedNbt": {
+      "rarity_upgrades": "1",
+      "hpc": "10",
+      "power_ability_scroll": "SAPPHIRE_POWER_SCROLL",
+      "upgrade_level": "5",
+      "uid": "add2f62333ff",
+      "uuid": "c8a5b58a-8737-45ae-9065-add2f62333ff",
+      "ability_scroll": "IMPLOSION_SCROLL SHADOW_WARP_SCROLL WITHER_SHIELD_SCROLL"
+    },
+    "tier": "MYTHIC"
+  },
+  {
+    "id": 885219780,
+    "uuid": "295560f29acd465392d445ad8b9b96d7",
+    "tag": "HYPERION",
+    "itemName": "Heroic Hyperion ✪✪✪✪✪",
+    "auctioneerId": "05f2040cd7d7451ca1aa9e8afae723f4",
+    "startingBid": 1144000000,
+    "highestBidAmount": 1144000000,
+    "start": "2026-09-21T17:48:52",
+    "end": "2026-09-21T17:57:53",
+    "bin": true,
+    "count": 1,
+    "enchantments": [
+      {
+        "type": "vampirism",
+        "level": 6
+      },
+      {
+        "type": "ultimate_wise",
+        "level": 5
+      },
+      {
+        "type": "ender_slayer",
+        "level": 6
+      },
+      {
+        "type": "luck",
+        "level": 6
+      },
+      {
+        "type": "venomous",
+        "level": 6
+      },
+      {
+        "type": "execute",
+        "level": 5
+      },
+      {
+        "type": "scavenger",
+        "level": 5
+      },
+      {
+        "type": "dragon_hunter",
+        "level": 5
+      },
+      {
+        "type": "experience",
+        "level": 4
+      },
+      {
+        "type": "bane_of_arthropods",
+        "level": 6
+      },
+      {
+        "type": "first_strike",
+        "level": 4
+      },
+      {
+        "type": "fire_aspect",
+        "level": 3
+      },
+      {
+        "type": "giant_killer",
+        "level": 6
+      },
+      {
+        "type": "magmarizer",
+        "level": 5
+      },
+      {
+        "type": "looting",
+        "level": 4
+      },
+      {
+        "type": "impaling",
+        "level": 5
+      },
+      {
+        "type": "cleave",
+        "level": 5
+      },
+      {
+        "type": "sharpness",
+        "level": 6
+      },
+      {
+        "type": "lethality",
+        "level": 6
+      },
+      {
+        "type": "critical",
+        "level": 6
+      },
+      {
+        "type": "thunderlord",
+        "level": 6
+      },
+      {
+        "type": "smite",
+        "level": 6
+      },
+      {
+        "type": "cubism",
+        "level": 5
+      },
+      {
+        "type": "life_steal",
+        "level": 4
+      }
+    ],
+    "shortItemBytes": null,
+    "flattenedNbt": {
+      "rarity_upgrades": "1",
+      "hpc": "10",
+      "power_ability_scroll": "SAPPHIRE_POWER_SCROLL",
+      "upgrade_level": "5",
+      "uid": "980bf0804603",
+      "uuid": "d7a92ca1-0a8f-410e-8df2-980bf0804603",
+      "ability_scroll": "IMPLOSION_SCROLL SHADOW_WARP_SCROLL WITHER_SHIELD_SCROLL"
+    },
+    "tier": "MYTHIC"
+  },
+  {
+    "id": 885132132,
+    "uuid": "57b21ba9efea4bf08844c44709a1f423",
+    "tag": "HYPERION",
+    "itemName": "Heroic Hyperion ✪✪✪✪✪",
+    "auctioneerId": "803bb4c4190b4211890bc03296dd7333",
+    "startingBid": 545000000,
+    "highestBidAmount": 545000000,
+    "start": "2026-09-21T04:55:38",
+    "end": "2026-09-21T17:48:00",
+    "bin": true,
+    "count": 1,
+    "enchantments": [
+      {
+        "type": "dragon_hunter",
+        "level": 5
+      },
+      {
+        "type": "giant_killer",
+        "level": 6
+      },
+      {
+        "type": "bane_of_arthropods",
+        "level": 6
+      },
+      {
+        "type": "cleave",
+        "level": 5
+      },
+      {
+        "type": "impaling",
+        "level": 5
+      },
+      {
+        "type": "lethality",
+        "level": 6
+      },
+      {
+        "type": "fire_aspect",
+        "level": 3
+      },
+      {
+        "type": "critical",
+        "level": 6
+      },
+      {
+        "type": "luck",
+        "level": 6
+      },
+      {
+        "type": "looting",
+        "level": 4
+      },
+      {
+        "type": "cubism",
+        "level": 5
+      },
+      {
+        "type": "scavenger",
+        "level": 3
+      },
+      {
+        "type": "sharpness",
+        "level": 5
+      },
+      {
+        "type": "ender_slayer",
+        "level": 6
+      },
+      {
+        "type": "thunderlord",
+        "level": 6
+      },
+      {
+        "type": "smite",
+        "level": 6
+      },
+      {
+        "type": "execute",
+        "level": 5
+      },
+      {
+        "type": "vampirism",
+        "level": 6
+      },
+      {
+        "type": "ultimate_wise",
+        "level": 5
+      },
+      {
+        "type": "experience",
+        "level": 3
+      },
+      {
+        "type": "venomous",
+        "level": 6
+      },
+      {
+        "type": "mana_steal",
+        "level": 3
+      },
+      {
+        "type": "first_strike",
+        "level": 4
+      }
+    ],
+    "shortItemBytes": null,
+    "flattenedNbt": {
+      "rarity_upgrades": "1",
+      "hpc": "10",
+      "upgrade_level": "5",
+      "uid": "f0520c68b9cc",
+      "uuid": "065472a6-f448-4f2b-b549-f0520c68b9cc"
+    },
+    "tier": "MYTHIC"
+  }
+]

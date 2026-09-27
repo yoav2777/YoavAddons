@@ -1,0 +1,47 @@
+{
+  "id": 885225060,
+  "uuid": "63565491384d4310b7dde4378f3367f9",
+  "tag": "POWER_WITHER_CHESTPLATE",
+  "itemName": "Ancient Necron's Chestplate ✪✪✪✪✪➊",
+  "auctioneerId": "e759642449d14f6bbcf07a1957658ca0",
+  "startingBid": 65000000,
+  "highestBidAmount": 65000000,
+  "start": "2026-09-21T18:19:52",
+  "end": "2026-09-21T18:27:00",
+  "bin": true,
+  "count": 1,
+  "enchantments": [
+    {
+      "type": "growth",
+      "level": 6
+    },
+    {
+      "type": "protection",
+      "level": 6
+    },
+    {
+      "type": "true_protection",
+      "level": 1
+    },
+    {
+      "type": "rejuvenate",
+      "level": 5
+    },
+    {
+      "type": "ultimate_legion",
+      "level": 5
+    }
+  ],
+  "shortItemBytes": null,
+  "flattenedNbt": {
+    "rarity_upgrades": "1",
+    "hpc": "15",
+    "unlocked_slots": "COMBAT_0,JASPER_0",
+    "upgrade_level": "6",
+    "uid": "f1437afa98b0",
+    "uuid": "04fc3faa-51e3-4533-a61d-f1437afa98b0",
+    "color": "231:65:60",
+    "cc": "1"
+  },
+  "tier": "MYTHIC"
+}

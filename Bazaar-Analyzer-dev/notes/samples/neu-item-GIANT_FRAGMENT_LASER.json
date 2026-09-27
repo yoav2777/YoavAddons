@@ -1,0 +1,18 @@
+{
+ "itemid": "minecraft:paper",
+ "displayname": "§5L.A.S.R.'s Eye",
+ "damage": 0,
+ "lore": [
+  "§8Precursor Relic",
+  "",
+  "..."
+ ],
+ "internalname": "GIANT_FRAGMENT_LASER",
+ "clickcommand": "",
+ "crafttext": "",
+ "modver": "Firmament 44.2.0-dev+mc26.1.2+g00fd3323",
+ "infoType": "WIKI_URL",
+ "info": [
+  "https://hypixelskyblock.minecraft.wiki/w/L.A.S.R.%27s_Eye"
+ ]
+}

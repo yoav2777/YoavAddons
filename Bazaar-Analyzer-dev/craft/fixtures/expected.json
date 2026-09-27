@@ -1,0 +1,5711 @@
+{
+ "generated": "2026-09-22T15:41:46.346Z",
+ "note": "computed by fixtures/reference.mjs from the fixture files only",
+ "roots": {
+  "HYPERION": {
+   "fromScratch": {
+    "id": "HYPERION",
+    "unitCost": 509326963,
+    "perCraft": 509326963,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "GIANT_FRAGMENT_LASER",
+      "qty": 8,
+      "unitCost": 1461042.1,
+      "total": 11688336.8,
+      "method": "buyOrder",
+      "flagged": false
+     },
+     {
+      "id": "NECRON_BLADE",
+      "qty": 1,
+      "unitCost": 497638626.2,
+      "total": 497638626.2,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "HYPERION",
+    "unitCost": 550785199.2,
+    "perCraft": 550785199.2,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "GIANT_FRAGMENT_LASER",
+      "qty": 8,
+      "unitCost": 1598149.9,
+      "total": 12785199.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "NECRON_BLADE",
+      "qty": 1,
+      "unitCost": 538000000,
+      "total": 538000000,
+      "method": "lowestBin",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 504000000
+  },
+  "TERMINATOR": {
+   "fromScratch": {
+    "id": "TERMINATOR",
+    "unitCost": 401869944.70000005,
+    "perCraft": 401869944.70000005,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "TESSELLATED_ENDER_PEARL",
+      "qty": 8,
+      "unitCost": 2833920,
+      "total": 22671360,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "NULL_BLADE",
+      "qty": 3,
+      "unitCost": 20945682.9,
+      "total": 62837048.699999996,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "TARANTULA_SILK",
+      "qty": 128,
+      "unitCost": 146956.8,
+      "total": 18810470.4,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "JUDGEMENT_CORE",
+      "qty": 1,
+      "unitCost": 174000000,
+      "total": 174000000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "BRAIDED_GRIFFIN_FEATHER",
+      "qty": 4,
+      "unitCost": 30887766.4,
+      "total": 123551065.6,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "TERMINATOR",
+    "unitCost": 471196332.6,
+    "perCraft": 471196332.6,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "TESSELLATED_ENDER_PEARL",
+      "qty": 8,
+      "unitCost": 4535999.7,
+      "total": 36287997.6,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "NULL_BLADE",
+      "qty": 3,
+      "unitCost": 29999999.8,
+      "total": 89999999.4,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "TARANTULA_SILK",
+      "qty": 128,
+      "unitCost": 278971.4,
+      "total": 35708339.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "JUDGEMENT_CORE",
+      "qty": 1,
+      "unitCost": 174000000,
+      "total": 174000000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "BRAIDED_GRIFFIN_FEATHER",
+      "qty": 4,
+      "unitCost": 33799999.1,
+      "total": 135199996.4,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 460000000
+  },
+  "ASPECT_OF_THE_VOID": {
+   "fromScratch": {
+    "id": "ASPECT_OF_THE_VOID",
+    "unitCost": 4016816,
+    "perCraft": 4016816,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "NULL_OVOID",
+      "qty": 32,
+      "unitCost": 124620.8,
+      "total": 3987865.6,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "ASPECT_OF_THE_END",
+      "qty": 1,
+      "unitCost": 28950.4,
+      "total": 28950.4,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "ASPECT_OF_THE_VOID",
+    "unitCost": 5954947.2,
+    "perCraft": 5954947.2,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "NULL_OVOID",
+      "qty": 32,
+      "unitCost": 175154.6,
+      "total": 5604947.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "ASPECT_OF_THE_END",
+      "qty": 1,
+      "unitCost": 350000,
+      "total": 350000,
+      "method": "lowestBin",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 7149000
+  },
+  "JUJU_SHORTBOW": {
+   "fromScratch": {
+    "id": "JUJU_SHORTBOW",
+    "unitCost": 10088960,
+    "perCraft": 10088960,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "ENCHANTED_EYE_OF_ENDER",
+      "qty": 32,
+      "unitCost": 899.2,
+      "total": 28774.4,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_STRING",
+      "qty": 192,
+      "unitCost": 480,
+      "total": 92160,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "NULL_OVOID",
+      "qty": 32,
+      "unitCost": 124620.8,
+      "total": 3987865.6,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_QUARTZ_BLOCK",
+      "qty": 32,
+      "unitCost": 186880,
+      "total": 5980160,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "JUJU_SHORTBOW",
+    "unitCost": 12999936,
+    "perCraft": 12999936,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "ENCHANTED_EYE_OF_ENDER",
+      "qty": 32,
+      "unitCost": 8995.8,
+      "total": 287865.6,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_STRING",
+      "qty": 192,
+      "unitCost": 1250,
+      "total": 240000,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "NULL_OVOID",
+      "qty": 32,
+      "unitCost": 175154.6,
+      "total": 5604947.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_QUARTZ_BLOCK",
+      "qty": 32,
+      "unitCost": 214597.6,
+      "total": 6867123.2,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 14750000
+  },
+  "DIVAN_DRILL": {
+   "fromScratch": {
+    "id": "DIVAN_DRILL",
+    "unitCost": 1568427720.9,
+    "perCraft": 1568427720.9,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "TITANIUM_DRILL_4",
+      "qty": 1,
+      "unitCost": 118427720.9,
+      "total": 118427720.9,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "DIVAN_ALLOY",
+      "qty": 1,
+      "unitCost": 1400000000,
+      "total": 1400000000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000000,
+      "unitCost": 1,
+      "total": 50000000,
+      "method": "coins"
+     }
+    ]
+   },
+   "easy": {
+    "id": "DIVAN_DRILL",
+    "unitCost": 1777000000,
+    "perCraft": 1777000000,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "TITANIUM_DRILL_4",
+      "qty": 1,
+      "unitCost": 327000000,
+      "total": 327000000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "DIVAN_ALLOY",
+      "qty": 1,
+      "unitCost": 1400000000,
+      "total": 1400000000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000000,
+      "unitCost": 1,
+      "total": 50000000,
+      "method": "coins"
+     }
+    ]
+   },
+   "lowestBin": 1885000000
+  },
+  "TITANIUM_DRILL_1": {
+   "fromScratch": {
+    "id": "TITANIUM_DRILL_1",
+    "unitCost": 7622086.4,
+    "perCraft": 7622086.4,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "FUEL_TANK",
+      "qty": 1,
+      "unitCost": 48215.8,
+      "total": 48215.8,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "DRILL_ENGINE",
+      "qty": 1,
+      "unitCost": 1179311.6,
+      "total": 1179311.6,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_MITHRIL",
+      "qty": 8,
+      "unitCost": 197120,
+      "total": 1576960,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_TITANIUM",
+      "qty": 8,
+      "unitCost": 344576,
+      "total": 2756608,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "GOLDEN_PLATE",
+      "qty": 6,
+      "unitCost": 343498.5,
+      "total": 2060991,
+      "method": "forge",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "TITANIUM_DRILL_1",
+    "unitCost": 21799262.5,
+    "perCraft": 21799262.5,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "FUEL_TANK",
+      "qty": 1,
+      "unitCost": 215571.7,
+      "total": 215571.7,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "DRILL_ENGINE",
+      "qty": 1,
+      "unitCost": 3589998.8,
+      "total": 3589998.8,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_MITHRIL",
+      "qty": 8,
+      "unitCost": 507709.4,
+      "total": 4061675.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_TITANIUM",
+      "qty": 8,
+      "unitCost": 625289.4,
+      "total": 5002315.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "GOLDEN_PLATE",
+      "qty": 6,
+      "unitCost": 1488283.6,
+      "total": 8929701.600000001,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 25542643
+  },
+  "ENCHANTED_DIAMOND_BLOCK": {
+   "fromScratch": {
+    "id": "ENCHANTED_DIAMOND_BLOCK",
+    "unitCost": 28160,
+    "perCraft": 28160,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "ENCHANTED_DIAMOND",
+      "qty": 160,
+      "unitCost": 176,
+      "total": 28160,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "ENCHANTED_DIAMOND_BLOCK",
+    "unitCost": 204544,
+    "perCraft": 204544,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "ENCHANTED_DIAMOND",
+      "qty": 160,
+      "unitCost": 1278.4,
+      "total": 204544,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": null
+  },
+  "REFINED_MITHRIL_PICKAXE": {
+   "fromScratch": {
+    "id": "REFINED_MITHRIL_PICKAXE",
+    "unitCost": 627999.2,
+    "perCraft": 627999.2,
+    "output": 1,
+    "method": "npc",
+    "children": [
+     {
+      "id": "MITHRIL_PICKAXE",
+      "qty": 1,
+      "unitCost": 233759.2,
+      "total": 233759.2,
+      "method": "npc",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_MITHRIL",
+      "qty": 2,
+      "unitCost": 197120,
+      "total": 394240,
+      "method": "forge",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "REFINED_MITHRIL_PICKAXE",
+    "unitCost": 1615418.8,
+    "perCraft": 1615418.8,
+    "output": 1,
+    "method": "npc",
+    "children": [
+     {
+      "id": "MITHRIL_PICKAXE",
+      "qty": 1,
+      "unitCost": 600000,
+      "total": 600000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "REFINED_MITHRIL",
+      "qty": 2,
+      "unitCost": 507709.4,
+      "total": 1015418.8,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 2499999
+  },
+  "TARANTULA_SILK": {
+   "fromScratch": {
+    "id": "TARANTULA_SILK",
+    "unitCost": 146956.8,
+    "perCraft": 146956.8,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "TARANTULA_WEB",
+      "qty": 128,
+      "unitCost": 908.1,
+      "total": 116236.8,
+      "method": "buyOrder",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_FLINT",
+      "qty": 32,
+      "unitCost": 960,
+      "total": 30720,
+      "method": "craft",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "TARANTULA_SILK",
+    "unitCost": 260694.40000000002,
+    "perCraft": 260694.40000000002,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "TARANTULA_WEB",
+      "qty": 128,
+      "unitCost": 949.4,
+      "total": 121523.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "ENCHANTED_FLINT",
+      "qty": 32,
+      "unitCost": 4349.1,
+      "total": 139171.2,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": null
+  },
+  "DIVAN_CHESTPLATE": {
+   "fromScratch": {
+    "id": "DIVAN_CHESTPLATE",
+    "unitCost": 14708947.2,
+    "perCraft": 14708947.2,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "GEMSTONE_MIXTURE",
+      "qty": 10,
+      "unitCost": 877056,
+      "total": 8770560,
+      "method": "forge",
+      "flagged": false
+     },
+     {
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unitCost": 1177600,
+      "total": 1177600,
+      "method": "craft",
+      "flagged": false
+     },
+     {
+      "id": "DIVAN_FRAGMENT",
+      "qty": 8,
+      "unitCost": 595098.4,
+      "total": 4760787.2,
+      "method": "buyOrder",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "DIVAN_CHESTPLATE",
+    "unitCost": 23282465.1,
+    "perCraft": 23282465.1,
+    "output": 1,
+    "method": "forge",
+    "children": [
+     {
+      "id": "GEMSTONE_MIXTURE",
+      "qty": 10,
+      "unitCost": 1618763.4,
+      "total": 16187634,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unitCost": 2049999.1,
+      "total": 2049999.1,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "DIVAN_FRAGMENT",
+      "qty": 8,
+      "unitCost": 630604,
+      "total": 5044832,
+      "method": "instaBuy",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 27000000
+  },
+  "POWER_WITHER_CHESTPLATE": {
+   "fromScratch": {
+    "id": "POWER_WITHER_CHESTPLATE",
+    "unitCost": 16955274.4,
+    "perCraft": 16955274.4,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "GIANT_FRAGMENT_DIAMOND",
+      "qty": 8,
+      "unitCost": 769409.3,
+      "total": 6155274.4,
+      "method": "buyOrder",
+      "flagged": false
+     },
+     {
+      "id": "WITHER_CHESTPLATE",
+      "qty": 1,
+      "unitCost": 10800000,
+      "total": 10800000,
+      "method": "lowestBin",
+      "flagged": false
+     }
+    ]
+   },
+   "easy": {
+    "id": "POWER_WITHER_CHESTPLATE",
+    "unitCost": 18039496.8,
+    "perCraft": 18039496.8,
+    "output": 1,
+    "method": "craft",
+    "children": [
+     {
+      "id": "GIANT_FRAGMENT_DIAMOND",
+      "qty": 8,
+      "unitCost": 904937.1,
+      "total": 7239496.8,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "WITHER_CHESTPLATE",
+      "qty": 1,
+      "unitCost": 10800000,
+      "total": 10800000,
+      "method": "lowestBin",
+      "flagged": false
+     }
+    ]
+   },
+   "lowestBin": 19600000
+  },
+  "CRIMSON_CHESTPLATE": {
+   "fromScratch": null,
+   "easy": null,
+   "lowestBin": 1850000
+  },
+  "ENDER_DRAGON;4": {
+   "fromScratch": {
+    "id": "ENDER_DRAGON;4",
+    "unitCost": 553060120,
+    "perCraft": 553060120,
+    "output": 1,
+    "method": "other",
+    "children": [
+     {
+      "id": "ENDER_DRAGON;3",
+      "qty": 1,
+      "unitCost": 142500000,
+      "total": 142500000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "SUMMONING_EYE",
+      "qty": 8,
+      "unitCost": 1320015,
+      "total": 10560120,
+      "method": "buyOrder",
+      "flagged": false
+     },
+     {
+      "id": "SKYBLOCK_COIN",
+      "qty": 400000000,
+      "unitCost": 1,
+      "total": 400000000,
+      "method": "coins"
+     }
+    ]
+   },
+   "easy": {
+    "id": "ENDER_DRAGON;4",
+    "unitCost": 553467411.2,
+    "perCraft": 553467411.2,
+    "output": 1,
+    "method": "other",
+    "children": [
+     {
+      "id": "ENDER_DRAGON;3",
+      "qty": 1,
+      "unitCost": 142500000,
+      "total": 142500000,
+      "method": "lowestBin",
+      "flagged": false
+     },
+     {
+      "id": "SUMMONING_EYE",
+      "qty": 8,
+      "unitCost": 1370926.4,
+      "total": 10967411.2,
+      "method": "instaBuy",
+      "flagged": false
+     },
+     {
+      "id": "SKYBLOCK_COIN",
+      "qty": 400000000,
+      "unitCost": 1,
+      "total": 400000000,
+      "method": "coins"
+     }
+    ]
+   },
+   "lowestBin": 520000000
+  }
+ },
+ "items": {
+  "NECRON_BLADE": {
+   "fromScratch": {
+    "unitCost": 497638626.2,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 538000000,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "GIANT_FRAGMENT_LASER": {
+   "fromScratch": {
+    "unitCost": 1461042.1,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 1598149.9,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "WITHER_CATALYST": {
+   "fromScratch": {
+    "unitCost": 1109942.8,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 1201945.6,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "NECRON_HANDLE": {
+   "fromScratch": {
+    "unitCost": 470999999,
+    "method": "lowestBin"
+   },
+   "easy": {
+    "unitCost": 470999999,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "NULL_OVOID": {
+   "fromScratch": {
+    "unitCost": 124620.8,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 175154.6,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "NULL_BLADE": {
+   "fromScratch": {
+    "unitCost": 20945682.9,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 29999999.8,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "TESSELLATED_ENDER_PEARL": {
+   "fromScratch": {
+    "unitCost": 2833920,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 4535999.7,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "TARANTULA_SILK": {
+   "fromScratch": {
+    "unitCost": 146956.8,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 278971.4,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "ENCHANTED_FLINT": {
+   "fromScratch": {
+    "unitCost": 960,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 4349.1,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "FLINT": {
+   "fromScratch": {
+    "unitCost": 6,
+    "method": "npc"
+   },
+   "easy": {
+    "unitCost": 6,
+    "method": "npc",
+    "flagged": false
+   }
+  },
+  "JUDGEMENT_CORE": {
+   "fromScratch": {
+    "unitCost": 174000000,
+    "method": "lowestBin"
+   },
+   "easy": {
+    "unitCost": 174000000,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "ENCHANTED_DIAMOND": {
+   "fromScratch": {
+    "unitCost": 176,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 1278.4,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "ENCHANTED_DIAMOND_BLOCK": {
+   "fromScratch": {
+    "unitCost": 28160,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 205031.5,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "DIAMOND_BLOCK": {
+   "fromScratch": {
+    "unitCost": 9.9,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 360,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "IRON_INGOT": {
+   "fromScratch": {
+    "unitCost": 0.9,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 5.5,
+    "method": "npc",
+    "flagged": false
+   }
+  },
+  "IRON_BLOCK": {
+   "fromScratch": {
+    "unitCost": 8.1,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 18,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "HOT_POTATO_BOOK": {
+   "fromScratch": {
+    "unitCost": 56323,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 87187.5,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "SAPPHIRE_POWER_SCROLL": {
+   "fromScratch": {
+    "unitCost": 367616,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 1199998,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "RECOMBOBULATOR_3000": {
+   "fromScratch": {
+    "unitCost": 10501550.6,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 10699996,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "FLAWLESS_SAPPHIRE_GEM": {
+   "fromScratch": {
+    "unitCost": 1792000,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 2534982.9,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "PERFECT_SAPPHIRE_GEM": {
+   "fromScratch": {
+    "unitCost": 16344393.5,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 17041010.5,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "TITANIUM_DRILL_4": {
+   "fromScratch": {
+    "unitCost": 118427720.9,
+    "method": "forge"
+   },
+   "easy": {
+    "unitCost": 327000000,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "DIVAN_ALLOY": {
+   "fromScratch": {
+    "unitCost": 1400000000,
+    "method": "lowestBin"
+   },
+   "easy": {
+    "unitCost": 1400000000,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "DIVAN_POWDER_COATING": {
+   "fromScratch": {
+    "unitCost": 57753892,
+    "method": "forge"
+   },
+   "easy": {
+    "unitCost": 67199998,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "MITHRIL_PICKAXE": {
+   "fromScratch": {
+    "unitCost": 233759.2,
+    "method": "npc"
+   },
+   "easy": {
+    "unitCost": 600000,
+    "method": "lowestBin",
+    "flagged": false
+   }
+  },
+  "INK_SACK-4": {
+   "fromScratch": {
+    "unitCost": 3.1,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 5.8,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "ENCHANTED_LAPIS_LAZULI": {
+   "fromScratch": {
+    "unitCost": 496,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 979.7,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "ENCHANTMENT_ULTIMATE_WISE_4": {
+   "fromScratch": {
+    "unitCost": 180000.5,
+    "method": "buyOrder"
+   },
+   "easy": {
+    "unitCost": 1097994.1,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  },
+  "SIL_EX": {
+   "fromScratch": {
+    "unitCost": 895795.2,
+    "method": "craft"
+   },
+   "easy": {
+    "unitCost": 3032991.4,
+    "method": "instaBuy",
+    "flagged": false
+   }
+  }
+ },
+ "listings": {
+  "crimson-chestplate": {
+   "tag": "CRIMSON_CHESTPLATE",
+   "rootId": "CRIMSON_CHESTPLATE",
+   "marketBase": {
+    "fromScratch": 1850000,
+    "easy": 1850000
+   },
+   "base": {
+    "fromScratch": null,
+    "easy": null
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "growth 5",
+      "id": "ENCHANTMENT_GROWTH_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 5",
+      "id": "ENCHANTMENT_PROTECTION_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence CRIMSON",
+      "id": "ESSENCE_CRIMSON",
+      "qty": 555,
+      "unit": 1115.4,
+      "total": 619047,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "star items",
+      "id": "HEAVY_PEARL",
+      "qty": 9,
+      "unit": 326215.1,
+      "total": 2935935.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "PRECURSOR_GEAR",
+      "qty": 1,
+      "unit": 417708.8,
+      "total": 417708.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000,
+      "unit": 1,
+      "total": 50000,
+      "method": "coins"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "growth 5",
+      "id": "ENCHANTMENT_GROWTH_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 5",
+      "id": "ENCHANTMENT_PROTECTION_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence CRIMSON",
+      "id": "ESSENCE_CRIMSON",
+      "qty": 555,
+      "unit": 1167.3,
+      "total": 647851.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "star items",
+      "id": "HEAVY_PEARL",
+      "qty": 9,
+      "unit": 380598,
+      "total": 3425382,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "PRECURSOR_GEAR",
+      "qty": 1,
+      "unit": 524071.8,
+      "total": 524071.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000,
+      "unit": 1,
+      "total": 50000,
+      "method": "coins"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 4022691.6999999997,
+    "easy": 4647305.3
+   },
+   "total": {
+    "fromScratch": 4022691.6999999997,
+    "easy": 4647305.3
+   }
+  },
+  "divan-chestplate-gems": {
+   "tag": "DIVAN_CHESTPLATE",
+   "rootId": "DIVAN_CHESTPLATE",
+   "marketBase": {
+    "fromScratch": 14708947.2,
+    "easy": 27000000
+   },
+   "base": {
+    "fromScratch": 14708947.2,
+    "easy": 23282465.1
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "growth 5",
+      "id": "ENCHANTMENT_GROWTH_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 5",
+      "id": "ENCHANTMENT_PROTECTION_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gemslot",
+      "label": "AMBER_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 6384036,
+      "total": 6384036,
+      "method": "forge"
+     },
+     {
+      "group": "gemslot",
+      "label": "AMBER_1",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 6384036,
+      "total": 6384036,
+      "method": "forge"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 6384036,
+      "total": 6384036,
+      "method": "forge"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 6384036,
+      "total": 6384036,
+      "method": "forge"
+     },
+     {
+      "group": "gemslot",
+      "label": "TOPAZ_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 6384036,
+      "total": 6384036,
+      "method": "forge"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_1",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14420070.4,
+      "total": 14420070.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_0",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15054582.1,
+      "total": 15054582.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_1",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15054582.1,
+      "total": 15054582.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "TOPAZ_0",
+      "id": "PERFECT_TOPAZ_GEM",
+      "qty": 1,
+      "unit": 16000001.9,
+      "total": 16000001.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14420070.4,
+      "total": 14420070.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_LAVA",
+      "qty": 1,
+      "unit": 18600000,
+      "total": 18600000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "JADERALD",
+      "qty": 1,
+      "unit": 2598015.7,
+      "total": 2598015.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 600000,
+      "unit": 1,
+      "total": 600000,
+      "method": "coins"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "growth 5",
+      "id": "ENCHANTMENT_GROWTH_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 5",
+      "id": "ENCHANTMENT_PROTECTION_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "AMBER_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 8100000,
+      "total": 8100000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "AMBER_1",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 8100000,
+      "total": 8100000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 8100000,
+      "total": 8100000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 8100000,
+      "total": 8100000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "TOPAZ_0",
+      "id": "GEMSTONE_CHAMBER",
+      "qty": 1,
+      "unit": 8100000,
+      "total": 8100000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_1",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14942002.3,
+      "total": 14942002.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_0",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15820348.2,
+      "total": 15820348.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_1",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15820348.2,
+      "total": 15820348.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "TOPAZ_0",
+      "id": "PERFECT_TOPAZ_GEM",
+      "qty": 1,
+      "unit": 16900639.2,
+      "total": 16900639.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14942002.3,
+      "total": 14942002.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_LAVA",
+      "qty": 1,
+      "unit": 18600000,
+      "total": 18600000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "JADERALD",
+      "qty": 1,
+      "unit": 3164013.9,
+      "total": 3164013.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 600000,
+      "unit": 1,
+      "total": 600000,
+      "method": "coins"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 139169053.2,
+    "easy": 151989350.1
+   },
+   "total": {
+    "fromScratch": 153878000.39999998,
+    "easy": 175271815.2
+   }
+  },
+  "divan-drill": {
+   "tag": "DIVAN_DRILL",
+   "rootId": "DIVAN_DRILL",
+   "marketBase": {
+    "fromScratch": 1568427720.9,
+    "easy": 1885000000
+   },
+   "base": {
+    "fromScratch": 1568427720.9,
+    "easy": 1777000000
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "ultimate_flowstate 3",
+      "id": "ENCHANTMENT_ULTIMATE_FLOWSTATE_2",
+      "qty": 2,
+      "unit": 2450.2,
+      "total": 4900.4,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "lapidary 5",
+      "id": "ENCHANTMENT_LAPIDARY_5",
+      "qty": 1,
+      "unit": 3500000.7,
+      "total": 3500000.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 4",
+      "id": "ENCHANTMENT_EXPERIENCE_4",
+      "qty": 1,
+      "unit": 373829.7,
+      "total": 373829.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "smelting_touch 1",
+      "id": "ENCHANTMENT_SMELTING_TOUCH_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "efficiency 10",
+      "id": "SIL_EX",
+      "qty": 5,
+      "unit": 895795.2,
+      "total": 4478976,
+      "method": "craft"
+     },
+     {
+      "group": "enchant",
+      "label": "fortune 4",
+      "id": "ENCHANTMENT_FORTUNE_4",
+      "qty": 1,
+      "unit": 18884.4,
+      "total": 18884.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "compact 10",
+      "id": "ENCHANTMENT_COMPACT_1",
+      "qty": 1,
+      "unit": 3938555.1,
+      "total": 3938555.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "paleontologist 5",
+      "id": "ENCHANTMENT_PALEONTOLOGIST_5",
+      "qty": 1,
+      "unit": 400000.5,
+      "total": 400000.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "prismatic 5",
+      "id": "ENCHANTMENT_PRISMATIC_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "polarvoid",
+      "id": "POLARVOID_BOOK",
+      "qty": 5,
+      "unit": 2209013,
+      "total": 11045065,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "divan_powder_coating",
+      "id": "DIVAN_POWDER_COATING",
+      "qty": 1,
+      "unit": 57753892,
+      "total": 57753892,
+      "method": "forge"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "AMBER_POWER_SCROLL",
+      "qty": 1,
+      "unit": 244736,
+      "total": 244736,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000,
+      "unit": 1,
+      "total": 50000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0",
+      "id": "FINE_JADE_GEM",
+      "qty": 20,
+      "unit": 16640,
+      "total": 332800,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 100000,
+      "unit": 1,
+      "total": 100000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1",
+      "id": "FINE_JADE_GEM",
+      "qty": 40,
+      "unit": 16640,
+      "total": 665600,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_JADE_GEM",
+      "qty": 1,
+      "unit": 1331200,
+      "total": 1331200,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_AMBER_GEM",
+      "qty": 1,
+      "unit": 1177600,
+      "total": 1177600,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_TOPAZ_GEM",
+      "qty": 1,
+      "unit": 1433600,
+      "total": 1433600,
+      "method": "craft"
+     },
+     {
+      "group": "gem",
+      "label": "MINING_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14420070.4,
+      "total": 14420070.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_1",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14420070.4,
+      "total": 14420070.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14420070.4,
+      "total": 14420070.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_0",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15054582.1,
+      "total": 15054582.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_1",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15054582.1,
+      "total": 15054582.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_engine",
+      "id": "SAPPHIRE_POLISHED_DRILL_ENGINE",
+      "qty": 1,
+      "unit": 96258961.1,
+      "total": 96258961.1,
+      "method": "forge"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_fuel_tank",
+      "id": "PERFECTLY_CUT_FUEL_TANK",
+      "qty": 1,
+      "unit": 64407953.6,
+      "total": 64407953.6,
+      "method": "forge"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_upgrade_module",
+      "id": "GOBLIN_OMELETTE_SPICY",
+      "qty": 1,
+      "unit": 3733283.2,
+      "total": 3733283.2,
+      "method": "forge"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "FRIGID_HUSK",
+      "qty": 1,
+      "unit": 1000000.6,
+      "total": 1000000.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 800000,
+      "unit": 1,
+      "total": 800000,
+      "method": "coins"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "ultimate_flowstate 3",
+      "id": "ENCHANTMENT_ULTIMATE_FLOWSTATE_3",
+      "qty": 1,
+      "unit": 59999.8,
+      "total": 59999.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "lapidary 5",
+      "id": "ENCHANTMENT_LAPIDARY_5",
+      "qty": 1,
+      "unit": 4999996.5,
+      "total": 4999996.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 4",
+      "id": "ENCHANTMENT_EXPERIENCE_4",
+      "qty": 1,
+      "unit": 470815.4,
+      "total": 470815.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "smelting_touch 1",
+      "id": "ENCHANTMENT_SMELTING_TOUCH_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "efficiency 10",
+      "id": "SIL_EX",
+      "qty": 5,
+      "unit": 3032991.4,
+      "total": 15164957,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "fortune 4",
+      "id": "ENCHANTMENT_FORTUNE_4",
+      "qty": 1,
+      "unit": 116180.6,
+      "total": 116180.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "compact 10",
+      "id": "ENCHANTMENT_COMPACT_1",
+      "qty": 1,
+      "unit": 4481525.2,
+      "total": 4481525.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "paleontologist 5",
+      "id": "ENCHANTMENT_PALEONTOLOGIST_5",
+      "qty": 1,
+      "unit": 964991.4,
+      "total": 964991.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "prismatic 5",
+      "id": "ENCHANTMENT_PRISMATIC_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "polarvoid",
+      "id": "POLARVOID_BOOK",
+      "qty": 5,
+      "unit": 2849710.6,
+      "total": 14248553,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "divan_powder_coating",
+      "id": "DIVAN_POWDER_COATING",
+      "qty": 1,
+      "unit": 67199998,
+      "total": 67199998,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "AMBER_POWER_SCROLL",
+      "qty": 1,
+      "unit": 1200000,
+      "total": 1200000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 50000,
+      "unit": 1,
+      "total": 50000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_0",
+      "id": "FINE_JADE_GEM",
+      "qty": 20,
+      "unit": 26676.1,
+      "total": 533522,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 100000,
+      "unit": 1,
+      "total": 100000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JADE_1",
+      "id": "FINE_JADE_GEM",
+      "qty": 40,
+      "unit": 26676.1,
+      "total": 1067044,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_JADE_GEM",
+      "qty": 1,
+      "unit": 2462437.1,
+      "total": 2462437.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_AMBER_GEM",
+      "qty": 1,
+      "unit": 2463499.9,
+      "total": 2463499.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "MINING_0",
+      "id": "FLAWLESS_TOPAZ_GEM",
+      "qty": 1,
+      "unit": 2749996.9,
+      "total": 2749996.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "MINING_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14942002.3,
+      "total": 14942002.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_1",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14942002.3,
+      "total": 14942002.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "JADE_0",
+      "id": "PERFECT_JADE_GEM",
+      "qty": 1,
+      "unit": 14942002.3,
+      "total": 14942002.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_0",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15820348.2,
+      "total": 15820348.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "AMBER_1",
+      "id": "PERFECT_AMBER_GEM",
+      "qty": 1,
+      "unit": 15820348.2,
+      "total": 15820348.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_engine",
+      "id": "SAPPHIRE_POLISHED_DRILL_ENGINE",
+      "qty": 1,
+      "unit": 128000000,
+      "total": 128000000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_fuel_tank",
+      "id": "PERFECTLY_CUT_FUEL_TANK",
+      "qty": 1,
+      "unit": 111700000,
+      "total": 111700000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "drill",
+      "label": "drill_part_upgrade_module",
+      "id": "GOBLIN_OMELETTE_SPICY",
+      "qty": 1,
+      "unit": 7769000,
+      "total": 7769000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "FRIGID_HUSK",
+      "qty": 1,
+      "unit": 9899960.1,
+      "total": 9899960.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 800000,
+      "unit": 1,
+      "total": 800000,
+      "method": "coins"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 337170764.3,
+    "easy": 463919176.20000005
+   },
+   "total": {
+    "fromScratch": 1905598485.2,
+    "easy": 2240919176.2
+   }
+  },
+  "hyperion-full": {
+   "tag": "HYPERION",
+   "rootId": "HYPERION",
+   "marketBase": {
+    "fromScratch": 504000000,
+    "easy": 504000000
+   },
+   "base": {
+    "fromScratch": 509326963,
+    "easy": 550785199.2
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "luck 6",
+      "id": "ENCHANTMENT_LUCK_6",
+      "qty": 1,
+      "unit": 33836.2,
+      "total": 33836.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "looting 5",
+      "id": "ENCHANTMENT_LOOTING_5",
+      "qty": 1,
+      "unit": 140584658,
+      "total": 140584658,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "critical 6",
+      "id": "ENCHANTMENT_CRITICAL_6",
+      "qty": 1,
+      "unit": 3600,
+      "total": 3600,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "scavenger 5",
+      "id": "ENCHANTMENT_SCAVENGER_5",
+      "qty": 1,
+      "unit": 248752.4,
+      "total": 248752.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "sharpness 6",
+      "id": "ENCHANTMENT_SHARPNESS_6",
+      "qty": 1,
+      "unit": 800000,
+      "total": 800000,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "ender_slayer 6",
+      "id": "ENCHANTMENT_ENDER_SLAYER_6",
+      "qty": 1,
+      "unit": 250001.1,
+      "total": 250001.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "thunderlord 6",
+      "id": "ENCHANTMENT_THUNDERLORD_6",
+      "qty": 1,
+      "unit": 13225.7,
+      "total": 13225.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "smite 7",
+      "id": "ENCHANTMENT_SMITE_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 3",
+      "id": "ENCHANTMENT_EXPERIENCE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "vampirism 6",
+      "id": "ENCHANTMENT_VAMPIRISM_6",
+      "qty": 1,
+      "unit": 1359693.6,
+      "total": 1359693.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_wise 5",
+      "id": "ENCHANTMENT_ULTIMATE_WISE_4",
+      "qty": 2,
+      "unit": 180000.5,
+      "total": 360001,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "first_strike 4",
+      "id": "ENCHANTMENT_FIRST_STRIKE_4",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "venomous 7",
+      "id": "ENCHANTMENT_VENOMOUS_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "prosecute 6",
+      "id": "ENCHANTMENT_PROSECUTE_6",
+      "qty": 1,
+      "unit": 126000001.4,
+      "total": 126000001.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "mana_steal 3",
+      "id": "ENCHANTMENT_MANA_STEAL_3",
+      "qty": 1,
+      "unit": 20159.3,
+      "total": 20159.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "giant_killer 6",
+      "id": "ENCHANTMENT_GIANT_KILLER_6",
+      "qty": 1,
+      "unit": 520003.6,
+      "total": 520003.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "champion 10",
+      "id": "ENCHANTMENT_CHAMPION_1",
+      "qty": 1,
+      "unit": 4000003.9,
+      "total": 4000003.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 5",
+      "id": "ENCHANTMENT_IMPALING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "bane_of_arthropods 7",
+      "id": "ENCHANTMENT_BANE_OF_ARTHROPODS_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "magmarizer 5",
+      "id": "ENCHANTMENT_MAGMARIZER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "lethality 6",
+      "id": "ENCHANTMENT_LETHALITY_6",
+      "qty": 1,
+      "unit": 120006.7,
+      "total": 120006.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "fire_aspect 3",
+      "id": "ENCHANTMENT_FIRE_ASPECT_3",
+      "qty": 1,
+      "unit": 11999,
+      "total": 11999,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cleave 5",
+      "id": "ENCHANTMENT_CLEAVE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 3350,
+      "unit": 2451.6,
+      "total": 8212860,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16072910.2,
+      "total": 16072910.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 18000000.4,
+      "total": 18000000.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 33723386.3,
+      "total": 33723386.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 72794627,
+      "total": 72794627,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 110000000.9,
+      "total": 110000000.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1608002.4,
+      "total": 8040012,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "art_of_war_count",
+      "id": "THE_ART_OF_WAR",
+      "qty": 1,
+      "unit": 11499598,
+      "total": 11499598,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 4290020.5,
+      "total": 4290020.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "IMPLOSION_SCROLL",
+      "id": "IMPLOSION_SCROLL",
+      "qty": 1,
+      "unit": 196444744.4,
+      "total": 196444744.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "SHADOW_WARP_SCROLL",
+      "id": "SHADOW_WARP_SCROLL",
+      "qty": 1,
+      "unit": 184713587.4,
+      "total": 184713587.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "WITHER_SHIELD_SCROLL",
+      "id": "WITHER_SHIELD_SCROLL",
+      "qty": 1,
+      "unit": 180508295.1,
+      "total": 180508295.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "SAPPHIRE_POWER_SCROLL",
+      "qty": 1,
+      "unit": 367616,
+      "total": 367616,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 1,
+      "unit": 3276800,
+      "total": 3276800,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 1792000,
+      "total": 1792000,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unit": 1177600,
+      "total": 1177600,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_AMETHYST_GEM",
+      "qty": 1,
+      "unit": 1484800,
+      "total": 1484800,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "SAPPHIRE_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "SAPPHIRE_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 4,
+      "unit": 1792000,
+      "total": 7168000,
+      "method": "craft"
+     },
+     {
+      "group": "gem",
+      "label": "COMBAT_0",
+      "id": "PERFECT_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 16344393.5,
+      "total": 16344393.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gem",
+      "label": "SAPPHIRE_0",
+      "id": "PERFECT_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 16344393.5,
+      "total": 16344393.5,
+      "method": "buyOrder"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "luck 6",
+      "id": "ENCHANTMENT_LUCK_6",
+      "qty": 1,
+      "unit": 486703.4,
+      "total": 486703.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "looting 5",
+      "id": "ENCHANTMENT_LOOTING_5",
+      "qty": 1,
+      "unit": 150050432.9,
+      "total": 150050432.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "critical 6",
+      "id": "ENCHANTMENT_CRITICAL_6",
+      "qty": 1,
+      "unit": 3600,
+      "total": 3600,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "scavenger 5",
+      "id": "ENCHANTMENT_SCAVENGER_5",
+      "qty": 1,
+      "unit": 698786.4,
+      "total": 698786.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "sharpness 6",
+      "id": "ENCHANTMENT_SHARPNESS_6",
+      "qty": 1,
+      "unit": 999998.6,
+      "total": 999998.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "ender_slayer 6",
+      "id": "ENCHANTMENT_ENDER_SLAYER_6",
+      "qty": 1,
+      "unit": 440025.7,
+      "total": 440025.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "thunderlord 6",
+      "id": "ENCHANTMENT_THUNDERLORD_6",
+      "qty": 1,
+      "unit": 150479.8,
+      "total": 150479.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "smite 7",
+      "id": "ENCHANTMENT_SMITE_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 3",
+      "id": "ENCHANTMENT_EXPERIENCE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "vampirism 6",
+      "id": "ENCHANTMENT_VAMPIRISM_6",
+      "qty": 1,
+      "unit": 2385966.7,
+      "total": 2385966.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_wise 5",
+      "id": "ENCHANTMENT_ULTIMATE_WISE_5",
+      "qty": 1,
+      "unit": 656553.3,
+      "total": 656553.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "first_strike 4",
+      "id": "ENCHANTMENT_FIRST_STRIKE_4",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "venomous 7",
+      "id": "ENCHANTMENT_VENOMOUS_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "prosecute 6",
+      "id": "ENCHANTMENT_PROSECUTE_6",
+      "qty": 1,
+      "unit": 142327551.4,
+      "total": 142327551.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "mana_steal 3",
+      "id": "ENCHANTMENT_MANA_STEAL_3",
+      "qty": 1,
+      "unit": 100273.5,
+      "total": 100273.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "giant_killer 6",
+      "id": "ENCHANTMENT_GIANT_KILLER_6",
+      "qty": 1,
+      "unit": 819061.5,
+      "total": 819061.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "champion 10",
+      "id": "ENCHANTMENT_CHAMPION_1",
+      "qty": 1,
+      "unit": 4809994.1,
+      "total": 4809994.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 5",
+      "id": "ENCHANTMENT_IMPALING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "bane_of_arthropods 7",
+      "id": "ENCHANTMENT_BANE_OF_ARTHROPODS_7",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "magmarizer 5",
+      "id": "ENCHANTMENT_MAGMARIZER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "lethality 6",
+      "id": "ENCHANTMENT_LETHALITY_6",
+      "qty": 1,
+      "unit": 427700.3,
+      "total": 427700.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "fire_aspect 3",
+      "id": "ENCHANTMENT_FIRE_ASPECT_3",
+      "qty": 1,
+      "unit": 11999,
+      "total": 11999,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cleave 5",
+      "id": "ENCHANTMENT_CLEAVE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 3350,
+      "unit": 2509,
+      "total": 8405150,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16749998.7,
+      "total": 16749998.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 19278537.2,
+      "total": 19278537.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 35907898.2,
+      "total": 35907898.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 78047322.1,
+      "total": 78047322.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 119306004.2,
+      "total": 119306004.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1707885.8,
+      "total": 8539429,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "art_of_war_count",
+      "id": "THE_ART_OF_WAR",
+      "qty": 1,
+      "unit": 11909418.1,
+      "total": 11909418.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 8105103.6,
+      "total": 8105103.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "IMPLOSION_SCROLL",
+      "id": "IMPLOSION_SCROLL",
+      "qty": 1,
+      "unit": 201999997.1,
+      "total": 201999997.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "SHADOW_WARP_SCROLL",
+      "id": "SHADOW_WARP_SCROLL",
+      "qty": 1,
+      "unit": 192169505.2,
+      "total": 192169505.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "WITHER_SHIELD_SCROLL",
+      "id": "WITHER_SHIELD_SCROLL",
+      "qty": 1,
+      "unit": 185616342.5,
+      "total": 185616342.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "SAPPHIRE_POWER_SCROLL",
+      "qty": 1,
+      "unit": 1199998,
+      "total": 1199998,
+      "method": "lowestBin"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 1,
+      "unit": 5389368.5,
+      "total": 5389368.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 2534982.9,
+      "total": 2534982.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unit": 2049999.1,
+      "total": 2049999.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_AMETHYST_GEM",
+      "qty": 1,
+      "unit": 2781344.3,
+      "total": 2781344.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "SAPPHIRE_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "SAPPHIRE_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 4,
+      "unit": 2534982.9,
+      "total": 10139931.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "COMBAT_0",
+      "id": "PERFECT_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 17041010.5,
+      "total": 17041010.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "SAPPHIRE_0",
+      "id": "PERFECT_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 17041010.5,
+      "total": 17041010.5,
+      "method": "instaBuy"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 1178146367.6999998,
+    "easy": 1260653348.9
+   },
+   "total": {
+    "fromScratch": 1687473330.6999998,
+    "easy": 1811438548.1000001
+   }
+  },
+  "hyperion-sold": {
+   "tag": "HYPERION",
+   "rootId": "HYPERION",
+   "marketBase": {
+    "fromScratch": 504000000,
+    "easy": 504000000
+   },
+   "base": {
+    "fromScratch": 509326963,
+    "easy": 550785199.2
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "luck 6",
+      "id": "ENCHANTMENT_LUCK_6",
+      "qty": 1,
+      "unit": 33836.2,
+      "total": 33836.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "looting 4",
+      "id": "ENCHANTMENT_LOOTING_4",
+      "qty": 1,
+      "unit": 11261.2,
+      "total": 11261.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "ender_slayer 6",
+      "id": "ENCHANTMENT_ENDER_SLAYER_6",
+      "qty": 1,
+      "unit": 250001.1,
+      "total": 250001.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "scavenger 5",
+      "id": "ENCHANTMENT_SCAVENGER_5",
+      "qty": 1,
+      "unit": 248752.4,
+      "total": 248752.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "sharpness 6",
+      "id": "ENCHANTMENT_SHARPNESS_6",
+      "qty": 1,
+      "unit": 800000,
+      "total": 800000,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "execute 5",
+      "id": "ENCHANTMENT_EXECUTE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "thunderlord 6",
+      "id": "ENCHANTMENT_THUNDERLORD_6",
+      "qty": 1,
+      "unit": 13225.7,
+      "total": 13225.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "smite 6",
+      "id": "ENCHANTMENT_SMITE_6",
+      "qty": 1,
+      "unit": 2622,
+      "total": 2622,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 4",
+      "id": "ENCHANTMENT_EXPERIENCE_4",
+      "qty": 1,
+      "unit": 373829.7,
+      "total": 373829.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "first_strike 4",
+      "id": "ENCHANTMENT_FIRST_STRIKE_4",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "vampirism 6",
+      "id": "ENCHANTMENT_VAMPIRISM_6",
+      "qty": 1,
+      "unit": 1359693.6,
+      "total": 1359693.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_wise 5",
+      "id": "ENCHANTMENT_ULTIMATE_WISE_4",
+      "qty": 2,
+      "unit": 180000.5,
+      "total": 360001,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "giant_killer 6",
+      "id": "ENCHANTMENT_GIANT_KILLER_6",
+      "qty": 1,
+      "unit": 520003.6,
+      "total": 520003.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "venomous 6",
+      "id": "ENCHANTMENT_VENOMOUS_6",
+      "qty": 1,
+      "unit": 197582.6,
+      "total": 197582.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "magmarizer 5",
+      "id": "ENCHANTMENT_MAGMARIZER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 5",
+      "id": "ENCHANTMENT_IMPALING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "cleave 5",
+      "id": "ENCHANTMENT_CLEAVE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "lethality 6",
+      "id": "ENCHANTMENT_LETHALITY_6",
+      "qty": 1,
+      "unit": 120006.7,
+      "total": 120006.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "bane_of_arthropods 6",
+      "id": "ENCHANTMENT_BANE_OF_ARTHROPODS_6",
+      "qty": 1,
+      "unit": 10999.3,
+      "total": 10999.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "critical 6",
+      "id": "ENCHANTMENT_CRITICAL_6",
+      "qty": 1,
+      "unit": 3600,
+      "total": 3600,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "life_steal 4",
+      "id": "ENCHANTMENT_LIFE_STEAL_4",
+      "qty": 1,
+      "unit": 310000.5,
+      "total": 310000.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "fire_aspect 3",
+      "id": "ENCHANTMENT_FIRE_ASPECT_3",
+      "qty": 1,
+      "unit": 11999,
+      "total": 11999,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 3350,
+      "unit": 2451.6,
+      "total": 8212860,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "scroll",
+      "label": "IMPLOSION_SCROLL",
+      "id": "IMPLOSION_SCROLL",
+      "qty": 1,
+      "unit": 196444744.4,
+      "total": 196444744.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "SHADOW_WARP_SCROLL",
+      "id": "SHADOW_WARP_SCROLL",
+      "qty": 1,
+      "unit": 184713587.4,
+      "total": 184713587.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "WITHER_SHIELD_SCROLL",
+      "id": "WITHER_SHIELD_SCROLL",
+      "qty": 1,
+      "unit": 180508295.1,
+      "total": 180508295.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "SAPPHIRE_POWER_SCROLL",
+      "qty": 1,
+      "unit": 367616,
+      "total": 367616,
+      "method": "craft"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "luck 6",
+      "id": "ENCHANTMENT_LUCK_6",
+      "qty": 1,
+      "unit": 486703.4,
+      "total": 486703.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "looting 4",
+      "id": "ENCHANTMENT_LOOTING_4",
+      "qty": 1,
+      "unit": 151796.8,
+      "total": 151796.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "ender_slayer 6",
+      "id": "ENCHANTMENT_ENDER_SLAYER_6",
+      "qty": 1,
+      "unit": 440025.7,
+      "total": 440025.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "scavenger 5",
+      "id": "ENCHANTMENT_SCAVENGER_5",
+      "qty": 1,
+      "unit": 698786.4,
+      "total": 698786.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "sharpness 6",
+      "id": "ENCHANTMENT_SHARPNESS_6",
+      "qty": 1,
+      "unit": 999998.6,
+      "total": 999998.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "execute 5",
+      "id": "ENCHANTMENT_EXECUTE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "thunderlord 6",
+      "id": "ENCHANTMENT_THUNDERLORD_6",
+      "qty": 1,
+      "unit": 150479.8,
+      "total": 150479.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "smite 6",
+      "id": "ENCHANTMENT_SMITE_6",
+      "qty": 1,
+      "unit": 2622,
+      "total": 2622,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "experience 4",
+      "id": "ENCHANTMENT_EXPERIENCE_4",
+      "qty": 1,
+      "unit": 470815.4,
+      "total": 470815.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "first_strike 4",
+      "id": "ENCHANTMENT_FIRST_STRIKE_4",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "vampirism 6",
+      "id": "ENCHANTMENT_VAMPIRISM_6",
+      "qty": 1,
+      "unit": 2385966.7,
+      "total": 2385966.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_wise 5",
+      "id": "ENCHANTMENT_ULTIMATE_WISE_5",
+      "qty": 1,
+      "unit": 656553.3,
+      "total": 656553.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "giant_killer 6",
+      "id": "ENCHANTMENT_GIANT_KILLER_6",
+      "qty": 1,
+      "unit": 819061.5,
+      "total": 819061.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "venomous 6",
+      "id": "ENCHANTMENT_VENOMOUS_6",
+      "qty": 1,
+      "unit": 599995.5,
+      "total": 599995.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "magmarizer 5",
+      "id": "ENCHANTMENT_MAGMARIZER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 5",
+      "id": "ENCHANTMENT_IMPALING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "cleave 5",
+      "id": "ENCHANTMENT_CLEAVE_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "lethality 6",
+      "id": "ENCHANTMENT_LETHALITY_6",
+      "qty": 1,
+      "unit": 427700.3,
+      "total": 427700.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "bane_of_arthropods 6",
+      "id": "ENCHANTMENT_BANE_OF_ARTHROPODS_6",
+      "qty": 1,
+      "unit": 10999.3,
+      "total": 10999.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "critical 6",
+      "id": "ENCHANTMENT_CRITICAL_6",
+      "qty": 1,
+      "unit": 3600,
+      "total": 3600,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "life_steal 4",
+      "id": "ENCHANTMENT_LIFE_STEAL_4",
+      "qty": 1,
+      "unit": 740992.1,
+      "total": 740992.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "fire_aspect 3",
+      "id": "ENCHANTMENT_FIRE_ASPECT_3",
+      "qty": 1,
+      "unit": 11999,
+      "total": 11999,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 3350,
+      "unit": 2509,
+      "total": 8405150,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "IMPLOSION_SCROLL",
+      "id": "IMPLOSION_SCROLL",
+      "qty": 1,
+      "unit": 201999997.1,
+      "total": 201999997.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "SHADOW_WARP_SCROLL",
+      "id": "SHADOW_WARP_SCROLL",
+      "qty": 1,
+      "unit": 192169505.2,
+      "total": 192169505.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "WITHER_SHIELD_SCROLL",
+      "id": "WITHER_SHIELD_SCROLL",
+      "qty": 1,
+      "unit": 185616342.5,
+      "total": 185616342.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "scroll",
+      "label": "power scroll",
+      "id": "SAPPHIRE_POWER_SCROLL",
+      "qty": 1,
+      "unit": 1199998,
+      "total": 1199998,
+      "method": "lowestBin"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 585939298.1,
+    "easy": 610020959.5999999
+   },
+   "total": {
+    "fromScratch": 1095266261.1,
+    "easy": 1160806158.8
+   }
+  },
+  "necron-chestplate": {
+   "tag": "POWER_WITHER_CHESTPLATE",
+   "rootId": "POWER_WITHER_CHESTPLATE",
+   "marketBase": {
+    "fromScratch": 16955274.4,
+    "easy": 19600000
+   },
+   "base": {
+    "fromScratch": 16955274.4,
+    "easy": 18039496.8
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "ultimate_legion 5",
+      "id": "ENCHANTMENT_ULTIMATE_LEGION_4",
+      "qty": 2,
+      "unit": 17200000.1,
+      "total": 34400000.2,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "strong_mana 5",
+      "id": "ENCHANTMENT_STRONG_MANA_5",
+      "qty": 1,
+      "unit": 2378863.5,
+      "total": 2378863.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "growth 6",
+      "id": "ENCHANTMENT_GROWTH_6",
+      "qty": 1,
+      "unit": 2489053.4,
+      "total": 2489053.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 6",
+      "id": "ENCHANTMENT_PROTECTION_6",
+      "qty": 1,
+      "unit": 2810203.9,
+      "total": 2810203.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "true_protection 1",
+      "id": "ENCHANTMENT_TRUE_PROTECTION_1",
+      "qty": 1,
+      "unit": 652186.8,
+      "total": 652186.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "rejuvenate 5",
+      "id": "ENCHANTMENT_REJUVENATE_5",
+      "qty": 1,
+      "unit": 370233.1,
+      "total": 370233.1,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 2250,
+      "unit": 2451.6,
+      "total": 5516100,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16072910.2,
+      "total": 16072910.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 18000000.4,
+      "total": 18000000.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 33723386.3,
+      "total": 33723386.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 72794627,
+      "total": 72794627,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 110000000.9,
+      "total": 110000000.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1608002.4,
+      "total": 8040012,
+      "method": "buyOrder"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 1,
+      "unit": 3276800,
+      "total": 3276800,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 1792000,
+      "total": 1792000,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unit": 1177600,
+      "total": 1177600,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_AMETHYST_GEM",
+      "qty": 1,
+      "unit": 1484800,
+      "total": 1484800,
+      "method": "craft"
+     },
+     {
+      "group": "gemslot",
+      "label": "JASPER_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JASPER_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 2,
+      "unit": 3276800,
+      "total": 6553600,
+      "method": "craft"
+     },
+     {
+      "group": "gem",
+      "label": "JASPER_0",
+      "id": "FINE_JASPER_GEM",
+      "qty": 1,
+      "unit": 40960,
+      "total": 40960,
+      "method": "craft"
+     },
+     {
+      "group": "gem",
+      "label": "COMBAT_0",
+      "id": "FINE_ONYX_GEM",
+      "qty": 1,
+      "unit": 10240,
+      "total": 10240,
+      "method": "craft"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_BLACK_ICE",
+      "qty": 1,
+      "unit": 27777777,
+      "total": 27777777,
+      "method": "lowestBin"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "PRECURSOR_GEAR",
+      "qty": 1,
+      "unit": 417708.8,
+      "total": 417708.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 60000,
+      "unit": 1,
+      "total": 60000,
+      "method": "coins"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "ultimate_legion 5",
+      "id": "ENCHANTMENT_ULTIMATE_LEGION_5",
+      "qty": 1,
+      "unit": 41299996.1,
+      "total": 41299996.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "strong_mana 5",
+      "id": "ENCHANTMENT_STRONG_MANA_5",
+      "qty": 1,
+      "unit": 2685862.6,
+      "total": 2685862.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "growth 6",
+      "id": "ENCHANTMENT_GROWTH_6",
+      "qty": 1,
+      "unit": 2891162.9,
+      "total": 2891162.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "protection 6",
+      "id": "ENCHANTMENT_PROTECTION_6",
+      "qty": 1,
+      "unit": 3421908.2,
+      "total": 3421908.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "true_protection 1",
+      "id": "ENCHANTMENT_TRUE_PROTECTION_1",
+      "qty": 1,
+      "unit": 949989.8,
+      "total": 949989.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "rejuvenate 5",
+      "id": "ENCHANTMENT_REJUVENATE_5",
+      "qty": 1,
+      "unit": 523000,
+      "total": 523000,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "essence WITHER",
+      "id": "ESSENCE_WITHER",
+      "qty": 2250,
+      "unit": 2509,
+      "total": 5645250,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16749998.7,
+      "total": 16749998.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 19278537.2,
+      "total": 19278537.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 35907898.2,
+      "total": 35907898.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 78047322.1,
+      "total": 78047322.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 119306004.2,
+      "total": 119306004.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1707885.8,
+      "total": 8539429,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 1,
+      "unit": 5389368.5,
+      "total": 5389368.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_SAPPHIRE_GEM",
+      "qty": 1,
+      "unit": 2534982.9,
+      "total": 2534982.9,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_RUBY_GEM",
+      "qty": 1,
+      "unit": 2049999.1,
+      "total": 2049999.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "COMBAT_0",
+      "id": "FLAWLESS_AMETHYST_GEM",
+      "qty": 1,
+      "unit": 2781344.3,
+      "total": 2781344.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gemslot",
+      "label": "JASPER_0 coins",
+      "id": "SKYBLOCK_COIN",
+      "qty": 250000,
+      "unit": 1,
+      "total": 250000,
+      "method": "coins"
+     },
+     {
+      "group": "gemslot",
+      "label": "JASPER_0",
+      "id": "FLAWLESS_JASPER_GEM",
+      "qty": 2,
+      "unit": 5389368.5,
+      "total": 10778737,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "JASPER_0",
+      "id": "FINE_JASPER_GEM",
+      "qty": 1,
+      "unit": 66592.2,
+      "total": 66592.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "gem",
+      "label": "COMBAT_0",
+      "id": "FINE_ONYX_GEM",
+      "qty": 1,
+      "unit": 25662.5,
+      "total": 25662.5,
+      "method": "instaBuy"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_BLACK_ICE",
+      "qty": 1,
+      "unit": 27777777,
+      "total": 27777777,
+      "method": "lowestBin"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "PRECURSOR_GEAR",
+      "qty": 1,
+      "unit": 524071.8,
+      "total": 524071.8,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 60000,
+      "unit": 1,
+      "total": 60000,
+      "method": "coins"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 361403844.1000001,
+    "easy": 399306765.3
+   },
+   "total": {
+    "fromScratch": 378359118.50000006,
+    "easy": 417346262.1
+   }
+  },
+  "pet-ender-dragon": {
+   "tag": "PET_ENDER_DRAGON",
+   "rootId": "ENDER_DRAGON;3",
+   "marketBase": {
+    "fromScratch": 142500000,
+    "easy": 142500000
+   },
+   "base": {
+    "fromScratch": null,
+    "easy": null
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "pet",
+      "label": "held item",
+      "id": "CROCHET_TIGER_PLUSHIE",
+      "qty": 1,
+      "unit": 590000,
+      "total": 590000,
+      "method": "lowestBin"
+     }
+    ],
+    "easy": [
+     {
+      "group": "pet",
+      "label": "held item",
+      "id": "CROCHET_TIGER_PLUSHIE",
+      "qty": 1,
+      "unit": 590000,
+      "total": 590000,
+      "method": "lowestBin"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 590000,
+    "easy": 590000
+   },
+   "total": {
+    "fromScratch": 590000,
+    "easy": 590000
+   }
+  },
+  "synthetic-extras": {
+   "tag": "TERMINATOR",
+   "rootId": "TERMINATOR",
+   "marketBase": {
+    "fromScratch": 401869944.70000005,
+    "easy": 460000000
+   },
+   "base": {
+    "fromScratch": 401869944.70000005,
+    "easy": 471196332.6
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 14765428.7,
+      "total": 14765428.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_4",
+      "qty": 2,
+      "unit": 6829378.4,
+      "total": 13658756.8,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 8888904.8,
+      "total": 8888904.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 225001.8,
+      "total": 225001.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 3554455.3,
+      "total": 3554455.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 56602.7,
+      "total": 56602.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4556.3,
+      "total": 9796045,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16072910.2,
+      "total": 16072910.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 18000000.4,
+      "total": 18000000.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 33723386.3,
+      "total": 33723386.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 72794627,
+      "total": 72794627,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 110000000.9,
+      "total": 110000000.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1608002.4,
+      "total": 8040012,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "wood_singularity_count",
+      "id": "WOOD_SINGULARITY",
+      "qty": 1,
+      "unit": 1823.9999999999995,
+      "total": 1823.9999999999995,
+      "method": "other"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 4290020.5,
+      "total": 4290020.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "ethermerge",
+      "id": "ETHERWARP_MERGER",
+      "qty": 1,
+      "unit": 699000,
+      "total": 699000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "upgrade",
+      "label": "ethermerge",
+      "id": "ETHERWARP_CONDUIT",
+      "qty": 1,
+      "unit": 8504115.2,
+      "total": 8504115.2,
+      "method": "craft"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_LAVA",
+      "qty": 1,
+      "unit": 18600000,
+      "total": 18600000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "rune",
+      "label": "RUNE_SOULTWIST",
+      "id": "RUNE-SOULTWIST-3",
+      "qty": 1,
+      "unit": 4640000,
+      "total": 4640000,
+      "method": "lowestBin"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 24653989,
+      "total": 24653989,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_5",
+      "qty": 1,
+      "unit": 17999985.3,
+      "total": 17999985.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 11999958.6,
+      "total": 11999958.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 481430.1,
+      "total": 481430.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 4589000,
+      "total": 4589000,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 113751.7,
+      "total": 113751.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4997.2,
+      "total": 10743980,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16749998.7,
+      "total": 16749998.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 19278537.2,
+      "total": 19278537.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 35907898.2,
+      "total": 35907898.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 78047322.1,
+      "total": 78047322.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 119306004.2,
+      "total": 119306004.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1707885.8,
+      "total": 8539429,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "wood_singularity_count",
+      "id": "WOOD_SINGULARITY",
+      "qty": 1,
+      "unit": 5199999.4,
+      "total": 5199999.4,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 8105103.6,
+      "total": 8105103.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "ethermerge",
+      "id": "ETHERWARP_MERGER",
+      "qty": 1,
+      "unit": 699000,
+      "total": 699000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "upgrade",
+      "label": "ethermerge",
+      "id": "ETHERWARP_CONDUIT",
+      "qty": 1,
+      "unit": 15500000,
+      "total": 15500000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "dye",
+      "label": "dye",
+      "id": "DYE_LAVA",
+      "qty": 1,
+      "unit": 18600000,
+      "total": 18600000,
+      "method": "lowestBin"
+     },
+     {
+      "group": "rune",
+      "label": "RUNE_SOULTWIST",
+      "id": "RUNE-SOULTWIST-3",
+      "qty": 1,
+      "unit": 4640000,
+      "total": 4640000,
+      "method": "lowestBin"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 357538060.90000004,
+    "easy": 412889446.8
+   },
+   "total": {
+    "fromScratch": 759408005.6000001,
+    "easy": 884085779.4000001
+   }
+  },
+  "terminator-full": {
+   "tag": "TERMINATOR",
+   "rootId": "TERMINATOR",
+   "marketBase": {
+    "fromScratch": 401869944.70000005,
+    "easy": 460000000
+   },
+   "base": {
+    "fromScratch": 401869944.70000005,
+    "easy": 471196332.6
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 14765428.7,
+      "total": 14765428.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_4",
+      "qty": 2,
+      "unit": 6829378.4,
+      "total": 13658756.8,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 8888904.8,
+      "total": 8888904.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 225001.8,
+      "total": 225001.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 3554455.3,
+      "total": 3554455.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 56602.7,
+      "total": 56602.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4556.3,
+      "total": 9796045,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16072910.2,
+      "total": 16072910.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 18000000.4,
+      "total": 18000000.4,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 33723386.3,
+      "total": 33723386.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 72794627,
+      "total": 72794627,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 110000000.9,
+      "total": 110000000.9,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1608002.4,
+      "total": 8040012,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 4290020.5,
+      "total": 4290020.5,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "OPTICAL_LENS",
+      "qty": 1,
+      "unit": 5567.3,
+      "total": 5567.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 1200000,
+      "unit": 1,
+      "total": 1200000,
+      "method": "coins"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 24653989,
+      "total": 24653989,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_5",
+      "qty": 1,
+      "unit": 17999985.3,
+      "total": 17999985.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "dragon_hunter 5",
+      "id": "ENCHANTMENT_DRAGON_HUNTER_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 11999958.6,
+      "total": 11999958.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 481430.1,
+      "total": 481430.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 4589000,
+      "total": 4589000,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 113751.7,
+      "total": 113751.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4997.2,
+      "total": 10743980,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16749998.7,
+      "total": 16749998.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 2",
+      "id": "SECOND_MASTER_STAR",
+      "qty": 1,
+      "unit": 19278537.2,
+      "total": 19278537.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 3",
+      "id": "THIRD_MASTER_STAR",
+      "qty": 1,
+      "unit": 35907898.2,
+      "total": 35907898.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 4",
+      "id": "FOURTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 78047322.1,
+      "total": 78047322.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 5",
+      "id": "FIFTH_MASTER_STAR",
+      "qty": 1,
+      "unit": 119306004.2,
+      "total": 119306004.2,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1707885.8,
+      "total": 8539429,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 8105103.6,
+      "total": 8105103.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "stone",
+      "id": "OPTICAL_LENS",
+      "qty": 1,
+      "unit": 100000,
+      "total": 100000,
+      "method": "instaBuy"
+     },
+     {
+      "group": "reforge",
+      "label": "apply",
+      "id": "SKYBLOCK_COIN",
+      "qty": 1200000,
+      "unit": 1,
+      "total": 1200000,
+      "method": "coins"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 326298689.00000006,
+    "easy": 369550447.40000004
+   },
+   "total": {
+    "fromScratch": 728168633.7,
+    "easy": 840746780
+   }
+  },
+  "terminator-sold-aow": {
+   "tag": "TERMINATOR",
+   "rootId": "TERMINATOR",
+   "marketBase": {
+    "fromScratch": 401869944.70000005,
+    "easy": 460000000
+   },
+   "base": {
+    "fromScratch": 401869944.70000005,
+    "easy": 471196332.6
+   },
+   "lines": {
+    "fromScratch": [
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_4",
+      "qty": 2,
+      "unit": 6829378.4,
+      "total": 13658756.8,
+      "method": "buyOrder+anvil"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 8888904.8,
+      "total": 8888904.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 225001.8,
+      "total": 225001.8,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 3554455.3,
+      "total": 3554455.3,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 56602.7,
+      "total": 56602.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 14765428.7,
+      "total": 14765428.7,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4556.3,
+      "total": 9796045,
+      "method": "buyOrder"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16072910.2,
+      "total": 16072910.2,
+      "method": "buyOrder"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10501550.6,
+      "total": 10501550.6,
+      "method": "buyOrder"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 56323,
+      "total": 563230,
+      "method": "craft"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1608002.4,
+      "total": 8040012,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "art_of_war_count",
+      "id": "THE_ART_OF_WAR",
+      "qty": 1,
+      "unit": 11499598,
+      "total": 11499598,
+      "method": "buyOrder"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 4290020.5,
+      "total": 4290020.5,
+      "method": "buyOrder"
+     }
+    ],
+    "easy": [
+     {
+      "group": "enchant",
+      "label": "impaling 3",
+      "id": "ENCHANTMENT_IMPALING_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "chance 4",
+      "id": "ENCHANTMENT_CHANCE_4",
+      "qty": 1,
+      "unit": 162188.7,
+      "total": 162188.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "aiming 5",
+      "id": "ENCHANTMENT_AIMING_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "ultimate_soul_eater 5",
+      "id": "ENCHANTMENT_ULTIMATE_SOUL_EATER_5",
+      "qty": 1,
+      "unit": 17999985.3,
+      "total": 17999985.3,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "tabasco 3",
+      "id": "ENCHANTMENT_TABASCO_3",
+      "qty": 1,
+      "unit": 11999958.6,
+      "total": 11999958.6,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "infinite_quiver 10",
+      "id": "ENCHANTMENT_INFINITE_QUIVER_10",
+      "qty": 1,
+      "unit": 481430.1,
+      "total": 481430.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "piercing 1",
+      "id": "ENCHANTMENT_PIERCING_1",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "snipe 3",
+      "id": "ENCHANTMENT_SNIPE_3",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "flame 2",
+      "id": "ENCHANTMENT_FLAME_2",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "noMarket"
+     },
+     {
+      "group": "enchant",
+      "label": "toxophilite 10",
+      "id": "ENCHANTMENT_TOXOPHILITE_1",
+      "qty": 1,
+      "unit": 4589000,
+      "total": 4589000,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "power 6",
+      "id": "ENCHANTMENT_POWER_6",
+      "qty": 1,
+      "unit": 113751.7,
+      "total": 113751.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "enchant",
+      "label": "cubism 5",
+      "id": "ENCHANTMENT_CUBISM_5",
+      "qty": 1,
+      "unit": 0,
+      "total": 0,
+      "method": "table"
+     },
+     {
+      "group": "enchant",
+      "label": "overload 5",
+      "id": "ENCHANTMENT_OVERLOAD_5",
+      "qty": 1,
+      "unit": 24653989,
+      "total": 24653989,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "essence DRAGON",
+      "id": "ESSENCE_DRAGON",
+      "qty": 2150,
+      "unit": 4997.2,
+      "total": 10743980,
+      "method": "instaBuy"
+     },
+     {
+      "group": "stars",
+      "label": "master star 1",
+      "id": "FIRST_MASTER_STAR",
+      "qty": 1,
+      "unit": 16749998.7,
+      "total": 16749998.7,
+      "method": "instaBuy"
+     },
+     {
+      "group": "recomb",
+      "label": "recomb",
+      "id": "RECOMBOBULATOR_3000",
+      "qty": 1,
+      "unit": 10699996,
+      "total": 10699996,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "hpb",
+      "id": "HOT_POTATO_BOOK",
+      "qty": 10,
+      "unit": 87187.5,
+      "total": 871875,
+      "method": "instaBuy"
+     },
+     {
+      "group": "hpb",
+      "label": "fuming",
+      "id": "FUMING_POTATO_BOOK",
+      "qty": 5,
+      "unit": 1707885.8,
+      "total": 8539429,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "art_of_war_count",
+      "id": "THE_ART_OF_WAR",
+      "qty": 1,
+      "unit": 11909418.1,
+      "total": 11909418.1,
+      "method": "instaBuy"
+     },
+     {
+      "group": "upgrade",
+      "label": "stats_book",
+      "id": "BOOK_OF_STATS",
+      "qty": 1,
+      "unit": 8105103.6,
+      "total": 8105103.6,
+      "method": "instaBuy"
+     }
+    ]
+   },
+   "modifierSum": {
+    "fromScratch": 102074705.1,
+    "easy": 127620103.8
+   },
+   "total": {
+    "fromScratch": 503944649.8000001,
+    "easy": 598816436.4
+   }
+  }
+ },
+ "easyNpcDiff": [
+  {
+   "id": "FLINT",
+   "withNpc": 6,
+   "withoutNpc": 85.3
+  },
+  {
+   "id": "BLAZE_POWDER",
+   "withNpc": 12,
+   "withoutNpc": 20
+  },
+  {
+   "id": "IRON_INGOT",
+   "withNpc": 5.5,
+   "withoutNpc": 30
+  },
+  {
+   "id": "COAL",
+   "withNpc": 4,
+   "withoutNpc": 10
+  },
+  {
+   "id": "REDSTONE",
+   "withNpc": 4,
+   "withoutNpc": 6
+  },
+  {
+   "id": "FRACTURED_MITHRIL_PICKAXE",
+   "withNpc": 10000,
+   "withoutNpc": 149249
+  },
+  {
+   "id": "POTATO_ITEM",
+   "withNpc": 2.3333333333333335,
+   "withoutNpc": 7
+  },
+  {
+   "id": "PORK",
+   "withNpc": 10,
+   "withoutNpc": 40.4
+  },
+  {
+   "id": "LOG-2",
+   "withNpc": 25,
+   "withoutNpc": 44.2
+  },
+  {
+   "id": "LOG_2-1",
+   "withNpc": 25,
+   "withoutNpc": 29.5
+  },
+  {
+   "id": "LOG_2",
+   "withNpc": 25,
+   "withoutNpc": 26.7
+  },
+  {
+   "id": "RABBIT",
+   "withNpc": 10,
+   "withoutNpc": 138.1
+  },
+  {
+   "id": "SLIME_BALL",
+   "withNpc": 14,
+   "withoutNpc": 17.5
+  },
+  {
+   "id": "MUTTON",
+   "withNpc": 10,
+   "withoutNpc": 99.5
+  },
+  {
+   "id": "SULPHUR",
+   "withNpc": 10,
+   "withoutNpc": 67.4
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+POWER_WITHER_CHESTPLATE ✿ Ancient Necron's Chestplate ✪✪✪✪✪➎ listed 289,999,000  tier MYTHIC reforge ancient
+
+== scratch: clean craft 16,955,274 + modifiers 359,949,350 = 376,904,625
+  [enchant] ultimate_legion 5: 2 x ENCHANTMENT_ULTIMATE_LEGION_4 bz-order+anvil @ 17,200,000 = 34,400,000
+  [enchant] strong_mana 5: 2 x ENCHANTMENT_STRONG_MANA_4 bz-order+anvil @ 500,010 = 1,000,020
+  [enchant] growth 6: 1 x ENCHANTMENT_GROWTH_6 bz-order @ 2,489,053 = 2,489,053
+  [enchant] protection 6: 1 x ENCHANTMENT_PROTECTION_6 bz-order @ 2,810,204 = 2,810,204
+  [enchant] true_protection 1: 1 x ENCHANTMENT_TRUE_PROTECTION_1 bz-order @ 652,187 = 652,187
+  [enchant] rejuvenate 5: 2 x ENCHANTMENT_REJUVENATE_4 bz-order+anvil @ 147,292 = 294,583
+  [stars] essence WITHER: 2250 x ESSENCE_WITHER bz-order @ 2,452 = 5,516,100
+  [stars] master star 1: 1 x FIRST_MASTER_STAR bz-order @ 16,072,910 = 16,072,910
+  [stars] master star 2: 1 x SECOND_MASTER_STAR bz-order @ 18,000,000 = 18,000,000
+  [stars] master star 3: 1 x THIRD_MASTER_STAR bz-order @ 33,723,386 = 33,723,386
+  [stars] master star 4: 1 x FOURTH_MASTER_STAR bz-order @ 72,794,627 = 72,794,627
+  [stars] master star 5: 1 x FIFTH_MASTER_STAR bz-order @ 110,000,001 = 110,000,001
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-order @ 10,501,551 = 10,501,551
+  [hpb] hot potato x10: 10 x HOT_POTATO_BOOK craft @ 56,323 = 563,230
+  [hpb] fuming x5: 5 x FUMING_POTATO_BOOK bz-order @ 1,608,002 = 8,040,012
+  [gem-slot] COMBAT_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_JASPER_GEM craft @ 3,276,800 = 3,276,800
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_SAPPHIRE_GEM craft @ 1,792,000 = 1,792,000
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_RUBY_GEM craft @ 1,177,600 = 1,177,600
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_AMETHYST_GEM craft @ 1,484,800 = 1,484,800
+  [gem-slot] JASPER_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] JASPER_0 unlock: 2 x FLAWLESS_JASPER_GEM craft @ 3,276,800 = 6,553,600
+  [gem] JASPER_0: 1 x FINE_JASPER_GEM craft @ 40,960 = 40,960
+  [gem] COMBAT_0: 1 x FINE_ONYX_GEM craft @ 10,240 = 10,240
+  [cosmetic] dye: 1 x DYE_BLACK_ICE lbin @ 27,777,777 = 27,777,777
+  [reforge] stone PRECURSOR_GEAR: 1 x PRECURSOR_GEAR bz-order @ 417,709 = 417,709
+  [reforge] apply cost @MYTHIC: 60000 x COINS coins @ 1 = 60,000
+
+== easy: clean craft 18,039,497 + modifiers 399,306,765 = 417,346,262
+  [enchant] ultimate_legion 5: 1 x ENCHANTMENT_ULTIMATE_LEGION_5 bz-instabuy @ 41,299,996 = 41,299,996
+  [enchant] strong_mana 5: 1 x ENCHANTMENT_STRONG_MANA_5 bz-instabuy @ 2,685,863 = 2,685,863
+  [enchant] growth 6: 1 x ENCHANTMENT_GROWTH_6 bz-instabuy @ 2,891,163 = 2,891,163
+  [enchant] protection 6: 1 x ENCHANTMENT_PROTECTION_6 bz-instabuy @ 3,421,908 = 3,421,908
+  [enchant] true_protection 1: 1 x ENCHANTMENT_TRUE_PROTECTION_1 bz-instabuy @ 949,990 = 949,990
+  [enchant] rejuvenate 5: 1 x ENCHANTMENT_REJUVENATE_5 bz-instabuy @ 523,000 = 523,000
+  [stars] essence WITHER: 2250 x ESSENCE_WITHER bz-instabuy @ 2,509 = 5,645,250
+  [stars] master star 1: 1 x FIRST_MASTER_STAR bz-instabuy @ 16,749,999 = 16,749,999
+  [stars] master star 2: 1 x SECOND_MASTER_STAR bz-instabuy @ 19,278,537 = 19,278,537
+  [stars] master star 3: 1 x THIRD_MASTER_STAR bz-instabuy @ 35,907,898 = 35,907,898
+  [stars] master star 4: 1 x FOURTH_MASTER_STAR bz-instabuy @ 78,047,322 = 78,047,322
+  [stars] master star 5: 1 x FIFTH_MASTER_STAR bz-instabuy @ 119,306,004 = 119,306,004
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-instabuy @ 10,699,996 = 10,699,996
+  [hpb] hot potato x10: 10 x HOT_POTATO_BOOK bz-instabuy @ 87,188 = 871,875
+  [hpb] fuming x5: 5 x FUMING_POTATO_BOOK bz-instabuy @ 1,707,886 = 8,539,429
+  [gem-slot] COMBAT_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_JASPER_GEM bz-instabuy @ 5,389,369 = 5,389,369
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_SAPPHIRE_GEM bz-instabuy @ 2,534,983 = 2,534,983
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_RUBY_GEM bz-instabuy @ 2,049,999 = 2,049,999
+  [gem-slot] COMBAT_0 unlock: 1 x FLAWLESS_AMETHYST_GEM bz-instabuy @ 2,781,344 = 2,781,344
+  [gem-slot] JASPER_0 unlock coins: 250000 x COINS coins @ 1 = 250,000
+  [gem-slot] JASPER_0 unlock: 2 x FLAWLESS_JASPER_GEM bz-instabuy @ 5,389,369 = 10,778,737
+  [gem] JASPER_0: 1 x FINE_JASPER_GEM bz-instabuy @ 66,592 = 66,592
+  [gem] COMBAT_0: 1 x FINE_ONYX_GEM bz-instabuy @ 25,663 = 25,663
+  [cosmetic] dye: 1 x DYE_BLACK_ICE lbin @ 27,777,777 = 27,777,777
+  [reforge] stone PRECURSOR_GEAR: 1 x PRECURSOR_GEAR bz-instabuy @ 524,072 = 524,072
+  [reforge] apply cost @MYTHIC: 60000 x COINS coins @ 1 = 60,000

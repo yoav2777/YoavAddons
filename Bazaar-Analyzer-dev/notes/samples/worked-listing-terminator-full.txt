@@ -1,0 +1,57 @@
+TERMINATOR Precise Terminator ✪✪✪✪✪➎ listed 809,000,000  tier MYTHIC reforge Precise
+
+== scratch: clean craft 401,869,945 + modifiers 322,839,908 = 724,709,852
+  [enchant] overload 5: 2 x ENCHANTMENT_OVERLOAD_4 bz-order+anvil @ 5,733,918 = 11,467,836
+  [enchant] impaling 3: 1 x ENCHANTMENT_IMPALING_3 no market (counted as 0) @ 0 = 0
+  [enchant] chance 4: 1 x ENCHANTMENT_CHANCE_4 bz-order @ 1,000 = 1,000
+  [enchant] aiming 5: 1 x ENCHANTMENT_AIMING_5 no market (counted as 0) @ 0 = 0
+  [enchant] ultimate_soul_eater 5: 2 x ENCHANTMENT_ULTIMATE_SOUL_EATER_4 bz-order+anvil @ 6,829,378 = 13,658,757
+  [enchant] dragon_hunter 5: 1 x ENCHANTMENT_DRAGON_HUNTER_5 no market (counted as 0) @ 0 = 0
+  [enchant] tabasco 3: 1 x ENCHANTMENT_TABASCO_3 bz-order @ 8,888,905 = 8,888,905
+  [enchant] infinite_quiver 10: 1 x ENCHANTMENT_INFINITE_QUIVER_10 bz-order @ 225,002 = 225,002
+  [enchant] piercing 1: 1 x ENCHANTMENT_PIERCING_1 no market (counted as 0) @ 0 = 0
+  [enchant] snipe 3: 1 x ENCHANTMENT_SNIPE_3 no market (counted as 0) @ 0 = 0
+  [enchant] flame 2: 1 x ENCHANTMENT_FLAME_2 no market (counted as 0) @ 0 = 0
+  [enchant] toxophilite 10: 1 x ENCHANTMENT_TOXOPHILITE_1 bz-order @ 3,554,455 = 3,554,455  (levels by use; priced as level 1)
+  [enchant] power 6: 1 x ENCHANTMENT_POWER_6 bz-order @ 56,603 = 56,603
+  [enchant] cubism 5: 1 x ENCHANTMENT_CUBISM_5 table @ 0 = 0
+  [stars] essence DRAGON: 2150 x ESSENCE_DRAGON bz-order @ 4,556 = 9,796,045
+  [stars] master star 1: 1 x FIRST_MASTER_STAR bz-order @ 16,072,910 = 16,072,910
+  [stars] master star 2: 1 x SECOND_MASTER_STAR bz-order @ 18,000,000 = 18,000,000
+  [stars] master star 3: 1 x THIRD_MASTER_STAR bz-order @ 33,723,386 = 33,723,386
+  [stars] master star 4: 1 x FOURTH_MASTER_STAR bz-order @ 72,794,627 = 72,794,627
+  [stars] master star 5: 1 x FIFTH_MASTER_STAR bz-order @ 110,000,001 = 110,000,001
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-order @ 10,501,551 = 10,501,551
+  [hpb] hot potato x10: 10 x HOT_POTATO_BOOK craft @ 56,323 = 563,230
+  [hpb] fuming x5: 5 x FUMING_POTATO_BOOK bz-order @ 1,608,002 = 8,040,012
+  [upgrade] stats_book: 1 x BOOK_OF_STATS bz-order @ 4,290,021 = 4,290,021
+  [reforge] stone OPTICAL_LENS: 1 x OPTICAL_LENS bz-order @ 5,567 = 5,567
+  [reforge] apply cost @MYTHIC: 1200000 x COINS coins @ 1 = 1,200,000
+
+== easy: clean craft 471,196,333 + modifiers 356,364,294 = 827,560,627
+  [enchant] overload 5: 2 x ENCHANTMENT_OVERLOAD_4 bz-order+anvil @ 5,733,918 = 11,467,836
+  [enchant] impaling 3: 1 x ENCHANTMENT_IMPALING_3 no market (counted as 0) @ 0 = 0
+  [enchant] chance 4: 1 x ENCHANTMENT_CHANCE_4 bz-instabuy @ 162,189 = 162,189
+  [enchant] aiming 5: 1 x ENCHANTMENT_AIMING_5 no market (counted as 0) @ 0 = 0
+  [enchant] ultimate_soul_eater 5: 1 x ENCHANTMENT_ULTIMATE_SOUL_EATER_5 bz-instabuy @ 17,999,985 = 17,999,985
+  [enchant] dragon_hunter 5: 1 x ENCHANTMENT_DRAGON_HUNTER_5 no market (counted as 0) @ 0 = 0
+  [enchant] tabasco 3: 1 x ENCHANTMENT_TABASCO_3 bz-instabuy @ 11,999,959 = 11,999,959
+  [enchant] infinite_quiver 10: 1 x ENCHANTMENT_INFINITE_QUIVER_10 bz-instabuy @ 481,430 = 481,430
+  [enchant] piercing 1: 1 x ENCHANTMENT_PIERCING_1 no market (counted as 0) @ 0 = 0
+  [enchant] snipe 3: 1 x ENCHANTMENT_SNIPE_3 no market (counted as 0) @ 0 = 0
+  [enchant] flame 2: 1 x ENCHANTMENT_FLAME_2 no market (counted as 0) @ 0 = 0
+  [enchant] toxophilite 10: 1 x ENCHANTMENT_TOXOPHILITE_1 bz-instabuy @ 4,589,000 = 4,589,000  (levels by use; priced as level 1)
+  [enchant] power 6: 1 x ENCHANTMENT_POWER_6 bz-instabuy @ 113,752 = 113,752
+  [enchant] cubism 5: 1 x ENCHANTMENT_CUBISM_5 table @ 0 = 0
+  [stars] essence DRAGON: 2150 x ESSENCE_DRAGON bz-instabuy @ 4,997 = 10,743,980
+  [stars] master star 1: 1 x FIRST_MASTER_STAR bz-instabuy @ 16,749,999 = 16,749,999
+  [stars] master star 2: 1 x SECOND_MASTER_STAR bz-instabuy @ 19,278,537 = 19,278,537
+  [stars] master star 3: 1 x THIRD_MASTER_STAR bz-instabuy @ 35,907,898 = 35,907,898
+  [stars] master star 4: 1 x FOURTH_MASTER_STAR bz-instabuy @ 78,047,322 = 78,047,322
+  [stars] master star 5: 1 x FIFTH_MASTER_STAR bz-instabuy @ 119,306,004 = 119,306,004
+  [recomb] recombobulated: 1 x RECOMBOBULATOR_3000 bz-instabuy @ 10,699,996 = 10,699,996
+  [hpb] hot potato x10: 10 x HOT_POTATO_BOOK bz-instabuy @ 87,188 = 871,875
+  [hpb] fuming x5: 5 x FUMING_POTATO_BOOK bz-instabuy @ 1,707,886 = 8,539,429
+  [upgrade] stats_book: 1 x BOOK_OF_STATS bz-instabuy @ 8,105,104 = 8,105,104
+  [reforge] stone OPTICAL_LENS: 1 x OPTICAL_LENS bz-instabuy @ 100,000 = 100,000
+  [reforge] apply cost @MYTHIC: 1200000 x COINS coins @ 1 = 1,200,000

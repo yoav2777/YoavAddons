@@ -1,0 +1,40 @@
+# Keeps every sold auction of the tracked items (.github/data-tags.txt `sold` lines) on the `sales-history` branch, every
+# 2 days, so the price backtest and the learned modifier values get months of sales (Coflnet keeps ~7 days).
+# Script: .github/tools/sales-history.mjs. To use it: git fetch origin sales-history && git worktree add ../hist sales-history
+name: Sales history
+on:
+  schedule:
+    - cron: '17 3 */2 * *'   # every 2 days: Coflnet keeps ~7 days, so nothing is missed, half the Actions minutes
+  workflow_dispatch:
+  push:
+    branches-ignore: [mod-jar, dev-shots, mc-api, data-dump, sales-history]
+
+permissions:
+  contents: write
+
+concurrency: sales-history
+
+jobs:
+  collect:
+    # a push runs it only with [history] in the commit message (to test before the schedule, which runs from main)
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[history]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check out the history branch
+        run: |
+          if git ls-remote --exit-code origin sales-history >/dev/null; then
+            git fetch -q --depth=1 origin sales-history && git worktree add hist origin/sales-history -B sales-history
+          else
+            git worktree add --orphan -b sales-history hist
+          fi
+      - name: Collect
+        run: node .github/tools/sales-history.mjs hist
+      - name: Push
+        run: |
+          cd hist && git add -A && git -c user.name=ci -c user.email=ci@localhost commit -qm "sales $(date -u +%F)" \
+            && git push -q "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" sales-history

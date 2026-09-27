@@ -1,0 +1,52 @@
+# Runs the mod's dev client on a virtual screen and pushes its screenshots + logs to the `dev-shots` branch.
+# Runs on a push whose commit message contains [shots] (or by hand); flags: DevHarness.java / notes/mod-build.md.
+name: Dev shots
+on:
+  push:
+    branches-ignore: [mod-jar, dev-shots, mc-api, data-dump]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[shots]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Software OpenGL/Vulkan + virtual screen
+        run: sudo apt-get update -q && sudo apt-get install -yq xvfb libgl1-mesa-dri mesa-vulkan-drivers
+      - name: Dev client (fake trade window, worth panel)
+        working-directory: Bazaar-Mod
+        run: |
+          mkdir -p run
+          printf 'onboardAccessibility:false\npauseOnLostFocus:false\nsoundCategory_master:0.0\noverrideWidth:1280\noverrideHeight:720\nguiScale:2\n' > run/options.txt
+          export JAVA_TOOL_OPTIONS="-Dbazaaranalyzer.dev.world=1 -Dbazaaranalyzer.dev.trade=button -Dbazaaranalyzer.dev.worth=1 -Dbazaaranalyzer.dev.noBrowser=1"
+          xvfb-run -a -s "-screen 0 1280x720x24" bash gradlew runClient --no-daemon > run.log 2>&1 &
+          for i in $(seq 1 300); do grep -q "Dev: worth shots done" run.log && break; grep -q "Crash report\|Mixin apply failed\|BUILD FAILED" run.log && break; sleep 5; done
+          sleep 5
+          pkill -f java || true
+      - name: Dev client (MoulConfig-style screens)
+        working-directory: Bazaar-Mod
+        run: |
+          export JAVA_TOOL_OPTIONS="-Dbazaaranalyzer.dev.world=1 -Dbazaaranalyzer.dev.moul=1 -Dbazaaranalyzer.dev.noBrowser=1"
+          xvfb-run -a -s "-screen 0 1280x720x24" bash gradlew runClient --no-daemon > run-moul.log 2>&1 &
+          for i in $(seq 1 200); do grep -q "Dev: moul shots done" run-moul.log && break; grep -q "Crash report\|Mixin apply failed\|BUILD FAILED" run-moul.log && break; sleep 5; done
+          sleep 5
+          pkill -f java || true
+      - name: Push shots to the dev-shots branch
+        if: always()
+        run: |
+          mkdir out
+          cp -r Bazaar-Mod/run/screenshots out/ 2>/dev/null || true
+          cp Bazaar-Mod/run*.log out/ 2>/dev/null || true
+          grep -hE "bazaaranalyzer|Exception|ERROR|Caused by|Mixin" Bazaar-Mod/run*.log > out/summary.txt 2>/dev/null || true
+          cd out && git init -q -b dev-shots && git add . \
+            && git -c user.name=ci -c user.email=ci@localhost commit -qm "shots from ${GITHUB_SHA::7} (${GITHUB_REF_NAME})" \
+            && git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" dev-shots

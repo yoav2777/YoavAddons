@@ -1,0 +1,84 @@
+{
+ "uuid": "c64e68376ddb46479b4b7d6ee0070015",
+ "count": 1,
+ "startingBid": 289999000,
+ "tag": "POWER_WITHER_CHESTPLATE",
+ "itemName": "✿ Ancient Necron's Chestplate ✪✪✪✪✪➎",
+ "start": "2026-09-20T07:25:59",
+ "end": "2026-10-04T07:25:59",
+ "auctioneerId": "921eb1e98d4242d18051118ef0f3438f",
+ "profileId": "845ab9d329924c1492adddf7810f4345",
+ "coop": null,
+ "coopMembers": null,
+ "highestBidAmount": 0,
+ "bids": null,
+ "anvilUses": 0,
+ "enchantments": [
+  {
+   "type": "ultimate_legion",
+   "level": 5
+  },
+  {
+   "type": "strong_mana",
+   "level": 5
+  },
+  {
+   "type": "growth",
+   "level": 6
+  },
+  {
+   "type": "protection",
+   "level": 6
+  },
+  {
+   "type": "true_protection",
+   "level": 1
+  },
+  {
+   "type": "rejuvenate",
+   "level": 5
+  }
+ ],
+ "nbtData": {
+  "data": {
+   "rarity_upgrades": 1,
+   "hpc": 15,
+   "gems": {
+    "JASPER_0": "FINE",
+    "COMBAT_0": "FINE",
+    "unlocked_slots": [
+     "COMBAT_0",
+     "JASPER_0"
+    ],
+    "COMBAT_0_gem": "ONYX"
+   },
+   "dungeon_item": 1,
+   "upgrade_level": 10,
+   "uid": "80316f504fe2",
+   "uuid": "c7ae3ac4-5582-4e25-b74b-80316f504fe2",
+   "dye_item": "DYE_BLACK_ICE",
+   "color": "11:32:49",
+   "cc": 1
+  }
+ },
+ "itemCreatedAt": "2023-07-16T19:42:00",
+ "reforge": "ancient",
+ "category": "UNKNOWN",
+ "tier": "MYTHIC",
+ "bin": true,
+ "flatNbt": {
+  "rarity_upgrades": "1",
+  "hpc": "15",
+  "JASPER_0": "FINE",
+  "COMBAT_0": "FINE",
+  "unlocked_slots": "COMBAT_0,JASPER_0",
+  "COMBAT_0_gem": "ONYX",
+  "dungeon_item": "1",
+  "upgrade_level": "10",
+  "uid": "80316f504fe2",
+  "uuid": "c7ae3ac4-5582-4e25-b74b-80316f504fe2",
+  "dye_item": "DYE_BLACK_ICE",
+  "color": "11:32:49",
+  "cc": "1"
+ }
+}

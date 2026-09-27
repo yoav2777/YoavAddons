@@ -1,0 +1,46 @@
+# Prints the API (javap) of the Minecraft / Fabric classes listed in .github/mc-api-classes.txt to api.txt on the
+# `mc-api` branch (signatures only, for writing mod code against 26.1 without an IDE).
+# Runs on a push whose commit message contains [api] (or by hand). For writing mod code against 26.1 without an IDE.
+name: MC API
+on:
+  push:
+    branches-ignore: [mod-jar, dev-shots, mc-api, data-dump]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  api:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[api]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Resolve Minecraft + Fabric
+        working-directory: Bazaar-Mod
+        run: bash gradlew compileJava --no-daemon -q
+      - name: javap
+        run: |
+          exec > api.txt 2>&1
+          find ~/.gradle Bazaar-Mod/.gradle -name '*.jar' 2>/dev/null | grep -iE 'minecraft|fabric' | grep -v sources > jars.txt
+          echo "=== jars"; cat jars.txt
+          CP=$(paste -sd: jars.txt)
+          for j in $(cat jars.txt); do
+            for pat in $(grep '^list ' .github/mc-api-classes.txt | cut -d' ' -f2); do
+              unzip -l "$j" 2>/dev/null | awk '{print $4}' | grep -E "$pat" | sed "s|^|[$(basename $j)] |"
+            done
+          done
+          grep -v '^list \|^#\|^$' .github/mc-api-classes.txt | while read c; do
+            echo "=== $c"; javap -cp "$CP" -p "$c" 2>&1 | grep -v '^Picked up' | head -400
+          done
+      - name: Push api.txt to the mc-api branch
+        run: |
+          mkdir out && mv api.txt out/
+          cd out && git init -q -b mc-api && git add . \
+            && git -c user.name=ci -c user.email=ci@localhost commit -qm "api from ${GITHUB_SHA::7}" \
+            && git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" mc-api
