@@ -3,6 +3,8 @@
 Personal tools for Hypixel SkyBlock by yoav3577. Private repo. Read this first, then the notes it points to.
 
 GitHub: https://github.com/yoav2777/YoavAddons (public, branch `main`; `gh` CLI is installed and logged in).
+Data collection (sales history, market dumps) and the dev-only workflows (dev shots, MC API) run in the private repo
+yoav2777/yoav-addons, not here; bring its data over when the price model is updated.
 On another PC: `gh repo clone yoav2777/YoavAddons`. The absolute `C:\Users\Lenovo\...` paths below are the main PC's.
 `README.md` = the user-facing setup page. Downloads = GitHub Releases, made by `.github/workflows/release.yml`
 (Actions > Release > Run workflow: builds the mod jar + zips `Bazaar-Analyzer-v12/` as `Bazaar-Analyzer.zip`, tag

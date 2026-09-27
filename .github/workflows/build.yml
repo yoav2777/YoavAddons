@@ -2,11 +2,12 @@
 name: Build
 on:
   push:
-    branches-ignore: [mod-jar, dev-shots, mc-api, data-dump]
+    branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -24,10 +25,3 @@ jobs:
         with:
           name: mod-jar
           path: Bazaar-Mod/build/libs/yoav-addons-*[0-9].jar
-      # ponytail: one jar branch, overwritten by every push; add per-branch names if two branches build at once.
-      - name: Put the jar on the mod-jar branch
-        run: |
-          mkdir jar && cp Bazaar-Mod/build/libs/yoav-addons-*[0-9].jar jar/
-          cd jar && git init -q -b mod-jar && git add . \
-            && git -c user.name=ci -c user.email=ci@localhost commit -qm "jar from ${GITHUB_SHA::7} (${GITHUB_REF_NAME})" \
-            && git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" mod-jar
