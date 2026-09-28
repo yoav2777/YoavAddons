@@ -263,7 +263,7 @@ final class SettingsScreen extends Screen {
 
       // Trade window
       this.options.add(new Toggle(
-         Page.TRADE, "Trade button", "The \"Open N AH items on website\" button in trade windows, with the other player's items' worth under it.",
+         Page.TRADE, "Trade button", "The \"Open N AH items on website\" button in trade windows, with the other player's items' worth under it. It moves beside the trade window if it would cover it.",
          () -> ModSettings.get().tradeButton(), v -> ModSettings.live(ModSettings.get().withTradeButton(v))
       ));
       this.options.add(new Dropdown<>(
