@@ -290,6 +290,19 @@ const REPLACEMENTS = [
     find: '},[t,o,e,c,u,f,m,a,g]),x=(0,y.useMemo)(()=>a.trim()?Ir(t,a,1).fuzzy:!1,[t,a]),',
     replace: '},[t,o,e,c,u,f,m,BA_sq,BA_dq,g]),x=BA_sq!=null&&BA_sq.fuzzy,',
   },
+  {
+    // Item names (Pt): Hypixel renamed the ultimate Duplex to Reiterate in the Bazaar, the game still says Duplex.
+    // The search text still has the bazaar id, so "reiterate" keeps finding it.
+    name: 'Names: Ultimate Reiterate shown as Ultimate Duplex',
+    find: 'i=Mt((r==null?t:t.slice(0,-1)).join(`_`));',
+    replace: 'i=Mt((r==null?t:t.slice(0,-1)).join(`_`).replace(/^ULTIMATE_REITERATE$/,`ULTIMATE_DUPLEX`));',
+  },
+  {
+    // Search ranking (Ir): ignore a leading "Ultimate " so "soul eater" ranks Ultimate Soul Eater like a name that starts with it.
+    name: 'Search: ultimate books rank by their name without "Ultimate"',
+    find: 'let e=t.name.toLowerCase(),n=0;e===r?n=100',
+    replace: 'let e=t.name.toLowerCase().replace(/^ultimate /,``),n=0;e===r?n=100',
+  },
   // Search (parts/80-search.js): one header search for Bazaar items, AH item types and players; the AH page's own
   // box is gone and its list follows the header query; each Activity tab gets its own search box.
   {
