@@ -45,3 +45,6 @@
 /* Book Flips tab (parts/40-book-flips.js): classes the prebuilt Tailwind CSS doesn't have */
 .ba-bf-search{width:10rem}
 .ba-bf-bad{border-color:var(--color-down)}
+
+/* keep the page from shifting sideways when the scrollbar appears/disappears (e.g. while the search narrows the list) */
+html { scrollbar-gutter: stable; }
