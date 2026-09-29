@@ -96,7 +96,7 @@ function BA_TopSearch() {
         onBlur: () => setTimeout(() => setOpen(!1), 120),
         onKeyDown: (e) => {
           // Tab / Shift+Tab walk the open list (wrapping) like the arrows; with no list, Tab moves focus as usual.
-          // Enter goes to the marked result, or with none marked closes the list, keeps the typed text and (from an item / other page) opens the Bazaar list it filters
+          // Enter goes to the marked result, or with none marked closes the list, keeps the typed text and, from any page but the Bazaar Market list and the AH list (which the query already filters), opens the Bazaar Market list (+ matching AH items)
           e.key === `Tab` && open && list.length
             ? (e.preventDefault(), setIdx((i) => (i < 0 ? (e.shiftKey ? list.length - 1 : 0) : (i + (e.shiftKey ? list.length - 1 : 1)) % list.length)))
             : e.key === `ArrowDown`
@@ -106,7 +106,7 @@ function BA_TopSearch() {
               : e.key === `Enter`
                 ? list[idx]
                   ? go(list[idx])
-                  : (setOpen(!1), ref.current?.blur(), /^#\/?(\?.*)?$|^#\/(ah|watchlist)(\?.*)?$/.test(window.location.hash) || ft(st.market))
+                  : (setOpen(!1), ref.current?.blur(), /^#\/?(\?(?!.*sub=books).*)?$|^#\/ah(\?.*)?$/.test(window.location.hash) || ft(st.market))
                 : e.key === `Escape` && (setQ(``), ref.current?.blur());
         },
         placeholder: `Search items or players…  (Ctrl K)`,
