@@ -238,6 +238,8 @@ final class PriceData {
 
    static String pretty(String id) {
       StringBuilder sb = new StringBuilder();
+      // the Bazaar renamed the ultimate Duplex to Reiterate, the game still says Duplex
+      id = id.replace("ENCHANTMENT_ULTIMATE_REITERATE_", "ENCHANTMENT_ULTIMATE_DUPLEX_");
 
       for (String w : id.split("_")) {
          if (!w.isEmpty()) {
