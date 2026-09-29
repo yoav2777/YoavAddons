@@ -52,8 +52,8 @@ function BA_TopSearch() {
       {
         onMouseDown: (e) => e.preventDefault(),
         onClick: () => go(s),
-        onMouseEnter: () => setIdx(i),
-        className: `flex w-full items-center gap-2.5 px-3 py-2 text-left ${i === idx ? `bg-white/8` : ``}`,
+        // hover only highlights: Enter opens a result only after Tab/arrows mark it
+        className: `flex w-full items-center gap-2.5 px-3 py-2 text-left ${i === idx ? `bg-white/8` : `hover:bg-white/5`}`,
         children: [
           s.kind === `pl`
             ? (0, b.jsx)(BA_Avatar, { uuid: s.r.uuid, size: 28 })
@@ -132,6 +132,47 @@ function BA_TopSearch() {
                 children: players.isFetching || dq !== q ? `Searching…` : `Nothing matches “${q}”.`,
               }),
         }),
+    ],
+  });
+}
+
+// ---- Market page with a search: the Auction House item types that match too ----
+// Mounted in af above the list (Bazaar tab only), fed the Market's debounced query, so Enter in the header search
+// (which lands on the Bazaar tab) shows Bazaar and AH matches on one page. Literal hits only: fuzzy AH guesses are noise.
+function BA_MarketAhHits({ q }) {
+  let { byId } = $t(),
+    ah = ka().data,
+    ahOnly = (0, y.useMemo)(() => (ah ?? []).filter((r) => !byId.has(r.tag)), [ah, byId]),
+    res = (0, y.useMemo)(() => (q && q.trim() ? Ir(ahOnly, q, 24) : null), [ahOnly, q]);
+  if (!res || res.fuzzy || !res.items.length) return null;
+  // Coflnet gives some different items the same name (5x "Inferno Minion Fuel"): those chips show their tag too
+  let seen = {};
+  res.items.forEach((r) => (seen[r.name] = (seen[r.name] ?? 0) + 1));
+  return (0, b.jsxs)(`div`, {
+    className: `mb-3 rounded-lg border border-line bg-panel px-3 py-2`,
+    children: [
+      (0, b.jsxs)(`div`, {
+        className: `mb-2 flex items-center gap-2 text-xs text-mute`,
+        children: [
+          `Auction House items`,
+          (0, b.jsx)(`button`, { onClick: () => ft(st.ah), className: `ml-auto text-accent hover:underline`, children: `Show all in the AH →` }),
+        ],
+      }),
+      (0, b.jsx)(`div`, {
+        className: `flex flex-wrap gap-1.5`,
+        children: res.items.map((r) =>
+          (0, b.jsxs)(
+            `button`,
+            {
+              onClick: () => ft(st.ahItem(r.tag)),
+              title: r.tag,
+              className: `flex items-center gap-1.5 rounded-md border border-line bg-panel2 px-2 py-1 text-sm hover:border-accent`,
+              children: [(0, b.jsx)(Jr, { id: r.tag, info: r.info, size: 20 }), r.name, seen[r.name] > 1 && (0, b.jsx)(`span`, { className: `text-[11px] text-mute`, children: r.tag })],
+            },
+            r.tag,
+          ),
+        ),
+      }),
     ],
   });
 }

@@ -303,6 +303,18 @@ const REPLACEMENTS = [
     find: 'let e=t.name.toLowerCase(),n=0;e===r?n=100',
     replace: 'let e=t.name.toLowerCase().replace(/^ultimate /,``),n=0;e===r?n=100',
   },
+  {
+    // Market page (af, Bazaar tab only): AH item types matching the search, above the list (parts/80-search.js).
+    name: 'Market search: AH matches above the list',
+    find: 'x&&(0,b.jsxs)(`div`,{className:`mb-3 rounded-lg border border-buy/30 bg-buy/10 px-3 py-2 text-sm text-buy`',
+    replace: 'e===`all`&&(0,b.jsx)(BA_CraftBoundary,{label:`AH matches`,children:(0,b.jsx)(BA_MarketAhHits,{q:BA_dq})}),x&&(0,b.jsxs)(`div`,{className:`mb-3 rounded-lg border border-buy/30 bg-buy/10 px-3 py-2 text-sm text-buy`',
+  },
+  {
+    // Settings "Clear watchlist" also clears the Book Flips stars (parts/40-book-flips.js BA_bfWatch).
+    name: 'Settings: Clear watchlist clears Book Flips stars too',
+    find: 'onConfirm:()=>L.setState({ids:[]})',
+    replace: 'onConfirm:()=>(L.setState({ids:[]}),BA_bfWatch.setState({ids:[]}))',
+  },
   // Search (parts/80-search.js): one header search for Bazaar items, AH item types and players; the AH page's own
   // box is gone and its list follows the header query; each Activity tab gets its own search box.
   {

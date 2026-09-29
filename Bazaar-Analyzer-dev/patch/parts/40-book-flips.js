@@ -161,7 +161,7 @@ function BA_BookFlips({ watch = false }) {
   const [minMargin, setMinMargin] = (0, y.useState)('');
   const [minProfit, setMinProfit] = (0, y.useState)('');
   const [search, setSearch] = (0, y.useState)('');
-  const [hideLoss, setHideLoss] = (0, y.useState)(true);
+  const [hideLoss, setHideLoss] = (0, y.useState)(!watch); // off on the watchlist: a starred flip stays when it dips into a loss
   // off by default: unlike a single bazaar item, a >100% margin over 16 books is often just the price of the levels,
   // not a placeholder order, so the rows are flagged (⚠ on Margin and Coins/hr) instead of being hidden
   const [hideWide, setHideWide] = (0, y.useState)(false);
@@ -182,9 +182,10 @@ function BA_BookFlips({ watch = false }) {
     const v = pct ? Number(t.replace(/%$/, '')) : Qi(t); return v == null || !Number.isFinite(v) ? { v: null, bad: true } : { v, bad: false }; };
   const fc = num(minCoins), fm = num(minMargin, true), fp = num(minProfit);
 
+  const pool = (0, y.useMemo)(() => (watch ? all.filter((r) => starred.includes(r.key)) : all), [all, watch, starred]);
   const list = (0, y.useMemo)(() => {
     const q = search.trim().toLowerCase();
-    let out = all.filter((r) => (!watch || starred.includes(r.key)) && (!hideLoss || r.profit > 0)
+    let out = pool.filter((r) => (!hideLoss || r.profit > 0)
       && (!hideWide || !BA_bookWide(r))
       && (fc.v == null || r.coinsHr >= fc.v)
       && (fm.v == null || r.pct * 100 >= fm.v)
@@ -193,7 +194,7 @@ function BA_BookFlips({ watch = false }) {
     const d = sort.dir === 'asc' ? 1 : -1;
     return out.sort((a, c) => sort.key === 'name' ? d * a.label.localeCompare(c.label) || a.from - c.from
       : typeof a[sort.key] === 'string' ? d * a[sort.key].localeCompare(c[sort.key]) || c.coinsHr - a.coinsHr : d * (a[sort.key] - c[sort.key]));
-  }, [all, watch, starred, hideLoss, hideWide, fc.v, fm.v, fp.v, search, sort]);
+  }, [pool, hideLoss, hideWide, fc.v, fm.v, fp.v, search, sort]);
 
   // Only the rows on screen are rendered (same virtualizer + overscan as the Market table), so a poll
   // that rebuilds every row object re-renders ~25 rows instead of all ~175. The page scrolls, not the box
@@ -225,7 +226,7 @@ function BA_BookFlips({ watch = false }) {
     (0, b.jsxs)('div', { className: 'mb-3 flex flex-wrap items-center gap-x-4 gap-y-2', children: [
       (0, b.jsx)(BA_BazaarSubTabs, { sub: 'books', base: watch ? st.watchlist : st.market }),
       (0, b.jsx)('h1', { className: 'text-lg font-semibold', children: watch ? 'Watchlist' : 'Book flips' }),
-      (0, b.jsx)('span', { className: 'num text-sm text-mute', children: `${list.length.toLocaleString()} of ${all.length.toLocaleString()} flips` }),
+      (0, b.jsx)('span', { className: 'num text-sm text-mute', children: `${list.length.toLocaleString()} of ${pool.length.toLocaleString()} flips` }),
       (0, b.jsxs)('div', { className: 'ml-auto flex flex-wrap items-center gap-2 text-sm', children: [
         (0, b.jsx)(BA_BookSeg, { label: 'Inputs', title: inTitle, value: instaIn, onChange: setInstaIn, options: [[false, 'Buy order'], [true, 'Insta-buy']] }),
         (0, b.jsx)(BA_BookSeg, { label: 'Output', title: outTitle, value: instaOut, onChange: setInstaOut, options: [[false, 'Sell order'], [true, 'Insta-sell']] }),
