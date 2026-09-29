@@ -11,7 +11,7 @@ import { canAnvilEnchant } from '../../craft/craftModifiers.js';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 // The part is plain bundle code: evaluate it in a sandbox (UI functions reference bundle ids only when called).
 // BA_bookCanAnvil falls back to the shared engine rule, so the sandbox gets the real BA_craft.canAnvilEnchant.
-const ctx = vm.createContext({ BA_craft: { canAnvilEnchant } });
+const ctx = vm.createContext({ BA_craft: { canAnvilEnchant }, Ht: () => () => ({}), Gt: () => ({}) }); // Ht/Gt = zustand create/persist (watchlist store)
 vm.runInContext(fs.readFileSync(path.join(HERE, '../parts/40-book-flips.js'), 'utf8')
   + '\n;globalThis.__f=BA_bookFlips;globalThis.__can=BA_bookCanAnvil;globalThis.__max=BA_bookAnvilMax;', ctx);
 // rows come from another realm: copy them so deepEqual compares plain arrays

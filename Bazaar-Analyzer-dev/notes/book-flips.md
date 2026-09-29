@@ -79,3 +79,9 @@ sale 45,999,995.3 x 0.9875, profit ~5.42M, flips/h min(22292/168/16=8.29, 1457/1
 bundle even after ctrl+shift+R (`performance.getEntriesByType('resource')` showed transferSize 0 and the old
 decodedBodySize). Navigating to `http://127.0.0.1:47849/index.html?cb=<n>#/?sub=books` (cache-busting query on the
 *document*) reloads index.html, whose `?v=<hash>` on the bundle then changes per patch run and pulls the new file.
+
+## Watchlist (Book Flips)
+Star column on every row; stars live in their own store `BA_bfWatch` (localStorage `bz.bookwatch.v1`, row keys) so the
+Market watchlist is untouched. Watchlist page = `BA_WatchlistPage`: `#/watchlist` = Market (af), `#/watchlist?sub=books`
+= `BA_BookFlips({watch:true})` (starred flips only). Mounts: route `Watchlist route: Market | Book Flips`; af header
+sub-tabs now show on both modes (`base` = Bazaar or Watchlist hash).

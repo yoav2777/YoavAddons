@@ -84,10 +84,16 @@ const REPLACEMENTS = [
     replace: 'e.page===`market`&&(0,b.jsx)(BA_BazaarPage,{})',
   },
   {
-    // Market page (af, e = mode): sub-tab switch before the "Bazaar market" title, only on the Bazaar tab (not Watchlist).
+    // Watchlist route: Market (af) | Book Flips watchlist (#/watchlist?sub=books).
+    name: 'Watchlist route: Market | Book Flips',
+    find: 'e.page===`watchlist`&&(0,b.jsx)(af,{mode:`watchlist`})',
+    replace: 'e.page===`watchlist`&&(0,b.jsx)(BA_WatchlistPage,{})',
+  },
+  {
+    // Market page (af, e = mode): sub-tab switch before the "Bazaar market"/"Watchlist" title.
     name: 'Market header: sub-tab switch',
     find: '(0,b.jsx)(`h1`,{className:`text-lg font-semibold`,children:e===`watchlist`?`Watchlist`:`Bazaar market`}),',
-    replace: 'e===`all`&&(0,b.jsx)(BA_CraftBoundary,{label:`Book Flips tabs`,children:(0,b.jsx)(BA_BazaarSubTabs,{sub:`market`})}),(0,b.jsx)(`h1`,{className:`text-lg font-semibold`,children:e===`watchlist`?`Watchlist`:`Bazaar market`}),',
+    replace: '(0,b.jsx)(BA_CraftBoundary,{label:`Book Flips tabs`,children:(0,b.jsx)(BA_BazaarSubTabs,{sub:`market`,base:e===`all`?st.market:st.watchlist})}),(0,b.jsx)(`h1`,{className:`text-lg font-semibold`,children:e===`watchlist`?`Watchlist`:`Bazaar market`}),',
   },
   // Mayor bands (parts/50-mayor-bands.js, notes/mayor-bands.md): one grey band per elected mayor
   // behind the AH price chart, plus the mayor in the chart's hover tooltip.

@@ -97,7 +97,17 @@ function BA_BazaarPage() {
     : (0, b.jsx)(af, { mode: 'all' });
 }
 
-function BA_BazaarSubTabs({ sub }) {
+// Book Flips watchlist: row keys, own store (the Market watchlist `L` holds bazaar item ids)
+const BA_bfWatch = Ht()(Gt((e) => ({ ids: [], toggle: (k) => e((s) => ({ ids: s.ids.includes(k) ? s.ids.filter((x) => x !== k) : [k, ...s.ids] })) }), { name: 'bz.bookwatch.v1' }));
+
+// Watchlist tab: Market (original af) | Book Flips (starred flips only), #/watchlist?sub=books
+function BA_WatchlistPage() {
+  return BA_bazaarSub() === 'books'
+    ? (0, b.jsx)(BA_CraftBoundary, { label: 'Book Flips watchlist', children: (0, b.jsx)(BA_BookFlips, { watch: true }) })
+    : (0, b.jsx)(af, { mode: 'watchlist' });
+}
+
+function BA_BazaarSubTabs({ sub, base = st.market }) {
   const tab = (id, label, href) => (0, b.jsx)('button', {
     type: 'button', role: 'tab', 'aria-selected': sub === id,
     onClick: () => { if (sub !== id) ft(href); },
@@ -105,7 +115,7 @@ function BA_BazaarSubTabs({ sub }) {
     children: label,
   }, id);
   return (0, b.jsxs)('div', { role: 'tablist', className: 'flex gap-0.5 rounded-lg border border-line bg-panel p-0.5',
-    children: [tab('market', 'Market', st.market), tab('books', 'Book Flips', st.market + '?sub=books')] });
+    children: [tab('market', 'Market', base), tab('books', 'Book Flips', base + '?sub=books')] });
 }
 
 const BA_bookCols = [
@@ -117,7 +127,7 @@ const BA_bookCols = [
   { key: 'flips', label: 'Flips/hr', title: 'min(input fill rate / books needed, output fill rate), 7-day averages. Ignores competition.' },
   { key: 'coinsHr', label: 'Coins/hr', title: 'Flips/hr × profit per flip (0 when unprofitable). Rough upper bound.' },
 ];
-const BA_bookGrid = 'minmax(220px,2.2fr) 120px 64px repeat(6,minmax(96px,1fr)) 84px';
+const BA_bookGrid = '44px minmax(220px,2.2fr) 120px 64px repeat(6,minmax(96px,1fr)) 84px';
 // same "very wide spread" flag the Market tab uses (kt): margin over 100% means the top orders are probably
 // placeholders, so the price (and every coins/hr built on it) is not achievable
 const BA_bookWide = (r) => r.pct > 1;
@@ -139,7 +149,7 @@ function BA_BookField({ label, title, value, onChange, bad, placeholder = 'any' 
       className: `${BA_bookInput} ${bad ? 'ba-bf-bad' : 'border-line'}` })] });
 }
 
-function BA_BookFlips() {
+function BA_BookFlips({ watch = false }) {
   const { byId, snapshot, loading, error } = $t();
   const bz = Xt();
   const tax = Kt((s) => s.tax);
@@ -156,6 +166,8 @@ function BA_BookFlips() {
   // not a placeholder order, so the rows are flagged (⚠ on Margin and Coins/hr) instead of being hidden
   const [hideWide, setHideWide] = (0, y.useState)(false);
   const [sort, setSort] = (0, y.useState)({ key: 'coinsHr', dir: 'desc' });
+  const starred = BA_bfWatch((s) => s.ids);
+  const toggleStar = BA_bfWatch((s) => s.toggle);
 
   const all = (0, y.useMemo)(() => {
     if (!snapshot) return [];
@@ -172,7 +184,7 @@ function BA_BookFlips() {
 
   const list = (0, y.useMemo)(() => {
     const q = search.trim().toLowerCase();
-    let out = all.filter((r) => (!hideLoss || r.profit > 0)
+    let out = all.filter((r) => (!watch || starred.includes(r.key)) && (!hideLoss || r.profit > 0)
       && (!hideWide || !BA_bookWide(r))
       && (fc.v == null || r.coinsHr >= fc.v)
       && (fm.v == null || r.pct * 100 >= fm.v)
@@ -181,13 +193,13 @@ function BA_BookFlips() {
     const d = sort.dir === 'asc' ? 1 : -1;
     return out.sort((a, c) => sort.key === 'name' ? d * a.label.localeCompare(c.label) || a.from - c.from
       : typeof a[sort.key] === 'string' ? d * a[sort.key].localeCompare(c[sort.key]) || c.coinsHr - a.coinsHr : d * (a[sort.key] - c[sort.key]));
-  }, [all, hideLoss, hideWide, fc.v, fm.v, fp.v, search, sort]);
+  }, [all, watch, starred, hideLoss, hideWide, fc.v, fm.v, fp.v, search, sort]);
 
   // Only the rows on screen are rendered (same virtualizer + overscan as the Market table), so a poll
   // that rebuilds every row object re-renders ~25 rows instead of all ~175. The page scrolls, not the box
   // (parts/90-page-scroll.js).
   const scrollRef = (0, y.useRef)(null);
-  const virt = BA_usePageVirt({ count: list.length, listRef: scrollRef, head: 39, minW: 1180, estimateSize: () => BA_BOOK_ROW_H, overscan: 14 });
+  const virt = BA_usePageVirt({ count: list.length, listRef: scrollRef, head: 39, minW: 1224, estimateSize: () => BA_BOOK_ROW_H, overscan: 14 });
 
   const setKey = (key) => setSort((s) => ({ key, dir: s.key === key ? (s.dir === 'desc' ? 'asc' : 'desc') : key === 'name' ? 'asc' : 'desc' }));
   const head = (key, label, title, left) => (0, b.jsxs)('button', { type: 'button', onClick: () => setKey(key), title,
@@ -211,8 +223,8 @@ function BA_BookFlips() {
 
   return (0, b.jsxs)('div', { className: 'mx-auto max-w-[1500px] px-4 py-4', children: [
     (0, b.jsxs)('div', { className: 'mb-3 flex flex-wrap items-center gap-x-4 gap-y-2', children: [
-      (0, b.jsx)(BA_BazaarSubTabs, { sub: 'books' }),
-      (0, b.jsx)('h1', { className: 'text-lg font-semibold', children: 'Book flips' }),
+      (0, b.jsx)(BA_BazaarSubTabs, { sub: 'books', base: watch ? st.watchlist : st.market }),
+      (0, b.jsx)('h1', { className: 'text-lg font-semibold', children: watch ? 'Watchlist' : 'Book flips' }),
       (0, b.jsx)('span', { className: 'num text-sm text-mute', children: `${list.length.toLocaleString()} of ${all.length.toLocaleString()} flips` }),
       (0, b.jsxs)('div', { className: 'ml-auto flex flex-wrap items-center gap-2 text-sm', children: [
         (0, b.jsx)(BA_BookSeg, { label: 'Inputs', title: inTitle, value: instaIn, onChange: setInstaIn, options: [[false, 'Buy order'], [true, 'Insta-buy']] }),
@@ -236,23 +248,26 @@ function BA_BookFlips() {
       'and books whose higher levels have no source but the Bazaar (Feast, Ice Cold, the Turbo books, …) up to the last such level. ',
       `Sale price after ${(tax * 100).toFixed(3).replace(/\.?0+$/, '')}% Bazaar tax; rates are 7-day averages.`] }),
     (0, b.jsx)('div', { ref: scrollRef, style: virt.boxStyle, className: 'rounded-xl border border-line bg-panel', children:
-      (0, b.jsxs)('div', { className: 'min-w-[1180px]', children: [
+      (0, b.jsxs)('div', { className: 'min-w-[1224px]', children: [
         (0, b.jsxs)('div', { className: 'sticky top-0 z-10 grid items-center border-b border-line bg-panel2 text-xs font-medium text-mute',
           style: { gridTemplateColumns: BA_bookGrid, height: 38, top: virt.stickyTop }, children: [
+            (0, b.jsx)('div', { key: 'star' }),
             head('name', 'Enchant', 'Target book', true),
             head('from', 'Route', 'Books needed × source level → target level (anvil: XP levels only, no coins). Sorts by source level.', true),
             ...BA_bookCols.map((c) => head(c.key, c.label, c.title)),
             head('limit', 'Limited by', 'The slower side of the flip: input books or the output book'),
           ] }),
         list.length === 0
-          ? (0, b.jsx)('div', { className: 'px-4 py-12 text-center text-sm text-mute', children: all.length
+          ? (0, b.jsx)('div', { className: 'px-4 py-12 text-center text-sm text-mute', children: watch && !starred.length
+            ? 'Your Book Flips watchlist is empty. Click the ☆ next to any flip on the Book Flips tab to add it.'
+            : all.length
             ? 'Nothing matches these filters.' + (hideLoss ? ' Unprofitable flips are hidden (untick “Hide unprofitable” to see them).' : '')
               + (hideWide ? ' Wide-spread flips are hidden too (untick “Hide ⚠ wide spreads”).' : '')
             : 'No book flips in the current Bazaar data.' })
           : (0, b.jsx)('div', { style: { height: virt.getTotalSize(), position: 'relative' }, children:
             virt.getVirtualItems().map((v) => {
               const r = list[v.index];
-              return (0, b.jsx)(BA_BookRow, { r, instaIn, instaOut, tick, top: v.start }, r.key);
+              return (0, b.jsx)(BA_BookRow, { r, instaIn, instaOut, tick, top: v.start, on: starred.includes(r.key), toggleStar }, r.key);
             }) }),
       ] }) }),
   ] });
@@ -260,7 +275,7 @@ function BA_BookFlips() {
 
 var BA_BOOK_ROW_H = 46;
 
-function BA_BookRow({ r, instaIn, instaOut, tick, top }) {
+function BA_BookRow({ r, instaIn, instaOut, tick, top, on, toggleStar }) {
   const cell = (children, cls = '', title) => (0, b.jsx)('div', { className: `pr-3 text-right ${cls}`, title, children });
   const two = (top, sub, cls, title) => (0, b.jsxs)('div', { className: `pr-3 text-right ${cls}`, title, children: [
     (0, b.jsx)('div', { children: top }), (0, b.jsx)('div', { className: 'whitespace-nowrap text-[11px] text-mute', children: sub })] });
@@ -270,7 +285,11 @@ function BA_BookRow({ r, instaIn, instaOut, tick, top }) {
     onKeyDown: (e) => { if (e.key === 'Enter') ft(st.item(r.outId)); },
     className: 'num absolute left-0 grid w-full cursor-pointer items-center overflow-hidden border-b border-line/60 text-[13px] hover:bg-white/[0.04]',
     style: { gridTemplateColumns: BA_bookGrid, height: BA_BOOK_ROW_H, transform: `translateY(${top}px)` }, children: [
-      (0, b.jsxs)('div', { className: 'flex min-w-0 items-center gap-2.5 pl-2.5 pr-2', children: [
+      (0, b.jsx)('button', { type: 'button', onClick: (e) => { e.stopPropagation(); toggleStar(r.key); }, onKeyDown: (e) => e.stopPropagation(),
+        'aria-label': on ? 'Remove from watchlist' : 'Add to watchlist',
+        className: `mx-auto flex h-7 w-7 items-center justify-center rounded-md hover:bg-white/10 ${on ? 'text-buy' : 'text-mute/60'}`,
+        children: (0, b.jsx)(zr, { name: 'star', size: 16, filled: on }) }),
+      (0, b.jsxs)('div', { className: 'flex min-w-0 items-center gap-2.5 pr-2', children: [
         (0, b.jsx)(Jr, { id: r.outId, info: r.info, size: 26 }),
         (0, b.jsxs)('div', { className: 'min-w-0', children: [
           (0, b.jsx)('div', { className: 'truncate font-sans text-sm text-ink', children: r.label }),
