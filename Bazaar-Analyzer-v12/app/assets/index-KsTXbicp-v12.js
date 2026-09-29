@@ -3297,7 +3297,7 @@ function BA_TopSearch() {
     { rows, byId } = $t(),
     ah = ka().data,
     [open, setOpen] = (0, y.useState)(!1),
-    [idx, setIdx] = (0, y.useState)(0),
+    [idx, setIdx] = (0, y.useState)(-1), // -1 = nothing marked: Enter just closes the list, Tab/arrows mark a result
     ref = (0, y.useRef)(null),
     dq = hd(q, 300),
     players = at({
@@ -3325,7 +3325,7 @@ function BA_TopSearch() {
     return [...(bz.fuzzy ? [...ahl, ...bzl] : [...bzl, ...ahl]), ...pl];
   }, [rows, ahOnly, q, players.data]);
   (0, y.useEffect)(() => {
-    setIdx(0);
+    setIdx(-1);
   }, [q]);
   let go = (s) => {
     ft(s.kind === `bz` ? st.item(s.r.id) : s.kind === `ah` ? st.ahItem(s.r.tag) : st.ahPlayer(s.r.uuid, s.r.name));
@@ -3381,15 +3381,18 @@ function BA_TopSearch() {
         onFocus: () => setOpen(!0),
         onBlur: () => setTimeout(() => setOpen(!1), 120),
         onKeyDown: (e) => {
-          // Tab / Shift+Tab walk the open list (wrapping) like the arrows; with no list, Tab moves focus as usual
+          // Tab / Shift+Tab walk the open list (wrapping) like the arrows; with no list, Tab moves focus as usual.
+          // Enter goes to the marked result, or with none marked closes the list and keeps the typed text
           e.key === `Tab` && open && list.length
-            ? (e.preventDefault(), setIdx((i) => (i + (e.shiftKey ? list.length - 1 : 1)) % list.length))
+            ? (e.preventDefault(), setIdx((i) => (i < 0 ? (e.shiftKey ? list.length - 1 : 0) : (i + (e.shiftKey ? list.length - 1 : 1)) % list.length)))
             : e.key === `ArrowDown`
             ? (e.preventDefault(), setIdx((i) => Math.min(i + 1, list.length - 1)))
             : e.key === `ArrowUp`
               ? (e.preventDefault(), setIdx((i) => Math.max(i - 1, 0)))
-              : e.key === `Enter` && list[idx]
-                ? go(list[idx])
+              : e.key === `Enter`
+                ? list[idx]
+                  ? go(list[idx])
+                  : (setOpen(!1), ref.current?.blur())
                 : e.key === `Escape` && (setQ(``), ref.current?.blur());
         },
         placeholder: `Search items or players…  (Ctrl K)`,
