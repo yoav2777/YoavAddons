@@ -4,6 +4,7 @@ import com.yoav3577.bazaaranalyzer.core.Cfg;
 import com.yoav3577.bazaaranalyzer.core.GraphPrefs;
 import com.yoav3577.bazaaranalyzer.core.LinkSettings;
 import com.yoav3577.bazaaranalyzer.core.ModPrefs;
+import com.yoav3577.bazaaranalyzer.core.SyncPrefs;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -44,6 +45,7 @@ final class SettingsScreen extends Screen {
       static final Page ABOUT = new Page("ABOUT", "About", "Yoav Addons by yoav3577.");
       static final Page GRAPH = new Page("GRAPH", "Price graph", "The price graph (key I): its default range, look and size.");
       static final Page TRADE = new Page("TRADE", "Trade window", "The website button in trade windows, and recording trades.");
+      static final Page SYNC = new Page("SYNC", "Cloud sync", "Shares the lowball tracker between your PCs through your GitHub.");
       static final Page WORTH = new Page("WORTH", "Item worth", "How items are valued: the trade window worth and the debug hover.");
       static final Page LINKS = new Page("LINKS", "Website links", "Which modifiers become filters on the website's AH item pages.");
       static final Page FILL = new Page("FILL", "Auto fill time", "Fills the Custom Duration sign in the AH Auction Duration menu.");
@@ -207,7 +209,7 @@ final class SettingsScreen extends Screen {
       this.options.add(new Info(Page.ABOUT, "Yoav Addons", "Version " + BazaarClient.VERSION + " by yoav3577. Prices come from Coflnet and the Hypixel API."));
       this.options.add(new Info(
          Page.ABOUT, "Commands",
-         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/ya site: the website in your browser (built into the mod).\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
+         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/ya site: the website in your browser (built into the mod).\n/ya sync: sync the lowball tracker with your other PCs now.\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
       ));
       this.options.add(new Action(
          Page.ABOUT, "Reset everything", "Every setting on every page back to the defaults. Click twice to confirm.",
@@ -351,6 +353,27 @@ final class SettingsScreen extends Screen {
          ModSettings.live(ModSettings.get().withSitePort(ModPrefs.DEFAULT.sitePort()));
          siteResult = null;
       }));
+
+      // Cloud sync
+      this.options.add(new Info(
+         Page.SYNC, "How it works",
+         "Keeps the lowball tracker (player trades, parts taken off bought items, the last 90 days of Bazaar/AH chat) in a secret gist on your GitHub, so every PC with the same token shows the same tracker.\nToken: github.com/settings/tokens > Generate new token (classic), tick only \"gist\", no expiration. Paste the same token on every PC."
+      ));
+      this.options.add(new Toggle(
+         Page.SYNC, "Sync", "Turn cloud sync on or off (the token stays saved).", CloudSync::enabled, CloudSync::setEnabled
+      ));
+      this.options.add(new Text(
+         Page.SYNC, "GitHub token", "Paste the token (Ctrl+V). It is saved on this PC only (config/bazaaranalyzer/sync.json); paste another one to replace it.",
+         CloudSync.tokenHint(), "", t -> {
+            if (SyncPrefs.looksLikeToken(t)) {
+               CloudSync.setToken(t);
+            }
+         }
+      ));
+      this.options.add(new Action(
+         Page.SYNC, "Sync now", "Gets your other PCs' data and uploads this PC's. It also runs by itself every few minutes and when the game closes.",
+         CloudSync::status, () -> CloudSync.syncNow(null)
+      ));
 
       // Auto fill time
       this.options.add(new Toggle(

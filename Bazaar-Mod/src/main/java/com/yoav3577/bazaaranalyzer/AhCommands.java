@@ -4,11 +4,13 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommands;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.minecraft.ChatFormatting;
 
 /**
  * Client commands. Settings: /ba, /ya, /yoavaddons, /bazaaranalyzer, /bazaaranalyzer settings, /bazaaranalyzer open.
  * /ya site (any of the names) opens the website in the browser.
  * /bazaaranalyzer open &lt;n&gt; re-opens a cancelled trade's AH items on the website.
+ * /ya sync syncs the lowball tracker with the other PCs now (CloudSync).
  */
 final class AhCommands {
    static final String[] SETTINGS_ALIASES = {"ba", "ya", "yoavaddons"};
@@ -31,6 +33,7 @@ final class AhCommands {
                .executes(c -> settings())
                .then(ClientCommands.literal("settings").executes(c -> settings()))
                .then(ClientCommands.literal("site").executes(c -> site()))
+               .then(ClientCommands.literal("sync").executes(c -> sync()))
                .then(ClientCommands.literal("open").executes(c -> settings()).then(ClientCommands.argument("id", IntegerArgumentType.integer(1)).executes(c -> {
                   AhTabs.openOffer(IntegerArgumentType.getInteger(c, "id"));
                   return 1;
@@ -42,6 +45,7 @@ final class AhCommands {
                   .executes(c -> settings())
                   .then(ClientCommands.literal("settings").executes(c -> settings()))
                   .then(ClientCommands.literal("site").executes(c -> site()))
+                  .then(ClientCommands.literal("sync").executes(c -> sync()))
             );
          }
       });
@@ -49,6 +53,12 @@ final class AhCommands {
 
    private static int site() {
       AhTabs.openSite();
+      return 1;
+   }
+
+   private static int sync() {
+      AhTabs.say("Cloud sync: syncing...", ChatFormatting.GRAY);
+      CloudSync.syncNow(s -> AhTabs.say("Cloud sync: " + s, ChatFormatting.GRAY));
       return 1;
    }
 

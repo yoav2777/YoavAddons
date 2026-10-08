@@ -35,6 +35,12 @@ public class BazaarClient implements ClientModInitializer {
       }
 
       try {
+         CloudSync.init();
+      } catch (Throwable e) {
+         LOG.error("Cloud sync could not start; the lowball tracker stays on this PC only", e);
+      }
+
+      try {
          GraphKey.init();
       } catch (Throwable var5) {
          LOG.error("The price graph key could not be registered; the mod keeps running without it", var5);
