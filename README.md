@@ -25,6 +25,17 @@ The mod has the website built in: `/ya site`, the trade window button and AH lin
 The online website's **Activity** tab also shows your trades while the game is running (the browser may ask to allow
 access to your local network: allow it).
 
+### Lowball tracker on more than one PC
+
+The lowball tracker's data is saved on the PC you play on. To share it between your PCs (desktop + laptop):
+
+1. On github.com: **Settings > Developer settings > Personal access tokens > Tokens (classic) > Generate new token (classic)**,
+   tick only **gist**, set **No expiration**, generate, and copy the token.
+2. In game: `/ya` > **Cloud sync** > paste the token in **GitHub token**. Do the same on every PC (same token).
+
+The mod keeps the data in a secret gist on your GitHub and syncs it on start, every few minutes and when the game
+closes (`/ya sync` syncs now). Nothing is ever deleted by the sync, so PCs can't overwrite each other.
+
 ## Setup: website on your PC (optional)
 
 1. Download `Bazaar-Analyzer.zip` from the release and extract it (right-click > Extract All).

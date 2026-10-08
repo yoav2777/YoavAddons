@@ -4,6 +4,7 @@ import com.yoav3577.bazaaranalyzer.core.FailureLimiter;
 import com.yoav3577.bazaaranalyzer.core.GemLog;
 import com.yoav3577.bazaaranalyzer.core.GemTracker;
 import com.yoav3577.bazaaranalyzer.core.Parts;
+import com.yoav3577.bazaaranalyzer.core.SyncData;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -81,6 +82,24 @@ final class GemWatch {
 
    static synchronized List<GemLog> all() {
       return new ArrayList<>(LOG);
+   }
+
+   /** Entries another PC uploaded (CloudSync, one JSON line each): the ones not here yet go into the log and the file. */
+   static synchronized int addSynced(List<String> lines) {
+      if (file == null) {
+         return 0;
+      }
+
+      int added = 0;
+      for (String l : SyncData.missing(LOG.stream().map(GemLog::toJson).toList(), lines)) {
+         GemLog e = GemLog.parse(l).orElse(null);
+         if (e != null) {
+            add(e);
+            added++;
+         }
+      }
+
+      return added;
    }
 
    private static synchronized void add(GemLog e) {

@@ -1,6 +1,9 @@
 package com.yoav3577.bazaaranalyzer;
 
 import com.yoav3577.bazaaranalyzer.core.CaptureFilter;
+import com.yoav3577.bazaaranalyzer.core.SyncData;
+import com.yoav3577.bazaaranalyzer.core.Trade;
+import com.yoav3577.bazaaranalyzer.core.TradeBook;
 import com.yoav3577.bazaaranalyzer.core.TradeParser;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -27,6 +30,8 @@ public final class Capture {
    });
    private static final DateTimeFormatter STAMP = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
    private static Path file;
+   /** Lines other PCs captured (CloudSync), kept apart so capture.log stays this PC's own chat in time order. */
+   private static Path synced;
 
    private Capture() {
    }
@@ -34,6 +39,7 @@ public final class Capture {
    public static void init() {
       Path dir = FabricLoader.getInstance().getConfigDir().resolve("bazaaranalyzer");
       file = dir.resolve("capture.log");
+      synced = dir.resolve("capture-sync.log");
       loadHistory();
       ClientReceiveMessageEvents.GAME.register((message, overlay) -> {
          if (!overlay) {
@@ -79,7 +85,54 @@ public final class Capture {
             }
          }
 
+         try {
+            if (Files.exists(synced)) {
+               List<Trade> more = new ArrayList<>();
+               for (String l : Files.readAllLines(synced, StandardCharsets.UTF_8)) {
+                  TradeBook.parseRecord(l).ifPresent(more::add);
+               }
+
+               BazaarClient.BOOK.addSorted(more);
+            }
+         } catch (RuntimeException | IOException e) {
+            BazaarClient.LOG.warn("Could not read {}", synced, e);
+         }
+
          BazaarClient.LOG.info("Loaded {} past trades from the capture files", BazaarClient.BOOK.size());
+      });
+   }
+
+   /** A trade as the line CloudSync uploads (the capture.log record it was read from). */
+   static String syncLine(Trade t) {
+      return t.ts() + "\t" + CaptureFilter.oneLine(t.raw());
+   }
+
+   /**
+    * Lines another PC uploaded (CloudSync, "ts\tline" since {@code from}): the trades not in the book yet go into it and
+    * into capture-sync.log. Runs on IO, so after the history has loaded.
+    */
+   static void addSynced(List<String> lines, long from) {
+      IO.execute(() -> {
+         try {
+            List<String> have = BazaarClient.BOOK.snapshot().stream().filter(t -> t.ts() >= from).map(Capture::syncLine).toList();
+            List<Trade> more = new ArrayList<>();
+            StringBuilder text = new StringBuilder();
+            for (String l : SyncData.missing(have, lines.stream().filter(l -> SyncData.ts(l) >= from).toList())) {
+               TradeBook.parseRecord(l).ifPresent(t -> {
+                  more.add(t);
+                  text.append(l).append('\n');
+               });
+            }
+
+            if (!more.isEmpty()) {
+               BazaarClient.BOOK.addSorted(more);
+               Files.createDirectories(synced.getParent());
+               Files.writeString(synced, text, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+               BazaarClient.LOG.info("Cloud sync: {} Bazaar/AH lines from other PCs", more.size());
+            }
+         } catch (IOException | RuntimeException e) {
+            BazaarClient.LOG.warn("Could not save synced capture lines", e);
+         }
       });
    }
 

@@ -44,11 +44,11 @@ into it while it is NOT running), the packaged copies in `Downloads\`, and the m
   Keep both, and keep the `#/ah/item/TAG?f=<json>` route.
 - Verify in a browser (the in-app browser pane works; it must be visible or requestAnimationFrame is paused).
 
-## Mod (Yoav Addons 0.9.2, mod id still `bazaaranalyzer` so configs keep working)
+## Mod (Yoav Addons 0.10.0, mod id still `bazaaranalyzer` so configs keep working)
 
 - Minecraft 26.1.2 (unobfuscated), Fabric Loader >=0.19.3, Fabric API 0.155.2+26.1.2, Java 25, Loom 1.17.21, Gradle 9.5.1.
 - Build: `cd Bazaar-Mod && JAVA_HOME="C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot" ./gradlew build`
-  → `build/libs/yoav-addons-0.9.2.jar` (124 JUnit tests). Stop the daemon after (`./gradlew --stop`) — RAM is tight.
+  → `build/libs/yoav-addons-0.10.0.jar` (135 JUnit tests). Stop the daemon after (`./gradlew --stop`) — RAM is tight.
 - Install: copy the jar to `Downloads\` and to `%APPDATA%\ModrinthApp\profiles\Skyblocker Modpack\mods\`
   **only while the game is closed** (old 0.5.0 stays there as `.disabled`).
 - Dev client: `./gradlew runClient` with `-Dbazaaranalyzer.dev.*` flags (DevHarness.java; list + screenshot tools in
@@ -57,7 +57,7 @@ into it while it is NOT running), the packaged copies in `Downloads\`, and the m
 - **Never** launch the real game or the Modrinth app, and never touch `%APPDATA%\.minecraft`.
 - Code map (`com.yoav3577.bazaaranalyzer`): `BazaarClient` entry point; `core/*` pure tested logic (TradeParser,
   TradeChat, ModPricer, ModSelector, AhLink, Filter, Lowball, AhLedger, TradeBook, settings math); `PriceScreen`
-  graph (key I); `TradeAhUi` trade-window button; `TradeTracker`/`Capture` trade logging; `GemWatch` (gems + other parts taken off lowball items, `gem-log.jsonl`); `Appraisal` + `core/Appraiser` (item worth: recent sales / 30-90 day history / BIN, notes/price-prediction.md), `TradeWorth` + `CraftPrices` + `core/craft` (trade window worth / craft "!"); `PriceDebug` (worth breakdown in tooltips); `LocalServer`
+  graph (key I); `TradeAhUi` trade-window button; `TradeTracker`/`Capture` trade logging; `GemWatch` (gems + other parts taken off lowball items, `gem-log.jsonl`); `CloudSync` + `core/SyncData`/`GistClient`/`SyncPrefs` (lowball tracker data shared between PCs through a secret GitHub gist, one file per kind + UTC month, lines only ever added on both sides; token in `sync.json`; other PCs' chat lines go to `capture-sync.log`); `Appraisal` + `core/Appraiser` (item worth: recent sales / 30-90 day history / BIN, notes/price-prediction.md), `TradeWorth` + `CraftPrices` + `core/craft` (trade window worth / craft "!"); `PriceDebug` (worth breakdown in tooltips); `LocalServer`
   (127.0.0.1:47860-47869, `/health` `/trades` `/lowballs` for the site's Activity tab); `SettingsScreen` (MoulConfig / SkyHanni look, drawing kit `MoulUi`; other mods add pages through `api/*` + the "yoavaddons" entrypoint, `Addons`; commands /ba /ya /yoavaddons /bazaaranalyzer in `AhCommands`);
   `SiteFinder`; `AhTabs`; `PriceData`/`AhLookup`/`Http`; `ModIo` shared IO thread. Config in `config/bazaaranalyzer/`.
 

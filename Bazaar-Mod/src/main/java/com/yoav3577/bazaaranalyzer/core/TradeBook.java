@@ -2,6 +2,7 @@ package com.yoav3577.bazaaranalyzer.core;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Iterator;
@@ -54,7 +55,19 @@ public final class TradeBook {
       return older.size();
    }
 
-   private static Optional<Trade> parseRecord(String l) {
+   /** Adds trades from another PC (CloudSync) in time order among the ones here; the oldest drop off past max. */
+   public synchronized void addSorted(List<Trade> more) {
+      if (!more.isEmpty()) {
+         List<Trade> all = new ArrayList<>(this.trades);
+         all.addAll(more);
+         all.sort(Comparator.comparingLong(Trade::ts));
+         this.trades.clear();
+         this.trades.addAll(all.subList(Math.max(0, all.size() - this.max), all.size()));
+      }
+   }
+
+   /** One capture record ("ts\tline") as a trade. */
+   public static Optional<Trade> parseRecord(String l) {
       int tab = l.indexOf('\t');
       if (tab <= 0) {
          return Optional.empty();
