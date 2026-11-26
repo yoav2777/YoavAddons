@@ -24,7 +24,7 @@ final class AhCommands {
       ClientTickEvents.END_CLIENT_TICK.register(mc -> {
          if (openSettings) {
             openSettings = false;
-            mc.setScreen(new SettingsScreen(null));
+            mc.gui.setScreen(new SettingsScreen(null));
          }
       });
       ClientCommandRegistrationCallback.EVENT.register((dispatcher, context) -> {

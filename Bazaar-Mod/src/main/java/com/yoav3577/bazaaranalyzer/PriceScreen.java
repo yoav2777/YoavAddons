@@ -115,18 +115,18 @@ final class PriceScreen extends Screen {
    }
 
    static void open(Minecraft mc, PriceData.Choice choice, String query, ItemStack hovered) {
-      mc.setScreen(new PriceScreen(choice, query, hovered));
+      mc.gui.setScreen(new PriceScreen(choice, query, hovered));
    }
 
    /** Opens the graph from another screen (the settings preview); Esc goes back to it. */
    static void openFrom(Minecraft mc, Screen parent) {
       PriceScreen s = new PriceScreen(rememberedChoice, null, null);
       s.parent = parent;
-      mc.setScreen(s);
+      mc.gui.setScreen(s);
    }
 
    public void onClose() {
-      this.minecraft.setScreen(this.parent);
+      this.minecraft.gui.setScreen(this.parent);
    }
 
    private int panelW() {
@@ -251,7 +251,7 @@ final class PriceScreen extends Screen {
          this.addRenderableWidget(this.rangeButtons[i]);
       }
 
-      this.settingsButton = new MoulUi.Button(this.px, this.py, 16, 16, "⚙", () -> this.minecraft.setScreen(new SettingsScreen(this)));
+      this.settingsButton = new MoulUi.Button(this.px, this.py, 16, 16, "⚙", () -> this.minecraft.gui.setScreen(new SettingsScreen(this)));
       this.settingsButton.setTooltip(Tooltip.create(Component.literal("Yoav Addons settings")));
       this.addRenderableWidget(this.settingsButton);
       this.layout();

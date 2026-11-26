@@ -20,7 +20,7 @@ mobs, blocks, and Mineshaft corpses: Lapis, Tungsten, Umber), a same-lobby warni
 
 ## Setup: mod
 
-Needs Minecraft **26.1.2** with **Fabric Loader 0.19.3+**, **Fabric API** and **Java 25**.
+Needs Minecraft **26.2** with **Fabric Loader 0.20.1+**, **Fabric API** and **Java 25**.
 
 1. Close the game.
 2. Download the `.jar` from the release and put it in your game profile's `mods` folder.

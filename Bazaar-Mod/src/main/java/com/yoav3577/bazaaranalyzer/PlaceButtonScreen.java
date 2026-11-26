@@ -133,7 +133,7 @@ final class PlaceButtonScreen extends Screen {
    }
 
    public void onClose() {
-      this.minecraft.setScreen(this.parent);
+      this.minecraft.gui.setScreen(this.parent);
    }
 
    public void extractBackground(GuiGraphicsExtractor g, int mouseX, int mouseY, float a) {

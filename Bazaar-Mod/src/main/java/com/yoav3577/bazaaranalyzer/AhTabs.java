@@ -52,7 +52,7 @@ final class AhTabs {
       Minecraft mc = Minecraft.getInstance();
       mc.execute(() -> {
          if (mc.gui != null) {
-            mc.gui.getChat().addClientSystemMessage(message);
+            mc.gui.hud.getChat().addClientSystemMessage(message);
          }
       });
    }

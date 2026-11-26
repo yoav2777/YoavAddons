@@ -291,7 +291,7 @@ final class SettingsScreen extends Screen {
       ));
       this.options.add(new Action(
          Page.TRADE, "Place the button", "Move the button with the mouse on a mock trade screen.", () -> "Drag to place...",
-         () -> this.minecraft.setScreen(new PlaceButtonScreen(this))
+         () -> this.minecraft.gui.setScreen(new PlaceButtonScreen(this))
       ));
       this.options.add(new Preview(Page.TRADE));
       this.options.add(new Toggle(
@@ -788,7 +788,7 @@ final class SettingsScreen extends Screen {
    }
 
    public void onClose() {
-      this.minecraft.setScreen(this.parent);
+      this.minecraft.gui.setScreen(this.parent);
    }
 
    // ---------------------------------------------------------------- dev harness

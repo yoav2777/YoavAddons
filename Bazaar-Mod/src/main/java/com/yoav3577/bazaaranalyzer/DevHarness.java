@@ -60,7 +60,7 @@ final class DevHarness {
       int[] play = new int[]{0};
       ClientTickEvents.END_CLIENT_TICK.register(mc -> {
          try {
-            if (mc.screen instanceof TitleScreen) {
+            if (mc.gui.screen() instanceof TitleScreen) {
                title[0]++;
                if (world && title[0] == 100) {
                   createWorld(mc);
@@ -84,7 +84,7 @@ final class DevHarness {
                      Object has = mm.getMethod("hasConfigScreen", String.class).invoke(null, BazaarClient.MOD_ID);
                      Object screen = mm.getMethod("getConfigScreen", String.class, net.minecraft.client.gui.screens.Screen.class).invoke(null, BazaarClient.MOD_ID, null);
                      BazaarClient.LOG.info("Dev: Mod Menu hasConfigScreen={} screen={}", has, screen == null ? null : screen.getClass().getName());
-                     mc.setScreen((net.minecraft.client.gui.screens.Screen) screen);
+                     mc.gui.setScreen((net.minecraft.client.gui.screens.Screen) screen);
                   } else if (t == 240) {
                      shot(mc, "modmenu-config");
                   }
@@ -111,7 +111,7 @@ final class DevHarness {
                   shot(mc, "graph-" + GraphSettings.get().range());
                } else if (System.getProperty(P + "gear") != null && t > 300) {
                   gear(mc, t);
-               } else if (t == 320 && gestures != null && mc.screen instanceof PriceScreen ps) {
+               } else if (t == 320 && gestures != null && mc.gui.screen() instanceof PriceScreen ps) {
                   String[] g = gestures.split(",");
                   ps.devGestures(Double.parseDouble(g[0]), Integer.parseInt(g[1]), Integer.parseInt(g[2]));
                }
@@ -177,9 +177,9 @@ final class DevHarness {
 
    private static void trade(Minecraft mc, String mode, int t) throws ReflectiveOperationException {
       if (t == 150) {
-         mc.setScreen(fakeTrade(mc));
+         mc.gui.setScreen(fakeTrade(mc));
       } else if (System.getProperty(P + "corners") != null && t >= 170 && t <= 290 && (t - 170) % 40 == 0
-         && mc.screen instanceof AbstractContainerScreen<?> cs) {
+         && mc.gui.screen() instanceof AbstractContainerScreen<?> cs) {
          ModPrefs.Corner c = ModPrefs.Corner.values()[(t - 170) / 40];
          ModSettings.live(ModSettings.get().withPosition(c, 6, 6));
          int[] r = TradeAhUi.rect(mc.font, TradeTracker.theirAhCount(), cs.width, cs.height);
@@ -188,17 +188,17 @@ final class DevHarness {
          shot(mc, "trade-corner-" + ModSettings.get().corner().name().toLowerCase());
       } else if (System.getProperty(P + "worth") != null && t >= 320) {
          worthShots(mc, t);
-      } else if (t == 320 && mc.screen instanceof AbstractContainerScreen<?> cs) {
+      } else if (t == 320 && mc.gui.screen() instanceof AbstractContainerScreen<?> cs) {
          if (mode.equals("button")) {
             BazaarClient.LOG.info("Dev: button click handled = {}", TradeAhUi.devClick(mc, cs));
          } else {
             ClientReceiveMessageEvents.GAME.invoker().onReceiveGameMessage(Component.literal("You cancelled the trade!"), false);
-            mc.setScreen(null);
+            mc.gui.setScreen(null);
          }
       } else if (t == 460 && mode.equals("cancel") && mc.player != null) {
          mc.player.connection.sendUnattendedCommand("bazaaranalyzer open 1", null);
       } else if (t == 640 && mode.equals("cancel")) {
-         mc.setScreen(new ChatScreen("", false));
+         mc.gui.setScreen(new ChatScreen("", false));
       }
    }
 
@@ -211,7 +211,7 @@ final class DevHarness {
          }
       }
 
-      if (!(mc.screen instanceof SettingsScreen ss)) {
+      if (!(mc.gui.screen() instanceof SettingsScreen ss)) {
          return;
       }
 
@@ -248,7 +248,7 @@ final class DevHarness {
       double s = mc.getWindow().getGuiScale();
       if (box != null) {
          setMouse(mc, (box[0] + box[2] / 2.0) * s, (box[1] + box[3] / 2.0) * s);
-      } else if (t >= 1100 && mc.screen instanceof AbstractContainerScreen<?> cs) {
+      } else if (t >= 1100 && mc.gui.screen() instanceof AbstractContainerScreen<?> cs) {
          // price debug tooltips: the Hyperion (slot 5), then the Ghoul pet (slot 14)
          int[] c = slotCenter(cs, t < 1420 ? 5 : 14);
          setMouse(mc, c[0] * s, c[1] * s);
@@ -291,9 +291,9 @@ final class DevHarness {
       if (t == 120) {
          mc.player.connection.sendCommand("ba");
       } else if (t == 160) {
-         BazaarClient.LOG.info("Dev: /ba opened {}", mc.screen == null ? "nothing" : mc.screen.getClass().getSimpleName());
+         BazaarClient.LOG.info("Dev: /ba opened {}", mc.gui.screen() == null ? "nothing" : mc.gui.screen().getClass().getSimpleName());
          shot(mc, "moul-about");
-      } else if (mc.screen instanceof SettingsScreen ss) {
+      } else if (mc.gui.screen() instanceof SettingsScreen ss) {
          double s = mc.getWindow().getGuiScale();
          if (t == 180) {
             ss.showPage(SettingsScreen.Page.GRAPH);
@@ -318,26 +318,26 @@ final class DevHarness {
             ss.onClose();
             PriceScreen.openFrom(mc, null);
          }
-      } else if (t == 380 && mc.screen instanceof PriceScreen) {
+      } else if (t == 380 && mc.gui.screen() instanceof PriceScreen) {
          shot(mc, "moul-graph-screen");
-         mc.setScreen(new PlaceButtonScreen(null));
+         mc.gui.setScreen(new PlaceButtonScreen(null));
       } else if (t == 420) {
          shot(mc, "moul-place");
-         mc.setScreen(null);
+         mc.gui.setScreen(null);
          BazaarClient.LOG.info("Dev: moul shots done");
       }
    }
 
    /** Saves a screenshot of the game framebuffer to run/screenshots/<name>.png (works while the window is hidden). */
    static void shot(Minecraft mc, String name) {
-      Screenshot.grab(mc.gameDirectory, name + ".png", mc.getMainRenderTarget(), 1, msg -> BazaarClient.LOG.info("Dev: screenshot {} -> {}", name, msg.getString()));
+      Screenshot.grab(mc.gameDirectory, name + ".png", mc.gameRenderer.mainRenderTarget(), 1, msg -> BazaarClient.LOG.info("Dev: screenshot {} -> {}", name, msg.getString()));
    }
 
    /** Opens the drag-to-place screen and drags the button to near the bottom-right corner. */
    private static void place(Minecraft mc, int t) {
       if (t == 200) {
-         mc.setScreen(new PlaceButtonScreen(null));
-      } else if (t == 260 && mc.screen instanceof PlaceButtonScreen ps) {
+         mc.gui.setScreen(new PlaceButtonScreen(null));
+      } else if (t == 260 && mc.gui.screen() instanceof PlaceButtonScreen ps) {
          int[] r = TradeAhUi.rect(mc.font, 3, ps.width, ps.height);
          MouseButtonEvent down = new MouseButtonEvent(r[0] + 4, r[1] + 4, new MouseButtonInfo(0, 0));
          // dev.placeAt=x,y: where the button's top-left should land (default: near the bottom-right corner).
@@ -350,7 +350,7 @@ final class DevHarness {
          BazaarClient.LOG.info("Dev: placed -> {} lands at {}", ModSettings.get().toJson().trim(), java.util.Arrays.toString(TradeAhUi.rect(mc.font, 3, ps.width, ps.height)));
       } else if (t == 240 || t == 280) {
          shot(mc, t == 240 ? "place-before" : "place-after");
-      } else if (t == 340 && mc.screen instanceof PlaceButtonScreen ps) {
+      } else if (t == 340 && mc.gui.screen() instanceof PlaceButtonScreen ps) {
          ps.onClose();
          BazaarClient.LOG.info("Dev: mod-settings.json = {}", String.valueOf(ConfigFiles.read("mod-settings.json")).trim());
       }
@@ -386,11 +386,11 @@ final class DevHarness {
     */
    private static void placeDrag(Minecraft mc, int t) throws ReflectiveOperationException {
       if (t == 200) {
-         mc.setScreen(new PlaceButtonScreen(null));
+         mc.gui.setScreen(new PlaceButtonScreen(null));
          return;
       }
 
-      if (!(mc.screen instanceof PlaceButtonScreen ps) || t < 220 || t > 340) {
+      if (!(mc.gui.screen() instanceof PlaceButtonScreen ps) || t < 220 || t > 340) {
          return;
       }
 
@@ -455,11 +455,11 @@ final class DevHarness {
     */
    private static void placeHuman(Minecraft mc, int t) throws ReflectiveOperationException {
       if (t == 200) {
-         mc.setScreen(new SettingsScreen(null));
+         mc.gui.setScreen(new SettingsScreen(null));
          return;
       }
 
-      if (t == 210 && mc.screen instanceof SettingsScreen ss) {
+      if (t == 210 && mc.gui.screen() instanceof SettingsScreen ss) {
          ss.showPage(SettingsScreen.Page.TRADE);
          return;
       }
@@ -467,7 +467,7 @@ final class DevHarness {
       java.lang.reflect.Field focused = com.mojang.blaze3d.platform.Window.class.getDeclaredField("focused");
       focused.setAccessible(true);
       focused.setBoolean(mc.getWindow(), true);
-      if (t == 220 && mc.screen instanceof SettingsScreen ss) {
+      if (t == 220 && mc.gui.screen() instanceof SettingsScreen ss) {
          double[] c = ss.devControl("Place the button");
          if (c != null) {
             BazaarClient.LOG.info("Dev: human clicks [Drag to place...] at {},{}", c[0], c[1]);
@@ -475,8 +475,8 @@ final class DevHarness {
          }
       } else if (t == 225) {
          mouseButton(mc, 0);
-         BazaarClient.LOG.info("Dev: after the click the screen is {}", mc.screen == null ? "null" : mc.screen.getClass().getSimpleName());
-      } else if (mc.screen instanceof PlaceButtonScreen ps) {
+         BazaarClient.LOG.info("Dev: after the click the screen is {}", mc.gui.screen() == null ? "null" : mc.gui.screen().getClass().getSimpleName());
+      } else if (mc.gui.screen() instanceof PlaceButtonScreen ps) {
          // Drag 1: from wherever the button is to the middle of the screen (on top of Done/Reset), in 10 small steps.
          int[] r = TradeAhUi.rect(mc.font, 3, ps.width, ps.height);
          double[] from = {r[0] + 4.5, r[1] + 4.5};
@@ -516,8 +516,8 @@ final class DevHarness {
             ps.onClose();
          }
       } else if (t == 280 || t == 305) {
-         BazaarClient.LOG.info("Dev: the place screen is gone, now {}", mc.screen == null ? "null" : mc.screen.getClass().getSimpleName());
-      } else if (t == 325 && mc.screen instanceof SettingsScreen ss) {
+         BazaarClient.LOG.info("Dev: the place screen is gone, now {}", mc.gui.screen() == null ? "null" : mc.gui.screen().getClass().getSimpleName());
+      } else if (t == 325 && mc.gui.screen() instanceof SettingsScreen ss) {
          ss.onClose();
       } else if (t == 330) {
          BazaarClient.LOG.info("Dev: placeHuman done, mod-settings.json = {}", String.valueOf(ConfigFiles.read("mod-settings.json")).trim());
@@ -529,17 +529,17 @@ final class DevHarness {
     * -> the same graph must now be 700x300 (clamped to the screen); then the mouse is put on the chart for a tooltip screenshot.
     */
    private static void gear(Minecraft mc, int t) throws ReflectiveOperationException {
-      if (t == 320 && mc.screen instanceof PriceScreen ps) {
+      if (t == 320 && mc.gui.screen() instanceof PriceScreen ps) {
          BazaarClient.LOG.info("Dev: gear before geometry={}", java.util.Arrays.toString(ps.devGeometry()));
          ps.devGear();
-      } else if (t == 340 && mc.screen instanceof SettingsScreen) {
+      } else if (t == 340 && mc.gui.screen() instanceof SettingsScreen) {
          GraphSettings.live(GraphSettings.get().withSize(700, 300).withLines(com.yoav3577.bazaaranalyzer.core.GraphPrefs.Lines.BUY));
-      } else if (t == 360 && mc.screen instanceof SettingsScreen ss) {
+      } else if (t == 360 && mc.gui.screen() instanceof SettingsScreen ss) {
          ss.onClose();
-      } else if (t == 380 && mc.screen instanceof PriceScreen ps) {
+      } else if (t == 380 && mc.gui.screen() instanceof PriceScreen ps) {
          int[] g = ps.devGeometry();
          BazaarClient.LOG.info("Dev: gear after geometry={} screen={}x{}", java.util.Arrays.toString(g), ps.width, ps.height);
-      } else if (t > 380 && t < 420 && mc.screen instanceof PriceScreen ps) {
+      } else if (t > 380 && t < 420 && mc.gui.screen() instanceof PriceScreen ps) {
          // Put the mouse on the middle of the chart (every tick, in case real mouse input moves it) for the tooltip.
          int[] g = ps.devGeometry();
          double s = mc.getWindow().getGuiScale();
@@ -561,8 +561,8 @@ final class DevHarness {
             "BazaarDev" + System.currentTimeMillis() % 100000L,
             settings,
             WorldOptions.testWorldWithRandomSeed(),
-            WorldPresets::createFlatWorldDimensions,
-            mc.screen
+            WorldPresets::createTestWorldDimensions,
+            mc.gui.screen()
          );
    }
 
@@ -582,8 +582,8 @@ final class DevHarness {
          tag.putString("id", id);
          stack.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
          mc.player.getInventory().setItem(9, stack);
-         mc.setScreen(new InventoryScreen(mc.player));
-      } else if (t == 150 && mc.screen instanceof InventoryScreen inv) {
+         mc.gui.setScreen(new InventoryScreen(mc.player));
+      } else if (t == 150 && mc.gui.screen() instanceof InventoryScreen inv) {
          for (Slot slot : ((InventoryMenu)inv.getMenu()).slots) {
             if (id.equals(ItemReader.skyblockId(slot.getItem()))) {
                GraphKey.setHoveredForDev(inv, slot);
