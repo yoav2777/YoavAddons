@@ -330,7 +330,7 @@ final class DevHarness {
 
    /** Saves a screenshot of the game framebuffer to run/screenshots/<name>.png (works while the window is hidden). */
    static void shot(Minecraft mc, String name) {
-      Screenshot.grab(mc.gameDirectory, name + ".png", mc.getMainRenderTarget(), 1, msg -> BazaarClient.LOG.info("Dev: screenshot {} -> {}", name, msg.getString()));
+      Screenshot.grab(mc.gameDirectory, name + ".png", mc.gameRenderer.mainRenderTarget(), 1, msg -> BazaarClient.LOG.info("Dev: screenshot {} -> {}", name, msg.getString()));
    }
 
    /** Opens the drag-to-place screen and drags the button to near the bottom-right corner. */
