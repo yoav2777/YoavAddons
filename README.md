@@ -14,7 +14,7 @@ Tools for Hypixel SkyBlock by yoav3577.
 The folders in this repo are the source code. You don't need them to use the tools.
 
 **Yoav Addons Extension** (optional add-on): [latest release](https://github.com/yoav2777/YoavAddonsExtension/releases/latest)
-(v1.3.0) has `yoav-addons-extension-1.3.0.jar` and the latest Yoav Addons jar (0.10.0) together. It adds ESP (players,
+(v1.4.0, Minecraft 26.2) has `yoav-addons-extension-1.4.0.jar` and the latest Yoav Addons jar (0.11.0) together. It adds ESP (players,
 mobs, blocks, and Mineshaft corpses: Lapis, Tungsten, Umber), a same-lobby warning and lowball ads. Put both jars in your
 `mods` folder; its pages show up in `/ya`.
 
