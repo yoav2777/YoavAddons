@@ -13,6 +13,11 @@ Tools for Hypixel SkyBlock by yoav3577.
 
 The folders in this repo are the source code. You don't need them to use the tools.
 
+**Yoav Addons Extension** (optional add-on): [latest release](https://github.com/yoav2777/YoavAddonsExtension/releases/latest)
+(v1.3.0) has `yoav-addons-extension-1.3.0.jar` and the latest Yoav Addons jar (0.10.0) together. It adds ESP (players,
+mobs, blocks, and Mineshaft corpses: Lapis, Tungsten, Umber), a same-lobby warning and lowball ads. Put both jars in your
+`mods` folder; its pages show up in `/ya`.
+
 ## Setup: mod
 
 Needs Minecraft **26.1.2** with **Fabric Loader 0.19.3+**, **Fabric API** and **Java 25**.
