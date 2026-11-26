@@ -45,7 +45,7 @@ final class ItemIcons {
    }
 
    private static void scan(Minecraft mc) {
-      if (mc.screen instanceof AbstractContainerScreen<?> cs) {
+      if (mc.gui.screen() instanceof AbstractContainerScreen<?> cs) {
          for (Slot s : cs.getMenu().slots) {
             remember(s.getItem());
          }

@@ -40,14 +40,14 @@ final class GraphKey {
 
       ClientTickEvents.END_CLIENT_TICK.register(mc -> {
          while (key.consumeClick()) {
-            if (mc.screen == null) {
+            if (mc.gui.screen() == null) {
                PriceScreen.open(mc, PriceScreen.remembered(), null, null);
             }
          }
 
          while (settingsKey.consumeClick()) {
-            if (mc.screen == null) {
-               mc.setScreen(new SettingsScreen(null));
+            if (mc.gui.screen() == null) {
+               mc.gui.setScreen(new SettingsScreen(null));
             }
          }
       });

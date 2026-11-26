@@ -81,7 +81,7 @@ final class TradeTracker {
    }
 
    private static void tick(Minecraft mc) {
-      if (mc.screen instanceof AbstractContainerScreen<?> cs && TradeWindow.isTradeTitle(cs.getTitle().getString())) {
+      if (mc.gui.screen() instanceof AbstractContainerScreen<?> cs && TradeWindow.isTradeTitle(cs.getTitle().getString())) {
          watch = null;
          List<Slot> slots = cs.getMenu().slots;
          lastOpenTs = System.currentTimeMillis();
@@ -117,13 +117,13 @@ final class TradeTracker {
       } else {
          lastStacks = null;
          lastCounts = null;
-         if (last != null && watch == null && mc.screen == null) {
+         if (last != null && watch == null && mc.gui.screen() == null) {
             watch = new TradeTracker.Watch(last, invBefore, lastDump, new int[]{WATCH_TICKS}, lastAh, lastOpenTs);
             last = null;
             lastAh = List.of();
          }
 
-         if (!(mc.screen instanceof AbstractContainerScreen<?> open && TradeWindow.isTradeTitle(open.getTitle().getString()))) {
+         if (!(mc.gui.screen() instanceof AbstractContainerScreen<?> open && TradeWindow.isTradeTitle(open.getTitle().getString()))) {
             seen = null;
             ahNow = List.of();
             TradeWorth.clear();
