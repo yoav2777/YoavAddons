@@ -30,6 +30,14 @@ The mod has the website built in: `/ya site`, the trade window button and AH lin
 The online website's **Activity** tab also shows your trades while the game is running (the browser may ask to allow
 access to your local network: allow it).
 
+### Mining tracker
+
+On mining islands (Dwarven Mines, Crystal Hollows, Mineshafts, Gold Mine, Deep Caverns) a draggable box shows what you
+mined and its bazaar worth (insta-sell): total, per hour of mining, or both, plus the top items. It counts Hypixel's
+"[Sacks] +N items" chat lines (keep **Sack Notifications** on in Hypixel's `/settings`; the mod can hide the lines) and
+bazaar items that land in your inventory. Settings: `/ya` > **Mining** (price items as Normal, Enchanted or Super
+compacted, move the box). Reset: `/ya mining reset` or the "Reset mining tracker" key.
+
 ### Lowball tracker on more than one PC
 
 The lowball tracker's data is saved on the PC you play on. To share it between your PCs (desktop + laptop):

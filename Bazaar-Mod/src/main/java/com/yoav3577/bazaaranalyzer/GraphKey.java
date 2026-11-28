@@ -20,6 +20,7 @@ import org.lwjgl.glfw.GLFW;
 final class GraphKey {
    private static KeyMapping key;
    private static KeyMapping settingsKey;
+   private static KeyMapping miningResetKey;
    private static Field hoveredSlot;
 
    private GraphKey() {
@@ -30,6 +31,7 @@ final class GraphKey {
       key = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.bazaaranalyzer.graph", GLFW.GLFW_KEY_I, category));
       // Unbound by default: the user's modpack already uses most keys. Bind it under Controls > Bazaar Analyzer.
       settingsKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.bazaaranalyzer.settings", GLFW.GLFW_KEY_UNKNOWN, category));
+      miningResetKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.bazaaranalyzer.mining_reset", GLFW.GLFW_KEY_UNKNOWN, category));
 
       try {
          hoveredSlot = AbstractContainerScreen.class.getDeclaredField("hoveredSlot");
@@ -49,6 +51,10 @@ final class GraphKey {
             if (mc.gui.screen() == null) {
                mc.gui.setScreen(new SettingsScreen(null));
             }
+         }
+
+         while (miningResetKey.consumeClick()) {
+            MiningTracker.resetWithMessage();
          }
       });
       if (DevHarness.active()) {

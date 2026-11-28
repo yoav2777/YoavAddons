@@ -35,6 +35,12 @@ public class BazaarClient implements ClientModInitializer {
       }
 
       try {
+         MiningTracker.init();
+      } catch (Throwable e) {
+         LOG.error("Mining tracker could not start; the mod keeps running without it", e);
+      }
+
+      try {
          CloudSync.init();
       } catch (Throwable e) {
          LOG.error("Cloud sync could not start; the lowball tracker stays on this PC only", e);

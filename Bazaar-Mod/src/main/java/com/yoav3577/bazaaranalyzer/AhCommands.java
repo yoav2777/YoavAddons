@@ -46,6 +46,10 @@ final class AhCommands {
                   .then(ClientCommands.literal("settings").executes(c -> settings()))
                   .then(ClientCommands.literal("site").executes(c -> site()))
                   .then(ClientCommands.literal("sync").executes(c -> sync()))
+                  .then(ClientCommands.literal("mining").then(ClientCommands.literal("reset").executes(c -> {
+                     MiningTracker.resetWithMessage();
+                     return 1;
+                  })))
             );
          }
       });
