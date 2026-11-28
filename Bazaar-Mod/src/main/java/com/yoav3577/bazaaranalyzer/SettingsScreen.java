@@ -3,6 +3,9 @@ package com.yoav3577.bazaaranalyzer;
 import com.yoav3577.bazaaranalyzer.core.Cfg;
 import com.yoav3577.bazaaranalyzer.core.GraphPrefs;
 import com.yoav3577.bazaaranalyzer.core.LinkSettings;
+import com.yoav3577.bazaaranalyzer.core.Coins;
+import com.yoav3577.bazaaranalyzer.core.MiningItems;
+import com.yoav3577.bazaaranalyzer.core.MiningPrefs;
 import com.yoav3577.bazaaranalyzer.core.ModPrefs;
 import com.yoav3577.bazaaranalyzer.core.SyncPrefs;
 import java.util.ArrayList;
@@ -49,6 +52,7 @@ final class SettingsScreen extends Screen {
       static final Page WORTH = new Page("WORTH", "Item worth", "How items are valued: the trade window worth and the debug hover.");
       static final Page LINKS = new Page("LINKS", "Website links", "Which modifiers become filters on the website's AH item pages.");
       static final Page FILL = new Page("FILL", "Auto fill time", "Fills the Custom Duration sign in the AH Auction Duration menu.");
+      static final Page MINING = new Page("MINING", "Mining", "Mining profit tracker: what you mine and what it is worth.");
 
       final String id;
       final String label;
@@ -209,7 +213,7 @@ final class SettingsScreen extends Screen {
       this.options.add(new Info(Page.ABOUT, "Yoav Addons", "Version " + BazaarClient.VERSION + " by yoav3577. Prices come from Coflnet and the Hypixel API."));
       this.options.add(new Info(
          Page.ABOUT, "Commands",
-         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/ya site: the website in your browser (built into the mod).\n/ya sync: sync the lowball tracker with your other PCs now.\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
+         "/ba, /ya, /yoavaddons, /bazaaranalyzer: this menu.\n/ya site: the website in your browser (built into the mod).\n/ya sync: sync the lowball tracker with your other PCs now.\n/ya mining reset: reset the mining tracker.\n/bazaaranalyzer open <n>: a cancelled trade's AH items on the website.\nKey I: the price graph."
       ));
       this.options.add(new Action(
          Page.ABOUT, "Reset everything", "Every setting on every page back to the defaults. Click twice to confirm.",
@@ -218,6 +222,7 @@ final class SettingsScreen extends Screen {
                GraphSettings.live(GraphPrefs.DEFAULT);
                ModSettings.live(ModPrefs.DEFAULT);
                AhSettings.live(LinkSettings.DEFAULT);
+               MiningSettings.live(MiningPrefs.DEFAULT);
                this.runAll(this.addonResets, "reset");
                this.resetArmed = false;
                this.rebuildWidgets();
@@ -388,6 +393,50 @@ final class SettingsScreen extends Screen {
          });
       hours.box.setMaxLength(String.valueOf(ModPrefs.MAX_FILL_HOURS).length());
       this.options.add(hours);
+
+      // Mining
+      this.options.add(new Toggle(
+         Page.MINING, "Mining tracker",
+         "On mining islands (Dwarven Mines, Crystal Hollows, Mineshafts, Gold Mine, Deep Caverns): counts what goes into your sacks "
+            + "(Hypixel's \"[Sacks] +N items\" line, keep Sack Notifications on in /settings) and the bazaar items that land in your "
+            + "inventory, and what it is worth at insta-sell.",
+         () -> MiningSettings.get().enabled(), v -> MiningSettings.live(MiningSettings.get().withEnabled(v))
+      ));
+      this.options.add(new Toggle(
+         Page.MINING, "Profit box", "The box with the profit, the time mined and the top items. Only on mining islands.",
+         () -> MiningSettings.get().hud(), v -> MiningSettings.live(MiningSettings.get().withHud(v))
+      ));
+      this.options.add(new Action(
+         Page.MINING, "Move box", "Drag the box where you want it; the mouse wheel on it changes its size.", () -> "Move",
+         () -> this.minecraft.gui.setScreen(new MiningHudScreen(this))
+      ));
+      this.options.add(new Dropdown<>(
+         Page.MINING, "Price items as",
+         "Normal = the raw item (Mithril, Rough gems); Enchanted = Enchanted Mithril, Flawed gems...; Super compacted = enchanted blocks, "
+            + "Concentrated Stone, Fine gems, Refined Mithril / Titanium / Umber / Tungsten (a form not on the bazaar uses the one below).",
+         List.of(MiningItems.Tier.values()), t -> t.label, () -> MiningSettings.get().tier(), v -> MiningSettings.live(MiningSettings.get().withTier(v))
+      ));
+      this.options.add(new Dropdown<>(
+         Page.MINING, "Show", "Total profit of the session, the average per hour of mining (10 minutes for 10M = 60M/h), or both.",
+         List.of(MiningPrefs.Show.values()), x -> x.label, () -> MiningSettings.get().show(), v -> MiningSettings.live(MiningSettings.get().withShow(v))
+      ));
+      this.options.add(new Slider(
+         Page.MINING, "Items shown", "How many items the box lists (most worth first).", 0, MiningPrefs.MAX_LINES, 1,
+         () -> MiningSettings.get().lines(), v -> MiningSettings.live(MiningSettings.get().withLines(v)), String::valueOf
+      ));
+      this.options.add(new Slider(
+         Page.MINING, "Pause after", "Breaks longer than this (no block broken) don't count as mining time, so they don't lower the hourly rate.",
+         MiningPrefs.MIN_IDLE, MiningPrefs.MAX_IDLE, 5, () -> MiningSettings.get().idle(), v -> MiningSettings.live(MiningSettings.get().withIdle(v)),
+         v -> Coins.time(v * 1000L)
+      ));
+      this.options.add(new Toggle(
+         Page.MINING, "Hide sack messages", "Hides the \"[Sacks] +N items\" chat lines on mining islands (still counted).",
+         () -> MiningSettings.get().hideSackChat(), v -> MiningSettings.live(MiningSettings.get().withHideSackChat(v))
+      ));
+      this.options.add(new Action(
+         Page.MINING, "Reset session", "Profit and timer back to zero. Also: the \"Reset mining tracker\" key (Controls) or /ya mining reset.",
+         () -> "Reset", MiningTracker::reset
+      ));
    }
 
    /** The options shown now: this page's, or every page's that match the search. */
@@ -702,6 +751,7 @@ final class SettingsScreen extends Screen {
       GraphSettings.set(GraphSettings.get());
       ModSettings.set(ModSettings.get());
       AhSettings.save(AhSettings.get());
+      MiningSettings.set(MiningSettings.get());
       this.runAll(this.addonCloses, "save");
    }
 
