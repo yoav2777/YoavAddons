@@ -38,6 +38,9 @@ class MiningTest {
       n.addId("TREASURITE");
       assertEquals("TREASURITE", n.id("Treasurite"));
       assertEquals("Treasurite", n.name("TREASURITE"));
+      n.tier("TREASURITE", "RARE");
+      assertEquals("§9", n.color("TREASURITE"));
+      assertEquals("§f", n.color("MITHRIL_ORE"));
       assertEquals("Mystery Thing", n.name("Mystery Thing"));
    }
 
@@ -70,6 +73,7 @@ class MiningTest {
       List<MiningSession.Line> ench = s.lines(MiningItems.Tier.ENCHANTED, MiningTest::price, k -> k);
       MiningSession.Line mithril = ench.stream().filter(l -> l.key().equals("MITHRIL_ORE")).findFirst().orElseThrow();
       assertEquals("Enchanted Mithril", mithril.name());
+      assertEquals("ENCHANTED_MITHRIL", mithril.id());
       assertEquals(3.0, mithril.count(), 1e-9);
       assertEquals(5280.0, mithril.value(), 1e-6);
       assertEquals("TREASURITE", ench.get(0).key());

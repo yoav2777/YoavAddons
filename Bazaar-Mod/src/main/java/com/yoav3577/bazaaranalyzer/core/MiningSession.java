@@ -15,8 +15,8 @@ import java.util.function.ToDoubleFunction;
  * the same family but never take a family below zero. Client thread only; times are passed in.
  */
 public final class MiningSession {
-   /** A row of the box: the item as the chosen tier shows it, how many and their worth (NaN when unpriced). */
-   public record Line(String key, String name, double count, double value) {
+   /** A row of the box: the item as the chosen tier shows it (its id and name), how many and their worth (NaN when unpriced). */
+   public record Line(String key, String id, String name, double count, double value) {
    }
 
    private final Map<String, Long> raw = new LinkedHashMap<>();
@@ -98,10 +98,10 @@ public final class MiningSession {
          MiningItems.Family f = MiningItems.family(e.getKey());
          if (f != null) {
             MiningItems.Form form = f.form(tier);
-            out.add(new Line(e.getKey(), form.name(), e.getValue() / (double) form.raw(), e.getValue() * perRaw(f, tier, price)));
+            out.add(new Line(e.getKey(), form.id(), form.name(), e.getValue() / (double) form.raw(), e.getValue() * perRaw(f, tier, price)));
          } else {
             double p = price.applyAsDouble(e.getKey());
-            out.add(new Line(e.getKey(), nameOf.apply(e.getKey()), e.getValue(), p > 0.0 ? e.getValue() * p : Double.NaN));
+            out.add(new Line(e.getKey(), e.getKey(), nameOf.apply(e.getKey()), e.getValue(), p > 0.0 ? e.getValue() * p : Double.NaN));
          }
       }
 

@@ -11,6 +11,7 @@ import java.util.Map;
 public final class ItemNames {
    private final Map<String, String> ids = new HashMap<>();
    private final Map<String, String> names = new HashMap<>();
+   private final Map<String, String> colors = new HashMap<>();
 
    public static ItemNames base() {
       ItemNames n = new ItemNames();
@@ -40,6 +41,27 @@ public final class ItemNames {
    /** A bazaar id named the way the bazaar id reads (ENCHANTED_MITHRIL -> Enchanted Mithril). */
    public void addId(String id) {
       this.add(id, pretty(id));
+   }
+
+   /** Remembers the item's rarity (the item list's "tier": COMMON, RARE...) for its colour. */
+   public void tier(String id, String tier) {
+      String c = tier == null ? null : switch (tier) {
+         case "UNCOMMON" -> "§a";
+         case "RARE" -> "§9";
+         case "EPIC" -> "§5";
+         case "LEGENDARY" -> "§6";
+         case "MYTHIC" -> "§d";
+         case "SPECIAL", "VERY_SPECIAL" -> "§c";
+         default -> null;
+      };
+      if (c != null) {
+         this.colors.put(id, c);
+      }
+   }
+
+   /** The colour code of the item's rarity (white when not known). */
+   public String color(String id) {
+      return this.colors.getOrDefault(id, "§f");
    }
 
    public String id(String name) {

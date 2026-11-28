@@ -1,7 +1,6 @@
 package com.yoav3577.bazaaranalyzer;
 
 import com.yoav3577.bazaaranalyzer.core.MiningPrefs;
-import java.util.List;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.input.KeyEvent;
@@ -123,8 +122,7 @@ final class MiningHudScreen extends Screen {
       g.centeredText(this.font, "Mouse wheel on it: size (" + MiningSettings.get().scale() + "%)", cx, cy - 18, MoulUi.TEXT);
       g.centeredText(this.font, "Arrow keys: 1 pixel, Esc keeps it", cx, cy - 6, MoulUi.TEXT);
       super.extractRenderState(g, mouseX, mouseY, a);
-      List<String> lines = MiningTracker.lines(MiningSettings.get(), true);
-      this.box = MiningTracker.draw(g, this.font, lines, MiningSettings.get());
+      this.box = MiningTracker.draw(g, this.font, MiningTracker.rows(MiningSettings.get(), true, false), MiningSettings.get(), -1, -1);
       int color = this.dragging || this.onBox(mouseX, mouseY) ? 0xFF55FFFF : 0x80FFFFFF;
       int x = this.box[0] - 1;
       int y = this.box[1] - 1;
